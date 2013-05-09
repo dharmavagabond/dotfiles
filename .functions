@@ -1,5 +1,13 @@
 function compiler() {
-  java -jar $HOME/scripts/compiler.jar --compilation_level ADVANCED_OPTIMIZATIONS --js $1.js --js_output_file $1.min.js
+  local compilation=$2
+  if [[ $compilation -eq 1 || -z $compilation ]] ; then
+    compilation=WHITESPACE_ONLY
+  elif [[ $compilation -eq 2 ]] ; then
+    compilation=SIMPLE_OPTIMIZATIONS
+  else
+    compilation=ADVANCED_OPTIMIZATIONS
+  fi
+  java -jar $HOME/scripts/compiler.jar  --js $1.js --js_output_file $1.min.js --compilation_level $compilation
 }
 function htmlcompressor(){
   java -jar $HOME/scripts/htmlcompressor.jar $1.html -o $1.min.html
