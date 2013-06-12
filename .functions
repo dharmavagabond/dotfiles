@@ -1,3 +1,9 @@
+function subl3() {
+  if [[ ! -f $1 ]] ; then
+    touch $1
+  fi
+  open -a Sublime\ Text $1
+}
 function compiler() {
   local compilation=$2
   if [[ $compilation -eq 1 || -z $compilation ]] ; then
