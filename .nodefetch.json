@@ -19,6 +19,7 @@
   "raf": "https://gist.github.com/paulirish/1579671/raw/7f515ade253afbc860dac1f84e21998d54359d79/rAF.js",
   "pubsub": "https://rawgithub.com/mroderick/PubSubJS/master/src/pubsub.js",
   "when": "https://rawgithub.com/cujojs/when/master/when.js",
+  "q": "https://rawgithub.com/kriskowal/q/master/q.min.js",
   "modernweb": "https://s3-sa-east-1.amazonaws.com/modernweb/scripts/ModernWeb.min.js",
   "sets": {
     "backboneapp": ["backbone", "jquery", "underscore"]
