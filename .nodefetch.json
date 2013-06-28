@@ -6,6 +6,7 @@
   "underscore" : "http://underscorejs.org/underscore-min.js",
   "lodash": "https://rawgithub.com/bestiejs/lodash/v1.0.1/dist/lodash.min.js",
   "jquery": "http://code.jquery.com/jquery-latest.min.js",
+  "zepto": "http://zeptojs.com/zepto.min.js",
   "json2": "https://github.com/douglascrockford/JSON-js/raw/master/json2.js",
   "raphael": "http://github.com/DmitryBaranovskiy/raphael/raw/master/raphael-min.js",
   "handlebars": "https://rawgithub.com/wycats/handlebars.js/master/dist/handlebars.js",
