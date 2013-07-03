@@ -31,3 +31,4 @@ alias actualizar="br; np; ge; comp; growlnotify -t 'Actualización' -m 'Todo act
 alias artisan="php artisan"
 alias libre="top -l 1 | ack '\d{1,4}M free' | xargs echo | growlnotify -t 'Memoria Libre'"
 alias purge="purge && libre"
+alias vaciarpapelera="rm -rfv $HOME/.Trash/*"
