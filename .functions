@@ -1,12 +1,6 @@
 function uglify() {
  uglifyjs $1.js -mc -o $1.min.js
 }
-function subl3() {
-  if [[ ! -f $1 ]] ; then
-    touch $1
-  fi
-  open -a Sublime\ Text $1
-}
 function compiler() {
   local compilation=$2
   if [[ $compilation -eq 1 || -z $compilation ]] ; then
@@ -17,9 +11,6 @@ function compiler() {
     compilation=ADVANCED_OPTIMIZATIONS
   fi
   java -jar $HOME/scripts/compiler.jar  --js $1.js --js_output_file $1.min.js --compilation_level $compilation
-}
-function htmlcompressor(){
-  java -jar $HOME/scripts/htmlcompressor.jar $1.html -o $1.min.html
 }
 function thumbs() {
   mkdir thumbs && parallel "djpeg -scale 1/$1 -ppm {} | pnmscale -pixels 50246 | cjpeg -optimize -progressive > thumbs/{}" ::: *.jpg
