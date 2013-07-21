@@ -1,6 +1,5 @@
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
-fi
+. ~/.aliases
+. ~/.functions
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -32,4 +31,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
-

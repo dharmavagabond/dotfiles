@@ -1,5 +1,7 @@
-if [ -f ~/.bashrc ];
-then
-   source ~/.bashrc
+. $HOME/.env
+. $HOME/.conf
+
+if [ -f ~/.bashrc ];  then
+  source ~/.bashrc
 fi
 

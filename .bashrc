@@ -1,4 +1,2 @@
-. ~/.env
-. ~/.conf
 . ~/.aliases
 . ~/.functions
