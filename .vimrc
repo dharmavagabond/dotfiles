@@ -23,6 +23,7 @@ set ft=scss.css
 set noundofile
 execute pathogen#infect()
 autocmd vimenter * if !argc() | NERDTree | endif
-nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <silent> <F8>  :TlistToggle<CR>
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> <C-t> :Trim<CR>
 let g:trailertrash_blacklist = ['__Calendar', '^http:']
