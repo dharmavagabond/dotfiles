@@ -56,7 +56,7 @@ var hideAll = slate.operation('hide', {
 });
 var focusSublime = slate.operation('focus', {
   'direction' : 'above',
-  'app': 'Sublime Text 2'
+  'app': 'Sublime Text'
 });
 var focusChrome = slate.operation('focus', {
   'direction' : 'above',
@@ -72,7 +72,7 @@ var devLayout = slate.layout('dev', {
   'Google Chrome': {
     'operations': leftHalf
   },
-  'Sublime Text 2': {
+  'Sublime Text': {
     'operations': rightHalf
   }
 });
