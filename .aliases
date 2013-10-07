@@ -33,3 +33,4 @@ alias libre="top -l 1 | ack '\d{1,4}M free' | xargs echo | growlnotify -t 'Memor
 alias purge="purge && libre"
 alias vaciarpapelera="rm -rfv $HOME/.Trash/*"
 alias manage="python manage.py"
+alias yt="youtube-dl -f 22/135/18"
