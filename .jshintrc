@@ -18,7 +18,6 @@
   "newcap"        : true,
   "noarg"         : true,
   "noempty"       : true,
-  "nomen"         : false,
   "onecase"       : true,
   "quotmark"      : true,
   "strict"        : true,
