@@ -1,3 +1,15 @@
+brew-remove-with-deps() {
+  formula="$*"
+
+   if [ "x$formula" = "x" ]
+   then
+      echo "Invalid empty parameter"
+    else
+      echo "Removing" "$formula" "and all its deps.."
+      brew rm $formula
+      brew rm $(join <(brew leaves) <(brew deps "$formula"))
+    fi
+}
 function npmls() {
   npm ls --depth=0 "$@" 2>/dev/null
 }

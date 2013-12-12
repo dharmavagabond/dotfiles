@@ -1,7 +1,10 @@
+[user]
+  name = Omar Gómez Figueroa
+  email = shadeogf@gmail.com
 [core]
   autocrlf = false
   safecrlf = true
-  ditor = vim
+  editor = vim
   excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes
 [alias]
@@ -25,3 +28,9 @@
   external = extDiff
 [color]
   ui = true
+[credential]
+  helper = osxkeychain
+[push]
+  default = simple
+[help]
+  autocorrect = 1
