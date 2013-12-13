@@ -1,2 +1,2 @@
-path=(/bin /usr/bin /usr/local/bin .)
+path=(/usr/local/bin /bin /usr/bin .)
 . $HOME/.env
