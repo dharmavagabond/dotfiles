@@ -60,3 +60,6 @@ dist/
 /vendor
 composer.phar
 composer.lock
+
+# Vagrant #
+.vagrant
