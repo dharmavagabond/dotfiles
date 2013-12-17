@@ -31,3 +31,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
+
+# Access the online help
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
