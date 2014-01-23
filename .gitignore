@@ -64,3 +64,6 @@ composer.lock
 
 # Vagrant #
 .vagrant
+
+# Sass cache folder #
+.sass-cache
