@@ -15,6 +15,7 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+  semtag = !git tag -a $(semver tag) -m \"tagging $(semver tag)\"
 [merge]
   keepBackup = false
   tool = extMerge
