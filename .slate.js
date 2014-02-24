@@ -70,10 +70,10 @@ var devLayout = slate.layout('dev', {
     'operations': [focusChrome, focusSublime]
   },
   'Google Chrome': {
-    'operations': leftHalf
+    'operations': rightHalf
   },
   'Sublime Text': {
-    'operations': rightHalf
+    'operations': leftHalf
   }
 });
 var dev = slate.operation('layout', { 'name' : devLayout });
