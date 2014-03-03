@@ -13,6 +13,7 @@
   st = status
   br = branch
   me = merge
+  gr = grep --break --heading --line-number
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
@@ -36,3 +37,6 @@
   default = simple
 [help]
   autocorrect = 1
+[grep]
+  extendRegexp = true
+  lineNumber = true
