@@ -4,6 +4,7 @@
   "devel"         : false,
   "eqeqeq"        : true,
   "eqnull"        : true,
+  "esnext"        : true,
   "evil"          : true,
   "forin"         : true,
   "immed"         : true,
