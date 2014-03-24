@@ -56,14 +56,20 @@ build/
 dist/
 
 # Laravel #
-##########
+###########
 bootstrap/compiled.php
 vendor
 composer.phar
 composer.lock
 
 # Vagrant #
+###########
 .vagrant
 
 # Sass cache folder #
+####################
 .sass-cache
+
+# Sublime Text #
+################
+*.sublime-workspace
