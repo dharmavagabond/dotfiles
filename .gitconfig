@@ -3,7 +3,7 @@
   email = shadeogf@gmail.com
 [core]
   autocrlf = input
-  safecrlf = true
+  safecrlf = false
   editor = vim
   excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes
