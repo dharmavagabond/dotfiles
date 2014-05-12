@@ -58,7 +58,7 @@ dist/
 # Laravel #
 ###########
 bootstrap/compiled.php
-vendor
+vendor/
 composer.phar
 composer.lock
 
