@@ -9,6 +9,7 @@ brew-remove-with-deps() {
       brew rm $formula
       brew rm $(join <(brew leaves) <(brew deps "$formula"))
     fi
+  brew missing
 }
 function npmls() {
   npm ls --depth=0 "$@" 2>/dev/null
