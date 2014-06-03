@@ -13,7 +13,7 @@ ZSH_THEME=agnoster
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vagrant web-search urltools themes systemadmin)
+plugins=(vagrant web-search urltools themes systemadmin tmux)
 
 source $ZSH/oh-my-zsh.sh
 
