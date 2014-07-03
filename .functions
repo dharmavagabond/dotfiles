@@ -46,6 +46,5 @@ function server() {
   if [[ -z $port ]] ; then
     port=8000
   fi
-  sleep 1 && open "http://localhost:$port/"
   python $HOME/scripts/server.py $port
 }
