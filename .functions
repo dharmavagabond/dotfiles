@@ -43,8 +43,15 @@ function emptyfile() {
 }
 function server() {
   local port=$1
+  local script="$HOME/scripts/server.py"
+
   if [[ -z $port ]] ; then
     port=8000
   fi
-  python $HOME/scripts/server.py $port
+
+  if [[ $port -eq 80 ]] ; then
+    sudo python $script $port
+  else
+    python $script $port
+  fi
 }
