@@ -1,82 +1,86 @@
-/* global slate*/
+/* global slate */
 
-var monitor = {
+var mac = {
   width: 1920,
   height: 1080,
-  barra: 21
+  bar: 21,
+  browser: 'Firefox'
 };
 
 var full = slate.operation('move', {
   'x': 'screenOriginX',
   'y': 'screenOriginY',
-  'width': monitor.width,
-  'height': monitor.height
+  'width': mac.width,
+  'height': mac.height
 });
 var leftHalf = slate.operation('move', {
   'x': 'screenOriginX',
   'y': 'screenOriginY',
-  'width': monitor.width / 2,
-  'height': monitor.height
+  'width': mac.width / 2,
+  'height': mac.height
 });
 var rightHalf = slate.operation('move', {
-  'x': monitor.width / 2,
+  'x': mac.width / 2,
   'y': 'screenOriginY',
-  'width': monitor.width / 2,
-  'height': monitor.height
+  'width': mac.width / 2,
+  'height': mac.height
 });
 var topHalf = slate.operation('move', {
   'x': 'screenOriginX',
   'y': 'screenOriginY',
-  'width': monitor.width,
-  'height': monitor.height / 2
+  'width': mac.width,
+  'height': mac.height / 2
 });
 var bottomHalf = slate.operation('move', {
   'x': 'screenOriginX',
-  'y': monitor.height / 2,
-  'width': monitor.width,
-  'height': monitor.height / 2
+  'y': mac.height / 2,
+  'width': mac.width,
+  'height': mac.height / 2
 });
 var semiFull = slate.operation('move', {
-  'x': monitor.width / 16,
-  'y': monitor.height / 16 + monitor.barra,
-  'width': monitor.width - monitor.width / 8,
-  'height': monitor.height - monitor.barra - monitor.height / 8
+  'x': mac.width / 16,
+  'y': mac.height / 16 + mac.bar,
+  'width': mac.width - mac.width / 8,
+  'height': mac.height - mac.bar - mac.height / 8
 });
-var center =  function(windowObject) {
-  var size    = windowObject.size();
-  var width   = size.width;
-  var height  = size.height;
+var center = function(windowObject) {
+  'use strict';
+  var size = windowObject.size();
+  var width = size.width;
+  var height = size.height;
   windowObject.move({
-    'x' : monitor.width / 2 - width / 2,
-    'y' : (monitor.height + monitor.barra) / 2 - height / 2
+    'x': mac.width / 2 - width / 2,
+    'y': (mac.height + mac.bar) / 2 - height / 2
   });
 };
 var hideAll = slate.operation('hide', {
-  'app' : 'all-but:"Finder"'
+  'app': 'all-but:"Finder"'
 });
 var focusSublime = slate.operation('focus', {
-  'direction' : 'above',
+  'direction': 'above',
   'app': 'Sublime Text'
 });
-var focusChrome = slate.operation('focus', {
-  'direction' : 'above',
-  'app': 'Google Chrome'
+var focusBrowser = slate.operation('focus', {
+  'direction': 'above',
+  'app': mac.browser
 });
-var devLayout = slate.layout('dev', {
+var layout = {
   '_before_': {
     'operations': hideAll
   },
   '_after_': {
-    'operations': [focusChrome, focusSublime]
-  },
-  'Google Chrome': {
-    'operations': rightHalf
+    'operations': [focusBrowser, focusSublime]
   },
   'Sublime Text': {
     'operations': leftHalf
   }
+};
+layout[mac.browser] = {
+  'operations': rightHalf
+};
+var dev = slate.operation('layout', {
+  'name': slate.layout('dev', layout)
 });
-var dev = slate.operation('layout', { 'name' : devLayout });
 
 slate.configAll({
   defaultToCurrentScreen: true,
