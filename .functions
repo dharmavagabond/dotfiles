@@ -1,3 +1,8 @@
+git-addremove() {
+  git ls-files --deleted | xargs git rm
+  git add .
+}
+
 brew-remove-with-deps() {
   formula="$*"
 
