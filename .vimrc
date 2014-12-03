@@ -29,6 +29,7 @@ nnoremap <silent> <F8>  :TlistToggle<CR>
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 nnoremap <silent> <C-t> :Trim<CR>
 let g:trailertrash_blacklist = ['__Calendar', '^http:']
+let g:airline_powerline_fonts = 1
 " fdoc is yaml
 autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 " md is markdown
