@@ -26,7 +26,6 @@
   keepTemporaries = false
   trustExitCode = false
   keepBackup = false
-  trustExitCode = false
 [diff]
   external = extDiff
 [color]
