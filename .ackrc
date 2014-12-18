@@ -1,9 +1,13 @@
-# From https://github.com/paulirish/dotfiles/blob/master/.ackrc
+# https://gist.github.com/theaboutbox/3758565
 
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=vendor
 --ignore-dir=public/generated
+--smart-case
 --sort-files
+--color
 --color-lineno=magenta
 --color-match=red
+--follow
+--group
