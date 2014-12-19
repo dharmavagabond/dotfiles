@@ -73,3 +73,7 @@ composer.lock
 # Sublime Text #
 ################
 *.sublime-workspace
+
+# Env variables #
+################
+.env
