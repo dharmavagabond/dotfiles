@@ -53,6 +53,12 @@ var center = function(windowObject) {
     'y': (mac.height + mac.bar) / 2 - height / 2
   });
 };
+var sublime =  slate.operation('move', {
+    'x': mac.width / 2 - 1226 / 2,
+    'y': mac.height / 16 + mac.bar,
+    'width': 1226,
+    'height': mac.height - mac.bar - mac.height / 8
+});
 var hideAll = slate.operation('hide', {
   'app': 'all-but:"Finder"'
 });
@@ -97,5 +103,6 @@ slate.bindAll({
   't:shift,alt': topHalf,
   'd:shift,alt': dev,
   'h:shift,alt': hideAll,
+  's:shift,alt': sublime,
   'c:shift,alt,cmd': center
 });
