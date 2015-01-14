@@ -66,9 +66,10 @@ composer.lock
 ###########
 .vagrant
 
-# Sass cache folder #
+# Cache folders #
 ####################
 .sass-cache
+__pycache__
 
 # Sublime Text #
 ################
