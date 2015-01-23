@@ -4,7 +4,7 @@ var mac = {
   width: 1920,
   height: 1080,
   bar: 21,
-  browser: 'Firefox'
+  browser: 'FirefoxDeveloperEdition'
 };
 
 var full = slate.operation('move', {
