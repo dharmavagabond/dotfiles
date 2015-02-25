@@ -34,3 +34,8 @@ let g:airline_powerline_fonts = 1
 autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+if $VIM_CRONTAB == "true"
+  set nobackup
+  set nowritebackup
+endif
