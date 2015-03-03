@@ -1,9 +1,9 @@
-git-addremove() {
+function git-addremove() {
   git ls-files --deleted | xargs git rm
   git add .
 }
 
-brew-remove-with-deps() {
+function brew-remove-with-deps() {
   formula="$*"
 
    if [ "x$formula" = "x" ]
@@ -16,12 +16,15 @@ brew-remove-with-deps() {
     fi
   brew missing
 }
+
 function npmls() {
   npm ls --depth=0 "$@" 2>/dev/null
 }
+
 function uglify() {
  uglifyjs $1.js -mc -o $1.min.js
 }
+
 function compiler() {
   local compilation=$2
   if [[ $compilation -eq 1 || -z $compilation ]] ; then
@@ -33,19 +36,24 @@ function compiler() {
   fi
   java -jar $HOME/scripts/compiler.jar  --js $1.js --js_output_file $1.min.js --compilation_level $compilation
 }
+
 function thumbs() {
   mkdir thumbs && parallel "djpeg -scale 1/$1 -ppm {} | pnmscale -pixels 50246 | cjpeg -optimize -progressive > thumbs/{}" ::: *.jpg
 }
+
 function mdir() {
   mkdir -p $1 && cd $1
 }
+
 function pman() {
   ps=`mktemp -t manpageXXXX`.ps && man -t $@ > "$ps" && open "$ps"
 }
+
 function emptyfile() {
   :> $1  # cat /dev/null > $1
-  growlnotify -t 'EmptyFile' -m 'Acción completada.'
+  growlnotify -t 'Archivo vacío' -m 'Acción completada.'
 }
+
 function server() {
   local port=$1
   local script="$HOME/scripts/server.py"
