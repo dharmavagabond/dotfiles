@@ -68,3 +68,7 @@ function server() {
     python $script $port
   fi
 }
+
+function -(){
+ cd -;
+}
