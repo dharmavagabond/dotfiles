@@ -1,3 +1,7 @@
+function coda() {
+  open $1 -a /Applications/Coda\ 2.app
+}
+
 function git-addremove() {
   git ls-files --deleted | xargs git rm
   git add .
