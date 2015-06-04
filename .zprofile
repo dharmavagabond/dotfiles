@@ -9,3 +9,7 @@ fi
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
 fi
+
+# Function to get help on zsh functions and builtins
+unalias run-help
+autoload run-help

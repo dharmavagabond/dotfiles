@@ -1,3 +1,7 @@
+function coda() {
+  open $1 -a /Applications/Coda\ 2.app
+}
+
 function git-addremove() {
   git ls-files --deleted | xargs git rm
   git add .
@@ -22,7 +26,7 @@ function npmls() {
 }
 
 function uglify() {
- uglifyjs $1.js -mc -o $1.min.js --source-map $1.js.map
+ uglifyjs $1.js -mc -o $1.min.js --source-map $1.min.js.map
 }
 
 function compiler() {
