@@ -1,9 +1,11 @@
 /* global slate */
 
+'use strict';
+
 var mac = {
   width: 1920,
   height: 1080,
-  bar: 21,
+  bar: 23,
   browser: 'FirefoxDeveloperEdition'
 };
 
@@ -13,79 +15,93 @@ var full = slate.operation('move', {
   'width': mac.width,
   'height': mac.height
 });
+
 var leftHalf = slate.operation('move', {
   'x': 'screenOriginX',
   'y': 'screenOriginY',
   'width': mac.width / 2,
   'height': mac.height
 });
+
 var rightHalf = slate.operation('move', {
   'x': mac.width / 2,
   'y': 'screenOriginY',
   'width': mac.width / 2,
   'height': mac.height
 });
+
 var topHalf = slate.operation('move', {
   'x': 'screenOriginX',
   'y': 'screenOriginY',
   'width': mac.width,
   'height': mac.height / 2
 });
+
 var bottomHalf = slate.operation('move', {
   'x': 'screenOriginX',
   'y': mac.height / 2,
   'width': mac.width,
   'height': mac.height / 2
 });
+
 var semiFull = slate.operation('move', {
   'x': mac.width / 16,
   'y': mac.height / 16 + mac.bar,
   'width': mac.width - mac.width / 8,
   'height': mac.height - mac.bar - mac.height / 8
 });
+
 var center = function(windowObject) {
-  'use strict';
   var size = windowObject.size();
   var width = size.width;
   var height = size.height;
+
   windowObject.move({
     'x': mac.width / 2 - width / 2,
     'y': (mac.height + mac.bar) / 2 - height / 2
   });
 };
-var sublime =  slate.operation('move', {
+
+var sublime = slate.operation('move', {
     'x': mac.width / 2 - 1226 / 2,
     'y': mac.height / 16 + mac.bar,
     'width': 1226,
     'height': mac.height - mac.bar - mac.height / 8
 });
+
 var hideAll = slate.operation('hide', {
   'app': 'all-but:"Finder"'
 });
+
 var focusSublime = slate.operation('focus', {
   'direction': 'above',
   'app': 'Sublime Text'
 });
+
 var focusBrowser = slate.operation('focus', {
   'direction': 'above',
   'app': mac.browser
 });
-var layout = {
-  '_before_': {
-    'operations': hideAll
-  },
-  '_after_': {
-    'operations': [focusBrowser, focusSublime]
-  },
-  'Sublime Text': {
-    'operations': leftHalf
-  }
+
+var getLayout = function() {
+  var layout = {
+    '_before_': {
+      'operations': hideAll
+    },
+    '_after_': {
+      'operations': [focusBrowser, focusSublime]
+    },
+    'Sublime Text': {
+      'operations': leftHalf
+    }
+  };
+  layout[mac.browser] = { 'operations': rightHalf };
+
+  return Object.freeze(layout);
 };
-layout[mac.browser] = {
-  'operations': rightHalf
-};
+
 var dev = slate.operation('layout', {
-  'name': slate.layout('dev', layout)
+  'name': slate.layout('dev', getLayout())
 });
 
 slate.configAll({
@@ -94,6 +110,7 @@ slate.configAll({
   nudgePercentOf: 'screenSize',
   resizePercentOf: 'screenSize'
 });
+
 slate.bindAll({
   'f:shift,alt': full,
   'c:shift,alt': semiFull,
