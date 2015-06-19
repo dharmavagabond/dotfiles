@@ -1,3 +1,7 @@
+function merge-mp4-m4a() {
+  ffmpeg -i $1.mp4 -i $1.m4a -acodec copy -vcodec copy output.mp4
+}
+
 function coda() {
   open $1 -a /Applications/Coda\ 2.app
 }
