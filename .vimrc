@@ -1,6 +1,6 @@
 filetype indent on
 filetype plugin indent on
-colorscheme Tomorrow-Night
+colorscheme flat
 syntax enable
 set t_Co=256
 set encoding=utf-8
