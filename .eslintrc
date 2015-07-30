@@ -1,21 +1,22 @@
 {
-  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "classes": false,
+    "experimentalObjectRestSpread": true,
+    "jsx": true,
+    "modules": [2],
+    "superInFunctions": false
+  },
 
   "env": {
     "browser": true,
-    "node": true,
-    "es6": true
+    "es6": true,
+    "node": true
   },
 
-  "ecmaFeatures": {
-    "jsx": true,
-    "superInFunctions": false,
-    "classes": false,
-    "modules": [2]
-  },
+  "extends": "eslint:recommended",
 
   "plugins": [
-    "no-class"
+    "react"
   ],
 
   "rules": {
@@ -42,11 +43,12 @@
     "generator-star-spacing": [2, "after"],
     "guard-for-in": [0],
     "handle-callback-err": [0],
+    "indent": [2, 2],
     "key-spacing": [2, {
       "beforeColon": false,
       "afterColon": true
     }],
-    "quotes": [2, "single", "avoid-escape"],
+    "linebreak-style": [2, "unix"],
     "max-depth": [0, 4],
     "max-len": [0, 120, 4],
     "max-nested-callbacks": [0, 2],
@@ -62,7 +64,6 @@
     "no-bitwise": [0],
     "no-caller": [2],
     "no-catch-shadow": [2],
-    "no-class/no-class": [2],
     "no-cond-assign": [2],
     "no-console": [0],
     "no-constant-condition": [1],
@@ -163,8 +164,9 @@
     "operator-linebreak": [2, "after"],
     "padded-blocks": [0],
     "quote-props": [0],
+    "quotes": [2, "single", "avoid-escape"],
     "radix": [0],
-    "semi": [2],
+    "semi": [2, "always"],
     "semi-spacing": [2, {
       "before": false,
       "after": true
