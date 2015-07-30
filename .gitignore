@@ -30,6 +30,13 @@
 *.zip
 *.tgz
 
+# Packages #
+############
+config.js
+node_modules/
+jspm_packages/
+
+
 # Logs and databases #
 ######################
 *.log
