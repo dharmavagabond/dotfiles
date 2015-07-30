@@ -20,11 +20,14 @@
   ],
 
   "rules": {
+    "arrow-parens": [0],
+    "arrow-spacing": [2],
     "block-scoped-var": [0],
     "brace-style": [2, "1tbs", {
       "allowSingleLine": true
     }],
     "camelcase": [0],
+    "callback-return": [1, ["callback", "cb", "next"]],
     "comma-dangle": [2, "never"],
     "comma-spacing": [2],
     "comma-style": [2, "last"],
@@ -44,6 +47,7 @@
     "guard-for-in": [0],
     "handle-callback-err": [0],
     "indent": [2, 2],
+    "init-declarations": [0],
     "key-spacing": [2, {
       "beforeColon": false,
       "afterColon": true
@@ -64,8 +68,10 @@
     "no-bitwise": [0],
     "no-caller": [2],
     "no-catch-shadow": [2],
+    "no-class-assign": [0],
     "no-cond-assign": [2],
     "no-console": [0],
+    "no-const-assign": [2],
     "no-constant-condition": [1],
     "no-continue": [2],
     "no-control-regex": [2],
@@ -152,6 +158,7 @@
       "args": "after-used"
     }],
     "no-use-before-define": [2],
+    "no-useless-call": [2],
     "no-void": [0],
     "no-warning-comments": [0, {
       "terms": ["todo", "fixme", "xxx"],
@@ -163,9 +170,11 @@
     "operator-assignment": [0, "always"],
     "operator-linebreak": [2, "after"],
     "padded-blocks": [0],
+    "prefer-spread": [1],
     "quote-props": [0],
     "quotes": [2, "single", "avoid-escape"],
     "radix": [0],
+    "require-yield": [2],
     "semi": [2, "always"],
     "semi-spacing": [2, {
       "before": false,
