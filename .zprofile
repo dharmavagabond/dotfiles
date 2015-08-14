@@ -1,5 +1,6 @@
 . $HOME/.conf
 . $(brew --prefix nvm)/nvm.sh
+. `brew --prefix`/etc/profile.d/z.sh
 
 if which pyenv > /dev/null; then
   eval "$(pyenv init -)";
