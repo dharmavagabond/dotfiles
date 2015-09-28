@@ -16,8 +16,8 @@
 #####################
 *.swp
 
-# Packages #
-############
+# Compressed files #
+####################
 # it's better to unpack these files and commit the raw source
 # git has its own built in compression methods
 *.7z
@@ -29,6 +29,13 @@
 *.tar
 *.zip
 *.tgz
+
+# Packages #
+############
+config.js
+node_modules/
+jspm_packages/
+
 
 # Logs and databases #
 ######################
@@ -67,7 +74,7 @@ composer.lock
 .vagrant
 
 # Cache folders #
-####################
+#################
 .sass-cache
 __pycache__
 
@@ -76,5 +83,6 @@ __pycache__
 *.sublime-workspace
 
 # Env variables #
-################
+#################
 .env
+
