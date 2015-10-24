@@ -167,7 +167,7 @@
     "no-extra-parens": [2],
     "one-var": [0],
     "operator-assignment": [0, "always"],
-    "operator-linebreak": [2, "after"],
+    "operator-linebreak": [2, "before"],
     "padded-blocks": [0],
     "prefer-spread": [1],
     "quote-props": [0],
