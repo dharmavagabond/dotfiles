@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(extract zsh-syntax-highlighting vagrant web-search urltools themes systemadmin tmux tmuxinator rsync)
+plugins=(extract github vagrant web-search urltools themes systemadmin tmux tmuxinator rsync zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
