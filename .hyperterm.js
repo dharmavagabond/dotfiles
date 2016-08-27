@@ -9,6 +9,8 @@ module.exports = {
     // terminal cursor background color (hex)
     cursorColor: '#F81CE5',
 
+    cursorShape: 'BEAM',
+
     // color of the text
     foregroundColor: '#fff',
 
