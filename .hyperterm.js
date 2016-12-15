@@ -58,7 +58,7 @@ module.exports = {
   //   `hypersolar`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [ 'hyperterm-wwdc', 'hyperterm-bold-tab', 'hyperterm-subpixel-antialiased',  ],
+  plugins: ['hyperterm-bold-tab', 'hyperterm-subpixel-antialiased', "hyper-material"],
 
   // in development, you can create a directory under
   // `~/.hyperterm_plugins/local/` and include it here
