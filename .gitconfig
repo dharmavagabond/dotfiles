@@ -1,6 +1,6 @@
 [user]
   name = Omar Gómez Figueroa
-  email = shadeogf@gmail.com
+  email = omar.figueroa@protonmail.com
 [core]
   autocrlf = input
   safecrlf = false
@@ -44,6 +44,7 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true

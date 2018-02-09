@@ -4,7 +4,7 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: 'Monaco, "DejaVu Sans Mono for Powerline", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+    fontFamily: 'Monaco, Hack, "DejaVu Sans Mono for Powerline", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
     // terminal cursor background color (hex)
     cursorColor: '#F81CE5',
