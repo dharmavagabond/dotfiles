@@ -84,3 +84,7 @@ function server() {
 function -(){
  cd -;
 }
+
+function actualizar(){
+ br; ge; np; osascript -e 'display notification "Actualización completa." with title "Brew, Gems y Node"';
+}

@@ -6,7 +6,7 @@ var mac = {
   width: 1920,
   height: 1080,
   bar: 23,
-  browser: 'FirefoxDeveloperEdition'
+  browser: 'Firefox Developer Edition'
 };
 
 var full = slate.operation('move', {
@@ -92,10 +92,10 @@ var getLayout = function() {
       'operations': [focusBrowser, focusSublime]
     },
     'Sublime Text': {
-      'operations': leftHalf
+      'operations': rightHalf
     }
   };
-  layout[mac.browser] = { 'operations': rightHalf };
+  layout[mac.browser] = { 'operations': leftHalf };
 
   return Object.freeze(layout);
 };
