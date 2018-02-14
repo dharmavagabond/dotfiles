@@ -1,6 +1,7 @@
 [user]
   name = Omar Gómez Figueroa
   email = omar.figueroa@protonmail.com
+	signingkey = 1D4B323A88EA3481
 [core]
   autocrlf = input
   safecrlf = false
