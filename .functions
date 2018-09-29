@@ -6,10 +6,6 @@ function merge-mp4-m4a() {
   ffmpeg -i $1.mp4 -i $1.m4a -acodec copy -vcodec copy output.mp4
 }
 
-function coda() {
-  open $1 -a /Applications/Coda\ 2.app
-}
-
 function git-addremove() {
   git ls-files --deleted | xargs git rm
   git add .
@@ -33,22 +29,6 @@ function npmls() {
   npm ls --depth=0 "$@" 2>/dev/null
 }
 
-function uglify() {
- uglifyjs $1.js -mc -o $1.min.js --source-map $1.min.js.map
-}
-
-function compiler() {
-  local compilation=$2
-  if [[ $compilation -eq 1 || -z $compilation ]] ; then
-    compilation=WHITESPACE_ONLY
-  elif [[ $compilation -eq 2 ]] ; then
-    compilation=SIMPLE_OPTIMIZATIONS
-  else
-    compilation=ADVANCED_OPTIMIZATIONS
-  fi
-  java -jar $HOME/scripts/compiler.jar  --js $1.js --js_output_file $1.min.js --compilation_level $compilation
-}
-
 function thumbs() {
   mkdir thumbs && parallel "djpeg -scale 1/$1 -ppm {} | pnmscale -pixels 50246 | cjpeg -optimize -progressive > thumbs/{}" ::: *.jpg
 }
@@ -63,22 +43,7 @@ function pman() {
 
 function emptyfile() {
   :> $1  # cat /dev/null > $1
-  growlnotify -t 'Archivo vacío' -m 'Acción completada.'
-}
-
-function server() {
-  local port=$1
-  local script="$HOME/scripts/server.py"
-
-  if [[ -z $port ]] ; then
-    port=8000
-  fi
-
-  if [[ $port -eq 80 ]] ; then
-    sudo python $script $port
-  else
-    python $script $port
-  fi
+  noti -t "Vaciar archivo"
 }
 
 function -(){
@@ -86,5 +51,5 @@ function -(){
 }
 
 function actualizar(){
- br; ge; np; osascript -e 'display notification "Actualización completa." with title "Brew, Gems y Node"';
+ br; np; noti -t "Actualizar Brew, Gems y Node";
 }

@@ -8,6 +8,7 @@
   editor = vim
   excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
   co = checkout
   cm = commit
@@ -27,8 +28,6 @@
   keepTemporaries = false
   trustExitCode = false
   keepBackup = false
-[diff]
-  external = extDiff
 [color]
   ui = true
 [credential]
@@ -49,3 +48,15 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

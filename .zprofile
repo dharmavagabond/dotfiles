@@ -2,14 +2,14 @@
 . $(brew --prefix nvm)/nvm.sh
 . `brew --prefix`/etc/profile.d/z.sh
 
-if which pyenv > /dev/null; then
-  eval "$(pyenv init -)";
-  pyenv virtualenvwrapper;
-fi
+# if which pyenv > /dev/null; then
+#   eval "$(pyenv init -)";
+#   pyenv virtualenvwrapper;
+# fi
 
-if which rbenv > /dev/null; then
-  eval "$(rbenv init -)";
-fi
+# if which rbenv > /dev/null; then
+#   eval "$(rbenv init -)";
+# fi
 
 # Function to get help on zsh functions and builtins
 unalias run-help
