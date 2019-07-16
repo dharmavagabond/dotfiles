@@ -11,20 +11,6 @@ function git-addremove() {
   git add .
 }
 
-function brew-remove-with-deps() {
-  formula="$*"
-
-   if [ "x$formula" = "x" ]
-   then
-      echo "Invalid empty parameter"
-    else
-      echo "Removing" "$formula" "and all its deps.."
-      brew rm $formula
-      brew rm $(join <(brew leaves) <(brew deps "$formula"))
-    fi
-  brew missing
-}
-
 function npmls() {
   npm ls --depth=0 "$@" 2>/dev/null
 }
@@ -51,5 +37,5 @@ function -(){
 }
 
 function actualizar(){
- br; np; noti -t "Actualizar Brew, Gems y Node";
+ br; nxup; np; noti -t "Actualizar Brew, Nix y Node";
 }
