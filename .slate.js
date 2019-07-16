@@ -2,6 +2,8 @@
 
 'use strict';
 
+const padding = 20;
+
 var mac = {
   width: 1920,
   height: 1080,
@@ -17,17 +19,17 @@ var full = slate.operation('move', {
 });
 
 var leftHalf = slate.operation('move', {
-  'x': 'screenOriginX',
-  'y': 'screenOriginY',
-  'width': mac.width / 2,
-  'height': mac.height
+  x: padding,
+  y: mac.bar + padding,
+  width: (mac.width / 2) - padding,
+  height: mac.height - (mac.bar + padding * 2),
 });
 
 var rightHalf = slate.operation('move', {
-  'x': mac.width / 2,
-  'y': 'screenOriginY',
-  'width': mac.width / 2,
-  'height': mac.height
+  x: mac.width / 2 + padding,
+  y: mac.bar + padding,
+  width: (mac.width / 2) - padding * 2,
+  height: mac.height - (mac.bar + padding * 2),
 });
 
 var topHalf = slate.operation('move', {
