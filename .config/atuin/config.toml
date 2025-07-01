@@ -1,0 +1,12 @@
+ctrl_n_shortcuts = true
+enter_accept = true
+inline_height = 10
+keymap_mode = "vim-normal"
+style = "compact"
+sync_frequency = "168h"
+
+[theme]
+name = "catppuccin-mocha-lavender"
+
+[sync]
+records = true

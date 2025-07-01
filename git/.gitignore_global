@@ -1,0 +1,86 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# Minifified files #
+####################
+*.min.*
+
+# Vim leave-behinds #
+#####################
+*.swp
+
+# Compressed files #
+####################
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Packages #
+############
+config.js
+node_modules/
+jspm_packages/
+
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+log.txt
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Builds #
+##########
+dist/
+
+# Laravel #
+###########
+bootstrap/compiled.php
+vendor/
+composer.phar
+composer.lock
+
+# Vagrant #
+###########
+.vagrant
+
+# Cache folders #
+#################
+.sass-cache
+__pycache__
+
+# Sublime Text #
+################
+*.sublime-workspace
+
+# Env variables #
+#################
+.env

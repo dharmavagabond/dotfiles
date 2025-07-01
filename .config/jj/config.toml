@@ -1,0 +1,10 @@
+[user]
+name = "Dharma"
+email = "omar.figueroa@protonmail.com"
+
+[ui]
+pager = "delta"
+diff-formatter = ":git"
+
+[signing]
+backends.gpg.program = "gpg2"

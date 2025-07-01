@@ -1,0 +1,10 @@
+--max-columns=150
+--max-columns-preview
+--follow
+--colors=match:bg:yellow
+--colors=match:fg:black
+--colors=path:fg:green
+--colors=path:style:bold
+--colors=line:fg:red
+--colors=line:style:intense
+--smart-case

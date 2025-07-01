@@ -1,0 +1,87 @@
+[include]
+  path = ~/.gitconfig.local
+[core]
+  autocrlf = input
+  safecrlf = false
+  editor = vim
+  excludesfile = ~/.gitignore_global
+  attributesfile = ~/.gitattributes
+  pager = "{ [ $COLUMNS -lt 160 ] && delta || delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}; }"
+[alias]
+  gr = grep --break --heading --line-number
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  resign = "!re() { git rebase --exec 'git commit --amend --no-edit -n -S' -i $1; }; re"
+[diff]
+  colorMoved = default
+	tool = juxta
+[diff "sqlite3"]
+  binary = true
+  textconv = "echo .dump | sqlite3"
+[difftool]
+	prompt = false
+[merge]
+  keepBackup = false
+	tool = juxta
+  conflictstyle = zdiff3
+[mergetool]
+	keepBackup = false
+[mergetool "juxta"]
+  cmd = juxta _mergetool --base \"${BASE:-/dev/null}\" --local \"$LOCAL\" --remote \"$REMOTE\" --merged \"${MERGED:-/dev/null}\"
+  trustExitCode = true
+[difftool "juxta"]
+  cmd = juxta _difftool --local \"$LOCAL\" --remote \"$REMOTE\" --merged \"$MERGED\"
+  trustExitCode = true
+[mergetool "smerge"]
+  cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+  trustExitCode = true
+[color]
+  ui = true
+[push]
+  default = simple
+  autoSetupRemote = true
+[help]
+  autocorrect = 1Í
+[grep]
+  extendRegexp = true
+  lineNumber = true
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[pull]
+  rebase = true
+[fetch]
+  prune = true
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+[delta]
+  features = line-numbers decorations
+  navigate = true
+  syntax-theme = Dracula
+  plus-style = syntax "#003800"
+  minus-style = syntax "#3f0001"
+  whitespace-error-style = 22 reverse
+  true-color = auto
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
+[delta "line-numbers"]
+  line-numbers-left-style = cyan
+  line-numbers-right-style = cyan
+  line-numbers-minus-style = 124
+  line-numbers-plus-style = 28
+[init]
+  defaultBranch = main
+[commit]
+	gpgsign = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/

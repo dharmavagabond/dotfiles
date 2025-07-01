@@ -1,0 +1,133 @@
+return {
+  {
+    "folke/trouble.nvim",
+    opts = {
+      modes = {
+        symbols = {
+          focus = true,
+        },
+      },
+    },
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    enabled = false,
+  },
+  {
+    "stevearc/oil.nvim",
+    lazy = false,
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    keys = {
+      {
+        "<leader>fe",
+        "<cmd>Oil --float<CR>",
+        desc = "File Explorer",
+      },
+    },
+    opts = {
+      delete_to_trash = true,
+      view_options = {
+        show_hidden = true,
+      },
+      float = {
+        padding = 5,
+      },
+    },
+  },
+  {
+    "kevinhwang91/nvim-ufo",
+    event = "VeryLazy",
+    dependencies = { "kevinhwang91/promise-async" },
+    keys = {
+      {
+        "zR",
+        mode = { "n" },
+        function()
+          require("ufo").openAllFolds()
+        end,
+        desc = "Opens all folds",
+      },
+      {
+        "zM",
+        mode = { "n" },
+        function()
+          require("ufo").closeAllFolds()
+        end,
+        desc = "Closes all folds",
+      },
+    },
+    opts = {
+      provider_selector = function()
+        return { "treesitter", "indent" }
+      end,
+    },
+  },
+  {
+    "mg979/vim-visual-multi",
+    event = "VeryLazy",
+    branch = "master",
+  },
+  {
+    "folke/twilight.nvim",
+    event = "CmdlineEnter",
+  },
+  {
+    "sunjon/shade.nvim",
+    event = "VeryLazy",
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      current_line_blame = true,
+      current_line_blame_opts = {
+        delay = 500,
+      },
+      current_line_blame_formatter = "<abbrev_sha> | <committer> (<author_time:%R>) · <summary>",
+    },
+  },
+  {
+    "gorbit99/codewindow.nvim",
+    event = "VeryLazy",
+    opts = {
+      auto_enable = true,
+      minimap_width = 15,
+      screen_bounds = "background",
+      window_border = "",
+    },
+    config = function(_, opts)
+      local codewindow = require("codewindow")
+      codewindow.setup(opts)
+      codewindow.apply_default_keybinds()
+    end,
+  },
+  {
+    "folke/snacks.nvim",
+    keys = {
+      {
+        "<leader>ff",
+        function()
+          Snacks.picker.files({ hidden = true, follow = true })
+        end,
+        desc = "Find Files",
+      },
+      {
+        "<leader>fc",
+        function()
+          Snacks.picker.files({
+            cwd = vim.fn.stdpath("config"),
+            hidden = true,
+            follow = true,
+          })
+        end,
+        desc = "Find Config File",
+      },
+      {
+        "<leader>z",
+        function()
+          Snacks.zen()
+        end,
+        desc = "Toggle Zen Mode",
+      },
+    },
+  },
+}

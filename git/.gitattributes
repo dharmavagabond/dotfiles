@@ -1,0 +1,25 @@
+# Auto detect text files and perform LF normalization
+*        text=auto
+
+*.cs     text diff=csharp
+*.java   text diff=java
+*.html   text diff=html
+
+*.css    text
+*.js     text
+*.sql    text
+*.c      text
+*.h      text
+
+*.sln    text eol=crlf
+
+*.csproj text merge=union
+*.sln    text merge=union eol=crlf
+
+*.docx   diff=astextplain
+*.DOCX   diff=astextplain
+*.sqlite diff=sqlite3
+
+*.png    binary
+*.jepg   binary
+*.sdf    binary

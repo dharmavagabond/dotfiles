@@ -1,0 +1,4 @@
+[[mgr.append_keymap]]
+on = "<S-a>"
+run = 'shell -- open -a Dropshelf "$@"'
+desc = "Add to Dropshelf"

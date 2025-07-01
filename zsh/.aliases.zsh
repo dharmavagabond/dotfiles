@@ -1,0 +1,6 @@
+alias hist="git hist"
+alias vim="nvim"
+alias vi="nvim"
+alias l="eza -hal"
+alias gdt="git difftool"
+alias pinentry="pinentry-mac"
