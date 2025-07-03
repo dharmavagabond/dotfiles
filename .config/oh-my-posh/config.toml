@@ -1,0 +1,81 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[palette]
+green = '#a6e3a1'
+red = '#f38ba8'
+mauve = '#cba6f7'
+sapphire = '#209fb5'
+lavender = '#b4befe'
+
+[upgrade]
+source = 'cdn'
+interval = '168h'
+auto = true
+notice = false
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+type = 'path'
+style = 'plain'
+background = 'transparent'
+foreground = 'p:lavender'
+template = '{{ .Path }}'
+
+[blocks.segments.properties]
+style = 'full'
+
+[[blocks.segments]]
+type = 'git'
+style = 'plain'
+foreground = 'p:lavander'
+background = 'transparent'
+template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}* {{end}}<p:sapphire>{{if gt .Behind 0}} ⇣{{end}}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
+
+[blocks.segments.properties]
+fetch_status = true
+branch_icon = "\ue725 "
+cherry_pick_icon = "\ue29b "
+commit_icon = "\uf417 "
+merge_icon = "\ue727 "
+no_icon = "\uf0c3 "
+rebase_icon = "\ue728 "
+revert_icon = "\uf0e2 "
+tag_icon = "\uf412 "
+
+[[blocks.segments]]
+type = 'executiontime'
+style = 'plain'
+foreground = 'p:yellow'
+background = 'transparent'
+template = ' {{ div .Ms 1000 }}s'
+
+[blocks.segments.properties]
+threshold = 5000
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+type = 'text'
+style = 'plain'
+background = 'transparent'
+foreground_templates = ["{{if gt .Code 0}}p:red{{else}}p:mauve{{end}}"]
+template = "\uf105"
+
+[transient_prompt]
+background = 'transparent'
+foreground_templates = ["{{if gt .Code 0}}p:red{{else}}p:mauve{{end}}"]
+template = "\uf105 "
+
+[secondary_prompt]
+foreground = 'p:mauve'
+background = 'transparent'
+template = "\uf105\uf105  "
