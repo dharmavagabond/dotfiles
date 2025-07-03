@@ -35,7 +35,7 @@ type = 'git'
 style = 'plain'
 foreground = 'p:lavander'
 background = 'transparent'
-template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}* {{end}}<p:sapphire>{{if gt .Behind 0}} ⇣{{end}}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
+template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}<p:sapphire> {{if gt .Behind 0}}⇣{{end}}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
 
 [blocks.segments.properties]
 fetch_status = true
