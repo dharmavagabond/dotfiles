@@ -137,8 +137,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # Carapace
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
 
-# Cargo
-export PATH=".cargo/bin:$PATH"
-
 # Posting
 export POSTING_PAGER_JSON=fx
+
+# Stow
+export STOW_DIR="$HOME/.dotfiles"
