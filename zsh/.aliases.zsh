@@ -1,5 +1,6 @@
 alias hist="git hist"
 alias vim="nvim"
+alias rm="rip"
 alias vi="nvim"
 alias l="eza -hal"
 alias gdt="git difftool"

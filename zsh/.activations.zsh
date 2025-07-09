@@ -25,6 +25,10 @@ source <(fzf --zsh)
 
 # Atuin
 eval "$(atuin init zsh)"
+export ZSH_AUTOSUGGEST_STRATEGY=(atuin history completion)
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# Zellij
+eval "$(zellij setup --generate-auto-start zsh)"

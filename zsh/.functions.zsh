@@ -36,8 +36,9 @@ function update(){
   brew update && brewu && brewc -s;
   mise upgrade;
   go-global-update;
+  mas upgrade;
   bun update -g;
-  noti -t "Actualizar brew, mise, go y bun";
+  noti -t "Actualizar brew, mise, go, Mac Apps y bun";
 }
 
 function fzf-preview(){
@@ -49,8 +50,7 @@ function zel() {
   NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -l)
 
   if [ "${NO_SESSIONS}" -ge 2 ]; then
-    zellij attach \
-    "$(echo "${ZJ_SESSIONS}" | sk)"
+    echo "${ZJ_SESSIONS}" | fzf --bind 'enter:become(zellij attach {})'
   else
     zellij attach -c
   fi
@@ -70,10 +70,10 @@ function y() {
 }
 
 function reload() {
- . $HOME/.aliases.zsh;
- . $HOME/.functions.zsh
+  source $HOME/.aliases.zsh;
+  source $HOME/.functions.zsh
 }
 
 function aero() {
-  aerospace list-windows --all | fzf --bind 'enter:become(zsh -c "aerospace focus --window-id {1}")+abort'
+  aerospace list-windows --all | fzf --bind 'enter:become(aerospace focus --window-id {1})'
 }

@@ -90,7 +90,7 @@ export PATH=$HOME/bin:$PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$BUN_INSTALL/bin:$PATH
-export PATH=".cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.lmstudio/bin"
 
 export VISUAL="nvim"
@@ -117,13 +117,12 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
 
 # Zellij
 export ZELLIJ_AUTO_EXIT=true
-export ZELLIJ_AUTO_ATTACH=true
 export ZELLIJ_LOCK=("vim" "nvim")
 
 # Mise
 export MISE_NPM_BUN=true
 
-# Added by LM Studio CLI (lms)
+# LM Studio
 export OPENAI_API_KEY=lm-studio
 
 # ZSH help

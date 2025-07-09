@@ -1,5 +1,3 @@
-fastfetch
-
 # Executes commands at the start of an interactive session.
 #
 # Authors:
@@ -16,4 +14,7 @@ source $HOME/.aliases.zsh
 source $HOME/.functions.zsh
 source $HOME/.activations.zsh
 
+fastfetch
+
+# Oh my posh
 eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/oh-my-posh/config.toml)"
