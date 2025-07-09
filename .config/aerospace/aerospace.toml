@@ -93,10 +93,6 @@ if.app-id = 'com.apple.FontBook'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'com.apple.Preview'
-run = 'layout floating'
-
-[[on-window-detected]]
 if.app-id = 'com.apple.QuickTimePlayerX'
 run = 'layout floating'
 
@@ -137,6 +133,14 @@ run = 'layout floating'
 if.app-name-regex-substring = 'qlmark'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'uk.co.canimaansoftware.ClamXAV'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Image(Optim|Alpha)'
+run = 'layout floating'
+
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -157,6 +161,9 @@ outer.left = 10
 outer.bottom = 10
 outer.top = 40
 outer.right = 10
+
+[workspace-to-monitor-force-assignment]
+1 = 1
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
