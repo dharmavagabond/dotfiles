@@ -103,5 +103,8 @@ return {
       })
     end,
   },
-  "m-demare/hlargs.nvim",
+  {
+    "m-demare/hlargs.nvim",
+    event = "VeryLazy",
+  },
 }

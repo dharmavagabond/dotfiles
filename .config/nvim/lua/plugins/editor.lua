@@ -16,7 +16,7 @@ return {
   {
     "stevearc/oil.nvim",
     lazy = false,
-    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    dependencies = "echasnovski/mini.icons",
     keys = {
       {
         "<leader>fe",
@@ -30,14 +30,14 @@ return {
         show_hidden = true,
       },
       float = {
-        padding = 5,
+        padding = 2,
       },
     },
   },
   {
     "kevinhwang91/nvim-ufo",
     event = "VeryLazy",
-    dependencies = { "kevinhwang91/promise-async" },
+    dependencies = "kevinhwang91/promise-async",
     keys = {
       {
         "zR",
@@ -70,10 +70,6 @@ return {
   {
     "folke/twilight.nvim",
     event = "CmdlineEnter",
-  },
-  {
-    "sunjon/shade.nvim",
-    event = "VeryLazy",
   },
   {
     "lewis6991/gitsigns.nvim",
@@ -129,5 +125,9 @@ return {
         desc = "Toggle Zen Mode",
       },
     },
+  },
+  {
+    "cpea2506/relative-toggle.nvim",
+    event = "InsertEnter",
   },
 }

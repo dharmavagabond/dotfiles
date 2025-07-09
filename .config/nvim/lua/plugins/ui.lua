@@ -1,15 +1,5 @@
 return {
   {
-    "cpea2506/relative-toggle.nvim",
-    event = "InsertEnter",
-  },
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      background_colour = "#000000",
-    },
-  },
-  {
     "freddiehaddad/feline.nvim",
     event = "VeryLazy",
     opts = function()
@@ -32,16 +22,26 @@ return {
     "akinsho/bufferline.nvim",
     after = "catppuccin",
     version = "*",
-    dependencies = { { "echasnovski/mini.icons", opts = {} } },
-    opts = {
-      highlights = require("catppuccin.groups.integrations.bufferline").get(),
-    },
+    opts = function(_, opts)
+      local bufferline = require("catppuccin.groups.integrations.bufferline")
+      local mocha = require("catppuccin.palettes").get_palette("mocha")
+      opts.highlights = bufferline.get({
+        custom = {
+          mocha = {
+            indicator_selected = { fg = mocha.sapphire },
+          },
+        },
+      })
+    end,
   },
   {
     "brenoprata10/nvim-highlight-colors",
     event = "VeryLazy",
     opts = {
-      render = "first_column",
+      render = "virtual",
+      virtual_symbol = "",
+      virtual_symbol_position = "eol",
+      virtual_symbol_suffix = "",
       enable_tailwind = true,
     },
   },
@@ -49,10 +49,7 @@ return {
     "utilyre/barbecue.nvim",
     name = "barbecue",
     version = "*",
-    dependencies = {
-      "SmiteshP/nvim-navic",
-      { "echasnovski/mini.icons", opts = {} },
-    },
+    dependencies = "SmiteshP/nvim-navic",
     event = "VeryLazy",
     opts = {
       theme = "catppuccin",

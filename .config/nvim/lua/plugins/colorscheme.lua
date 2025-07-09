@@ -4,8 +4,15 @@ return {
     priority = 1000,
     name = "catppuccin",
     opts = {
-      flavour = "macchiato",
+      flavour = "mocha",
       transparent_background = true,
+      highlight_overrides = {
+        mocha = function(c)
+          return {
+            CursorLine = { bg = c.none },
+          }
+        end,
+      },
       integrations = {
         avante = true,
         cmp = true,
@@ -21,7 +28,6 @@ return {
         noice = true,
         notify = true,
         semantic_tokens = true,
-        snacks = true,
         treesitter = true,
         treesitter_context = true,
         ufo = true,
@@ -52,6 +58,10 @@ return {
         navic = {
           enabled = true,
           custom_bg = "NONE",
+        },
+        snacks = {
+          enabled = true,
+          indent_scope_color = "lavender",
         },
       },
     },

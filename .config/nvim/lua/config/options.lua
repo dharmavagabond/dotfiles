@@ -6,21 +6,20 @@ local opt = vim.opt
 local o = vim.o
 
 vim.filetype.add({
-	filename = {
-		[".sqlfluff"] = "toml",
-	},
+  filename = {
+    [".sqlfluff"] = "toml",
+  },
 })
 
 opt.number = false
 opt.relativenumber = false
 opt.listchars:append({
-	-- eol = '↲',
-	space = " ",
-	tab = "→\\ ",
-	trail = "_",
-	nbsp = "␣",
-	extends = "›",
-	precedes = "‹",
+  space = " ",
+  tab = "→\\ ",
+  trail = "_",
+  nbsp = "␣",
+  extends = "›",
+  precedes = "‹",
 })
 opt.scrolloff = 0
 

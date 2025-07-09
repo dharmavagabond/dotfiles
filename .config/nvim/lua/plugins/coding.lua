@@ -2,18 +2,14 @@ return {
   {
     "ray-x/go.nvim",
     ft = { "go", "gomod" },
-    build = ':lua require("go.install").update_all_sync()',
     branch = "master",
     dependencies = {
       "ray-x/guihua.lua",
     },
     opts = {
-      luasnip = true,
-      lsp_cfg = false,
-      lsp_gofumpt = true,
       run_in_floaterm = true,
       tag_transform = "snakecase",
-      test_runner = "richgo",
+      test_runner = "gotestsum",
       trouble = true,
     },
   },
@@ -88,8 +84,16 @@ return {
     },
   },
   {
+    "jay-babu/mason-nvim-dap.nvim",
+    dependencies = "mason.nvim",
+    cmd = { "DapInstall", "DapUninstall" },
+    opt = {
+      automatic_installation = true,
+      ensure_installed = { "delve" },
+    },
+  },
+  {
     "rcarriga/nvim-dap-ui",
-    ft = "go",
     dependencies = {
       "mfussenegger/nvim-dap",
       "nvim-neotest/nvim-nio",
@@ -98,21 +102,13 @@ return {
   },
   {
     "nvim-neotest/neotest",
-    event = "LazyFile",
+    event = "VeryLazy",
     dependencies = {
       "nvim-neotest/nvim-nio",
       "antoinemadec/FixCursorHold.nvim",
     },
     opts = {
       adapters = {
-        -- ["neotest-bun"] = {
-        -- 	filter_dir = function(name)
-        -- 		return name ~= "node_modules"
-        -- 	end,
-        -- 	is_test_file = function(file_path)
-        -- 		return string.match(file_path, "test")
-        -- 	end,
-        -- },
         ["neotest-vitest"] = {
           filter_dir = function(name)
             return name ~= "node_modules"
@@ -124,6 +120,12 @@ return {
       },
     },
   },
-  { "marilari88/neotest-vitest" },
-  -- { "arthur944/neotest-bun" },
+  {
+    "marilari88/neotest-vitest",
+    event = "VeryLazy",
+  },
+  {
+    "mrcjkb/neotest-haskell",
+    event = "VeryLazy",
+  },
 }

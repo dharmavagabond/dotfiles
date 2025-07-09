@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    event = "VeryLazy",
     opts = {
       servers = {
         yamlls = {
@@ -36,11 +37,15 @@ return {
   },
   {
     "kosayoda/nvim-lightbulb",
-    event = "LazyFile",
+    event = "VeryLazy",
     config = function()
       require("nvim-lightbulb").setup({
         autocmd = { enabled = true },
       })
     end,
+  },
+  {
+    "mason-org/mason-lspconfig.nvim",
+    event = "VeryLazy",
   },
 }
