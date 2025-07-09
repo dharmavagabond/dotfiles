@@ -5,6 +5,7 @@ final_space = true
 [palette]
 green = '#a6e3a1'
 red = '#f38ba8'
+yellow = '#f9e2af'
 mauve = '#cba6f7'
 sapphire = '#209fb5'
 lavender = '#b4befe'
