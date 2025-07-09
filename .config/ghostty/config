@@ -16,15 +16,15 @@ font-feature = cv07
 
 keybind = global:super+t=ignore
 
+macos-titlebar-style = hidden
+
 macos-titlebar-proxy-icon = hidden
 
-theme = catppuccin-macchiato
-
-title = " "
+theme = light:catppuccin-macchiato, dark:catppuccin-mocha
 
 quit-after-last-window-closed = true
 
-window-padding-x = 15,0
-window-padding-y = 15,0
+window-padding-x = 15,10
+window-padding-y = 8,0
 window-width = 115
 window-height = 40
