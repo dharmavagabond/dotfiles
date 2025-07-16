@@ -13,6 +13,7 @@ font-feature = cv01
 font-feature = cv02
 font-feature = cv04
 font-feature = cv07
+font-size = 14
 
 keybind = global:super+t=ignore
 
