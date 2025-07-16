@@ -57,6 +57,7 @@ minikube = "latest"
 restic = "latest"
 act = "latest"
 age = "latest"
+task = "latest"
 
 [settings]
 experimental = true
