@@ -1,7 +1,7 @@
 adjust-cell-height = 90%
 
 background-opacity = 0.8
-background-blur-radius = 30
+background-blur-radius = 35
 
 font-family = CommitMono Nerd Font
 font-feature = ss01
