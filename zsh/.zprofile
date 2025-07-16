@@ -84,12 +84,12 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export GOPATH="$XDG_DATA_HOME/go"
-export BUN_INSTALL="$XDG_DATA_HOME/bun"
+export BUN_INSTALL="$HOME/.bun"
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH=$PATH:$GOPATH/bin
-export PATH=$BUN_INSTALL/bin:$PATH
+export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.lmstudio/bin"
 
