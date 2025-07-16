@@ -30,10 +30,6 @@ zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-  'archive' \
-  'environment' \
-  'editor' \
-  'history' \
   'directory' \
   'docker' \
   'gnu-utility' \
@@ -44,8 +40,6 @@ zstyle ':prezto:load' pmodule \
   'fzf-tab' \
   'autosuggestions' \
   'homebrew' \
-  'gpg' \
-  'ssh' \
   'command-not-found'
 
 #
