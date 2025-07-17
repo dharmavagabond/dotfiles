@@ -25,7 +25,7 @@ return {
   },
   {
     "drybalka/tree-climber.nvim",
-    event = "LazyFile",
+    event = "VeryLazy",
     keys = {
       {
         "ah",
@@ -106,5 +106,12 @@ return {
   {
     "m-demare/hlargs.nvim",
     event = "VeryLazy",
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "VeryLazy",
+    opts = {
+      enable = true,
+    },
   },
 }
