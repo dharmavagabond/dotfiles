@@ -69,6 +69,7 @@ return {
   },
   {
     "folke/twilight.nvim",
+    enabled = false,
     event = "CmdlineEnter",
   },
   {
@@ -129,5 +130,11 @@ return {
   {
     "cpea2506/relative-toggle.nvim",
     event = "InsertEnter",
+  },
+  {
+    "mbbill/undotree",
+    keys = {
+      { "<leader><F5>", "<cmd>UndotreeToggle<cr>", desc = "Toggles Undotree sidebar" },
+    },
   },
 }

@@ -1,0 +1,109 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: Inter;
+  font-size: 0.8rem;
+}
+
+window#waybar {
+  background: rgba(0,0,0,0);
+  color: #cdd6f4;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-radius: 10px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #11111b;
+    transition: 0.3s;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: #313244;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: #a6adc8;
+}
+
+#workspaces button:hover {
+    background: #11111b;
+    color: #cdd6f4;
+    border-radius: 20px;
+}
+
+#window {
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#tray,
+#cpu,
+#custom-gpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#clock,
+#workspaces,
+#custom-expand-icon,
+#custom-weather,
+#memory,
+#custom-logo {
+  background: #1e1e2e;
+  opacity: 0.9;
+  padding: 0px 10px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+#custom-logo,
+#custom-expand-icon {
+  border-radius: 20px 0px 0px 20px;
+}
+
+#workspaces,
+#custom-weather {
+  border-radius: 0px 20px 20px 0px;
+}
+
+#custom-logo {
+  background-color: #cdd7f4;
+  color:  #1e1e2e;
+  padding-left: 2px;
+  margin-right: -5px;
+  margin-top: 5px;
+}
+
+#bluetooth,
+#network,
+#pulseaudio,
+#cpu,
+#custom-gpu,
+#custom-weather,
+#memory {
+  color: #89b4fa;
+}
+
+#clock {
+  color: white;
+  font-size: 0.75rem;
+  transition: 0.25s;
+}
+
+#custom-weather {
+  padding-left: 0;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}

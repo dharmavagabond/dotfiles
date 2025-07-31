@@ -3,12 +3,11 @@ version = 3
 final_space = true
 
 [palette]
-green = '#a6e3a1'
-red = '#f38ba8'
-yellow = '#f9e2af'
-mauve = '#cba6f7'
-sapphire = '#209fb5'
-lavender = '#b4befe'
+cat_sapphire = '#209fb5'
+tokyo_blue = '#7aa2f7'
+tokyo_magenta = '#bb9af7'
+tokyo_red = '#f7768e'
+tokyo_yellow = '#e0af68'
 
 [upgrade]
 source = 'cdn'
@@ -25,7 +24,7 @@ newline = true
 type = 'path'
 style = 'plain'
 background = 'transparent'
-foreground = 'p:lavender'
+foreground = 'p:tokyo_blue'
 template = '{{ .Path }}'
 
 [blocks.segments.properties]
@@ -36,7 +35,7 @@ type = 'git'
 style = 'plain'
 foreground = 'p:lavander'
 background = 'transparent'
-template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}<p:sapphire> {{if gt .Behind 0}}⇣{{end}}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
+template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{end}}<p:cat_sapphire> {{if gt .Behind 0}}⇣{{end}}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
 
 [blocks.segments.properties]
 fetch_status = true
@@ -52,7 +51,7 @@ tag_icon = "\uf412 "
 [[blocks.segments]]
 type = 'executiontime'
 style = 'plain'
-foreground = 'p:yellow'
+foreground = 'p:tokyo_yellow'
 background = 'transparent'
 template = ' {{ div .Ms 1000 }}s'
 
@@ -68,15 +67,19 @@ newline = true
 type = 'text'
 style = 'plain'
 background = 'transparent'
-foreground_templates = ["{{if gt .Code 0}}p:red{{else}}p:mauve{{end}}"]
+foreground_templates = [
+  "{{if gt .Code 0}}p:tokyo_red{{else}}p:tokyo_magenta{{end}}",
+]
 template = "\uf105"
 
 [transient_prompt]
 background = 'transparent'
-foreground_templates = ["{{if gt .Code 0}}p:red{{else}}p:mauve{{end}}"]
+foreground_templates = [
+  "{{if gt .Code 0}}p:tokyo_red{{else}}p:tokyo_magenta{{end}}",
+]
 template = "\uf105 "
 
 [secondary_prompt]
-foreground = 'p:mauve'
+foreground = 'p:tokyo_magenta'
 background = 'transparent'
 template = "\uf105\uf105  "

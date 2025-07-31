@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "kanagawa",
     },
   },
   {
@@ -19,5 +19,10 @@ return {
   {
     "echasnovski/mini.ai",
     enabled = false,
+  },
+  {
+    "denialofsandwich/sudo.nvim",
+    dependencies = "MunifTanjim/nui.nvim",
+    config = true,
   },
 }

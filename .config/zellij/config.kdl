@@ -269,7 +269,7 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "catppuccin-mocha"
+theme "tokyo-night-dark"
 
 // Choose the base input mode of zellij.
 // Default: normal
@@ -293,12 +293,12 @@ default_layout "dharma-top"
 // The folder in which Zellij will look for layouts
 // (Requires restart)
 //
-layout_dir "/Users/Dharma/.config/zellij/layouts"
+// layout_dir
 
 // The folder in which Zellij will look for themes
 // (Requires restart)
 //
-theme_dir "/Users/Dharma/.config/zellij/themes"
+// theme_dir
 
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could

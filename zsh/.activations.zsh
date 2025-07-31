@@ -1,16 +1,11 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Git extras
+source /usr/share/doc/git-extras/git-extras-completion.zsh
 
 # Forgit
 source $XDG_DATA_HOME/zsh/forgit/forgit.plugin.zsh
 
 # F-Sy-H
 source $XDG_DATA_HOME/zsh/f-sy-h/F-Sy-H.plugin.zsh
-
-# Homebrew Command Not Found
-HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
-if [ -f "$HB_CNF_HANDLER" ]; then
-  source "$HB_CNF_HANDLER";
-fi
 
 # Mise
 eval "$(mise activate zsh)"
@@ -24,11 +19,11 @@ source <(carapace _carapace)
 source <(fzf --zsh)
 
 # Atuin
-eval "$(atuin init zsh)"
 export ZSH_AUTOSUGGEST_STRATEGY=(atuin history completion)
+eval "$(atuin init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
 
 # Zellij
-eval "$(zellij setup --generate-auto-start zsh)"
+# eval "$(zellij setup --generate-auto-start zsh)"

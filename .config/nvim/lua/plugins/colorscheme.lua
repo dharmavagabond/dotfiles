@@ -1,11 +1,15 @@
 return {
   {
+    "rebelot/kanagawa.nvim",
+  },
+  {
     "catppuccin/nvim",
+    enabled = false,
     priority = 1000,
     name = "catppuccin",
     opts = {
       flavour = "mocha",
-      transparent_background = true,
+      transparent_background = false,
       highlight_overrides = {
         mocha = function(c)
           return {

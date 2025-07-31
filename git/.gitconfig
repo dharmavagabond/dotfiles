@@ -23,19 +23,9 @@
 	prompt = false
 [merge]
   keepBackup = false
-	tool = juxta
   conflictstyle = zdiff3
 [mergetool]
 	keepBackup = false
-[mergetool "juxta"]
-  cmd = juxta _mergetool --base \"${BASE:-/dev/null}\" --local \"$LOCAL\" --remote \"$REMOTE\" --merged \"${MERGED:-/dev/null}\"
-  trustExitCode = true
-[difftool "juxta"]
-  cmd = juxta _difftool --local \"$LOCAL\" --remote \"$REMOTE\" --merged \"$MERGED\"
-  trustExitCode = true
-[mergetool "smerge"]
-  cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
-  trustExitCode = true
 [color]
   ui = true
 [push]
@@ -84,4 +74,6 @@
 [commit]
 	gpgsign = true
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret

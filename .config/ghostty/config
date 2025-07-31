@@ -1,7 +1,7 @@
 adjust-cell-height = 90%
 
 background-opacity = 0.8
-background-blur-radius = 35
+background-blur-radius = true
 
 font-family = CommitMono Nerd Font
 font-feature = ss01
@@ -13,19 +13,10 @@ font-feature = cv01
 font-feature = cv02
 font-feature = cv04
 font-feature = cv07
-font-size = 14
+font-size = 10
 
 keybind = global:super+t=ignore
 
-macos-titlebar-style = hidden
-
-macos-titlebar-proxy-icon = hidden
-
-theme = light:catppuccin-macchiato, dark:catppuccin-mocha
+theme = tokyonight
 
 quit-after-last-window-closed = true
-
-window-padding-x = 15,10
-window-padding-y = 8,0
-window-width = 115
-window-height = 40
