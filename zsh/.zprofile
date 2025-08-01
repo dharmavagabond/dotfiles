@@ -113,6 +113,7 @@ export FX_THEME=2
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
 
 # Zellij
+export ZELLIJ_AUTO_EXIT=true
 export ZELLIJ_LOCK=("vim" "nvim")
 
 # Mise

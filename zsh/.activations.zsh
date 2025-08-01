@@ -26,4 +26,4 @@ eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"
 
 # Zellij
-# eval "$(zellij setup --generate-auto-start zsh)"
+eval "$(zellij setup --generate-auto-start zsh)"
