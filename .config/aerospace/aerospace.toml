@@ -24,7 +24,7 @@ exec-on-workspace-change = [
 ]
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -170,8 +170,8 @@ outer.right = 10
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
-alt-b = 'exec-and-forget open -n /Applications/Ghostty.app --args -e "btop"'
-alt-g = 'exec-and-forget open -n /Applications/Ghostty.app'
+alt-a = 'exec-and-forget open -n /Applications/Ghostty.app --args -e "btop"'
+alt-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 alt-m = 'exec-and-forget open /Applications/Proton\ Mail.app'
 alt-p = 'exec-and-forget open /Applications/Proton\ Pass.app'
 alt-t = 'exec-and-forget open /Applications/Tidal.app'

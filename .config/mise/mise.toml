@@ -58,6 +58,7 @@ restic = "latest"
 act = "latest"
 age = "latest"
 task = "latest"
+cargo-binstall = "latest"
 
 [settings]
 experimental = true

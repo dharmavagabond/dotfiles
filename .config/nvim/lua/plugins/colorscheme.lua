@@ -1,4 +1,5 @@
 return {
+  { "p00f/alabaster.nvim" },
   {
     "catppuccin/nvim",
     priority = 1000,
