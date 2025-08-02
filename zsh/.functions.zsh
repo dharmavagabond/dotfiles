@@ -1,22 +1,5 @@
-function merge-mp4-m4a() {
-  ffmpeg -i $1.mp4 -i $1.m4a -acodec copy -vcodec copy output.mp4
-}
-
-function git-addremove() {
-  git ls-files --deleted | xargs git rm
-  git add .
-}
-
-function thumbs() {
-  mkdir thumbs && parallel "djpeg -scale 1/$1 -ppm {} | pnmscale -pixels 50246 | cjpeg -optimize -progressive > thumbs/{}" ::: *.jpg
-}
-
 function mdir() {
   mkdir -p $1 && cd $1
-}
-
-function pman() {
-  ps=`mktemp -t manpageXXXX`.ps && man -t $@ > "$ps" && open "$ps"
 }
 
 function emptyfile() {
@@ -65,7 +48,7 @@ function reload() {
 }
 
 # Create a desktop launcher for a web app
-web2app() {
+function web2app() {
   if [ "$#" -ne 3 ]; then
     echo "Usage: web2app <AppName> <AppURL> <IconURL> (IconURL must be in PNG -- use https://dashboardicons.com)"
     return 1

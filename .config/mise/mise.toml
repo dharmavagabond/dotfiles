@@ -52,6 +52,10 @@ age = "latest"
 task = "latest"
 cargo-binstall = "latest"
 mitmproxy = "latest"
+"pipx:posting" = "latest"
+"pipx:pgcli" = "latest"
+"pipx:tldr" = "latest"
+shellcheck = "latest"
 
 [settings]
 experimental = true
