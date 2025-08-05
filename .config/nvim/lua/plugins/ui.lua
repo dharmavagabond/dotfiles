@@ -1,6 +1,13 @@
 return {
   {
     "nvim-lualine/lualine.nvim",
+    opts = {
+      options = {
+        theme = "rose-pine",
+        component_separators = "",
+        section_separators = { left = "", right = "" },
+      },
+    },
   },
   {
     "akinsho/bufferline.nvim",

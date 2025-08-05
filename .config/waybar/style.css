@@ -1,3 +1,5 @@
+@import "./themes/rose-pine.css";
+
 * {
   border: none;
   border-radius: 0;
@@ -6,65 +8,56 @@
   font-size: 0.8rem;
 }
 
-window#waybar {
+#waybar {
   background: rgba(0,0,0,0);
-  color: #cdd6f4;
 }
 
-tooltip {
-    background: #1e1e2e;
-    border-radius: 10px;
-    border-width: 1.5px;
-    border-style: solid;
-    border-color: #11111b;
-    transition: 0.3s;
+#workspaces {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 #workspaces button {
-    padding: 5px;
-    color: #313244;
-    margin-right: 5px;
-}
-
-#workspaces button.active {
-    color: #a6adc8;
+  padding: 5px;
+  color: @highlightMed;
 }
 
 #workspaces button:hover {
-    background: #11111b;
-    color: #cdd6f4;
-    border-radius: 20px;
+  color: @text;
+  border-radius: 50%;
 }
 
-#window {
-    border-radius: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
+#workspaces button.active {
+  color: @gold;
 }
 
-#tray,
-#cpu,
-#custom-gpu,
-#battery,
-#network,
 #bluetooth,
-#pulseaudio,
-#clock,
-#workspaces,
+#cpu,
 #custom-expand-icon,
+#custom-gpu,
+#custom-logo,
 #custom-weather,
 #memory,
-#custom-logo {
-  background: #1e1e2e;
-  opacity: 0.9;
-  padding: 0px 10px;
-  margin: 0;
-  margin-top: 5px;
+#network,
+#pulseaudio {
+  background: @base;
+  padding: 0 10px;
+}
+
+#bluetooth,
+#cpu,
+#custom-expand-icon,
+#custom-gpu,
+#custom-weather,
+#memory,
+#network,
+#pulseaudio {
+  color: @iris;
 }
 
 #custom-logo,
 #custom-expand-icon {
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px 0px 0px 20px
 }
 
 #workspaces,
@@ -73,27 +66,20 @@ tooltip {
 }
 
 #custom-logo {
-  background-color: #cdd7f4;
-  color:  #1e1e2e;
+  background-color: @text;
+  color:  @base;
   padding-left: 2px;
-  margin-right: -5px;
-  margin-top: 5px;
-}
-
-#bluetooth,
-#network,
-#pulseaudio,
-#cpu,
-#custom-gpu,
-#custom-weather,
-#memory {
-  color: #89b4fa;
+  padding-right: 4px;
 }
 
 #clock {
-  color: white;
+  color: @text;
   font-size: 0.75rem;
   transition: 0.25s;
+}
+
+#custom-expand-icon {
+  padding-right: 5px;
 }
 
 #custom-weather {
@@ -101,9 +87,18 @@ tooltip {
 }
 
 .modules-left {
-  margin-left: 8px;
+  padding-top: 5px;
+  padding-left: 8px;
 }
 
 .modules-right {
-  margin-right: 8px;
+  padding-top: 5px;
+}
+
+tooltip {
+  background: @base;
+  border: 1px solid @overlay;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: @text;
 }
