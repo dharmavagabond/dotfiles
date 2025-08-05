@@ -74,7 +74,7 @@
     "on-click": "ghostty --title=btop-w -e btop"
   },
   "clock": {
-    "format": "{:%a %d, %I:%M %p}",
+    "format": "{:%a %d %I:%M %p}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "timezone": "America/Mexico_City",
     "calendar": {
