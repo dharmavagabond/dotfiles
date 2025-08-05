@@ -1,11 +1,13 @@
 .config/mpv/watch_later
 .config/wtf/log.txt
+.config/bat/themes/*
 .config/mpv/scripts/*
 .config/mpv/shaders/*
 .config/yazi/flavors/*
 .config/zellij/plugins/*
 .config/zellij/themes/*
 
+!.config/bat/themes/.gitkeep
 !.config/mpv/scripts/.gitkeep
 !.config/mpv/shaders/.gitkeep
 !.config/yazi/flavors/.gitkeep
