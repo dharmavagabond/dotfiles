@@ -1,3 +1,5 @@
 alias vim="nvim"
 alias vi="nvim"
 alias l="eza -hal"
+alias tree="lstr -Ggps --icons"
+alias vimdiff="nvim -d -R"
