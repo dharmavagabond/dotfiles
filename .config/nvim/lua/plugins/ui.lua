@@ -11,7 +11,6 @@ return {
   },
   {
     "akinsho/bufferline.nvim",
-    after = "catppuccin",
     version = "*",
   },
   {
@@ -32,7 +31,7 @@ return {
     dependencies = "SmiteshP/nvim-navic",
     event = "VeryLazy",
     opts = {
-      theme = "catppuccin",
+      theme = "rose-pine",
     },
   },
 }
