@@ -30,11 +30,12 @@ zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-  'gnu-utility' \
+  'directory' \
   'utility' \
   'git' \
   'completion' \
   'rsync' \
+  'pacman' \
   'fzf-tab' \
   'autosuggestions'
 
