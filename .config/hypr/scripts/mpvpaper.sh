@@ -8,7 +8,7 @@ start_mpvpaper() {
     loop-playlist=inf \
     cache=no \
     reset-on-next-file=all \
-    shuffle" HDMI-A-1 ~/Videos/wallpapers
+    shuffle" DP-1 ~/Videos/wallpapers
 }
 
 kill_mpvpaper() {
