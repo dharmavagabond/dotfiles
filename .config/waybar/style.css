@@ -5,25 +5,11 @@
   border-radius: 0;
   min-height: 0;
   font-family: Inter;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 #waybar {
   background: rgba(0,0,0,0);
-}
-
-#workspaces button {
-  padding: 5px;
-  color: @highlightMed;
-}
-
-#workspaces button:hover {
-  color: @text;
-  border-radius: 50%;
-}
-
-#workspaces button.active {
-  color: @gold;
 }
 
 #bluetooth,
@@ -41,6 +27,11 @@
   padding: 0 10px;
 }
 
+#custom-wireguard-manager {
+  padding-left: 10px;
+  background: @base;
+}
+
 #bluetooth,
 #cpu,
 #custom-expand-icon,
@@ -49,7 +40,7 @@
 #memory,
 #network,
 #pulseaudio {
-  color: @iris;
+  color: #907aa9; /* rose-pine-dawn @iris */
 }
 
 #tray {
@@ -57,26 +48,60 @@
   padding: 0 10px;
 }
 
+#privacy {
+  background: #faf4ed; /* rose-pine-dawn @base */
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  padding: 0 10px;
+  padding-bottom: 2px;
+  transition: 0.25s;
+}
+
+#privacy-item.screenshare {
+  color: #40a02b; /* catppuccin @green */
+}
+
+#privacy-item.audio-in {
+  color: #d7827e; /* rose-pine-dawn @rose */
+}
+
 #custom-logo,
 #custom-expand-icon {
-  border-radius: 20px 0px 0px 20px
+  border-radius: 3px 0px 0px 3px;
 }
 
 #workspaces,
 #custom-weather {
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+#workspaces {
+  padding-right: 2px;
+}
+
+#workspaces button {
+  padding: 2px;
+  color: @highlightMed;
+}
+
+#workspaces button:hover {
+  color: @text;
+  background: @base;
+}
+
+#workspaces button.active {
+  color: @gold;
 }
 
 #custom-logo {
-  background-color: @text;
+  background-color: #faf4ed; /* rose-pine-dawn @base */
   color:  @base;
-  padding-left: 2px;
-  padding-right: 4px;
+  padding-left: 6px;
+  padding-right: 10px;
 }
 
 #clock {
   color: @text;
-  font-size: 0.75rem;
   transition: 0.25s;
 }
 
@@ -104,4 +129,8 @@ tooltip {
   border-radius: 5px;
   transition: 0.3s;
   opacity: 0.9;
+}
+
+tooltip label {
+  color: @text;
 }

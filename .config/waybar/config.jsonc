@@ -9,6 +9,7 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
+    "privacy"
   ],
   "modules-right": [
     "group/tray-expander",
@@ -18,6 +19,7 @@
     "cpu",
     "custom/gpu",
     "memory",
+    "custom/wireguard-manager",
     "clock",
     "custom/weather"
   ],
@@ -46,7 +48,7 @@
     }
   },
   "custom/logo": {
-    "format": "  ",
+    "format": "",
     "tooltip": false
   },
   "custom/gpu": {
@@ -64,6 +66,17 @@
     "format": "{text}",
     "tooltip": "{tooltip}"
    },
+  "custom/wireguard-manager": {
+    "interval": 5,
+    "exec": "exec ~/.config/waybar/wireguard-manager/wireguard-manager.sh -s",
+    "format": "{icon}",
+    "format-icons": {
+      "connected": "<span color=\"#9ccfd8\">VPN: 🔒</span>",
+      "disconnected": "<span color=\"#eb6f92\">VPN: 🔓</span>"
+    },
+    "on-click": "~/.config/waybar/wireguard-manager/wireguard-manager.sh -t",
+    "return-type": "json"
+  },
   "cpu": {
     "interval": 5,
     "format": "󰍛",
@@ -88,36 +101,42 @@
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
     "format" : "{icon}",
     "format-wifi" : "{icon}",
-    "format-ethernet" : "󰀂",
+    "format-ethernet" : "󰈀",
     "format-disconnected" : "󰖪",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
     "on-click": "ghostty --title=impala -e impala"
   },
-  "battery": {
-    "format": "{capacity}% {icon}",
-    "format-discharging": "{icon}",
-    "format-charging":    "{icon}",
-    "format-plugged":     "",
-    "format-icons": {
-      "charging": [
-        "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"
-      ],
-      "default": [
-        "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
-      ]
-    },
-    "format-full": "󰂅",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
-    "interval": 5,
-    "states": {
-      "warning": 20,
-      "critical": 10
-    }
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 12,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      }
+    ],
+    "ignore-monitor": true,
+    "ignore": [
+      {
+        "type": "audio-in",
+        "name": "cava"
+      },
+      {
+        "type": "screenshare",
+        "name": "obs"
+      }
+    ]
   },
   "bluetooth": {
     "format": "",
@@ -136,7 +155,13 @@
     "scroll-step": 5,
     "format-muted": "󰝟",
     "format-icons": {
-      "default": ["", "", ""]
+      "headphone": "󰋋",
+      "hands-free": "󰋎",
+      "headset": "󰋎",
+      "phone": "󰏲",
+      "portable": "󰄝",
+      "car": "󰄋",
+      "default": ["󰕿", "󰖀", "󰕾"]
     }
   },
   "group/tray-expander": {
