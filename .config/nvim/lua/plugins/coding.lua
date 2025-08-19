@@ -128,4 +128,13 @@ return {
     "mrcjkb/neotest-haskell",
     event = "VeryLazy",
   },
+  {
+    "sindrets/diffview.nvim",
+    event = "VeryLazy",
+  },
+  {
+    "akinsho/git-conflict.nvim",
+    version = "*",
+    config = true,
+  },
 }
