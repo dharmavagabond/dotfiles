@@ -62,7 +62,7 @@
     },
     {
       "type": "os",
-      "key": " OS",
+      "key": " OS",
       "keyColor": "yellow"
     },
     {
@@ -76,51 +76,51 @@
       "keyColor": "yellow"
     },
     {
+      "type": "terminal",
+      "key": "│ ├",
+      "keyColor": "yellow"
+    },
+    {
       "type": "shell",
       "key": "└ └",
       "keyColor": "yellow"
     },
     "break",
     {
-      "type": "command",
-      "key": "│ ├Ø",
-      "keyColor": "blue",
-      "text": "version=$(git -C ~/.local/share/omarchy describe --tags --abbrev=0 2>/dev/null); echo \"Omarchy $version\""
-    },
-    {
       "type": "de",
       "key": " DE",
-      "keyColor": "blue"
+      "keyColor": "magenta"
     },
     {
       "type": "wm",
-      "key": "│ ├",
-      "keyColor": "blue"
+      "key": "🗔 DE",
+      "keyColor": "magenta"
     },
     {
       "type": "wmtheme",
       "key": "│ ├󰉼",
-      "keyColor": "blue"
+      "keyColor": "magenta"
     },
     {
       "type": "icons",
       "key": "│ ├󰀻",
-      "keyColor": "blue"
+      "keyColor": "magenta"
     },
     {
       "type": "cursor",
       "key": "│ ├",
-      "keyColor": "blue"
+      "keyColor": "magenta"
     },
     {
       "type": "terminalfont",
       "key": "│ ├",
-      "keyColor": "blue"
+      "keyColor": "magenta"
     },
     {
-      "type": "terminal",
-      "key": "└ └",
-      "keyColor": "blue"
+      "type": "colors",
+      "key": "└ └",
+      "keyColor": "magenta",
+      "symbol": "circle"
     },
     {
       "type": "custom",
