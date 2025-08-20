@@ -4,7 +4,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: Inter;
+  font-family: Work Sans;
   font-size: 0.75rem;
 }
 
@@ -19,6 +19,7 @@
 #custom-gpu,
 #custom-logo,
 #custom-weather,
+#custom-wireguard-manager,
 #memory,
 #network,
 #pulseaudio,
@@ -27,9 +28,26 @@
   padding: 0 10px;
 }
 
+#custom-gpu {
+  font-size: 0.65rem;
+}
+
+#memory {
+  font-size: 0.65rem;
+}
+
 #custom-wireguard-manager {
-  padding-left: 10px;
+  font-size: 0.65rem;
+  padding-right: 5px;
   background: @base;
+}
+
+#custom-wireguard-manager.connected {
+  color: @pine;
+}
+
+#custom-wireguard-manager.disconnected {
+  color: #d7827e; /* rose-pine-dawn @rose */
 }
 
 #bluetooth,

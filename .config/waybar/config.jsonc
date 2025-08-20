@@ -53,7 +53,7 @@
   },
   "custom/gpu": {
     "interval": 5,
-    "format": "󰍛",
+    "format": "",
     "on-click": "ghostty --title=nvtop-w -e nvtop",
     "exec": "nvtop -s | jq --unbuffered --compact-output '.[0] | {tooltip: .mem_util}'",
     "return-type": "json",
@@ -71,8 +71,8 @@
     "exec": "exec ~/.config/waybar/wireguard-manager/wireguard-manager.sh -s",
     "format": "{icon}",
     "format-icons": {
-      "connected": "<span color=\"#9ccfd8\">VPN: 🔒</span>",
-      "disconnected": "<span color=\"#eb6f92\">VPN: 🔓</span>"
+      "connected": "",
+      "disconnected": ""
     },
     "on-click": "~/.config/waybar/wireguard-manager/wireguard-manager.sh -t",
     "return-type": "json"
