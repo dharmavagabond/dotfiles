@@ -19,7 +19,7 @@
 #custom-gpu,
 #custom-logo,
 #custom-weather,
-#custom-wireguard-manager,
+#custom-notification,
 #memory,
 #network,
 #pulseaudio,
@@ -37,8 +37,8 @@
 }
 
 #custom-wireguard-manager {
-  font-size: 0.65rem;
-  padding-right: 5px;
+  font-size: 0.7rem;
+  padding: 0 5px;
   background: @base;
 }
 
@@ -54,6 +54,7 @@
 #cpu,
 #custom-expand-icon,
 #custom-gpu,
+#custom-notification,
 #custom-weather,
 #memory,
 #network,
