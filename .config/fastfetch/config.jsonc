@@ -16,34 +16,34 @@
     },
     {
       "type": "host",
-      "key": " PC",
+      "key": " PC ",
       "keyColor": "green"
     },
     {
       "type": "cpu",
-      "key": "│ ├",
+      "key": "│ ├ ",
       "showPeCoreCount": true,
       "keyColor": "green"
     },
     {
       "type": "gpu",
-      "key": "│ ├",
+      "key": "│ ├ ",
       "detectionMethod": "pci",
       "keyColor": "green"
     },
     {
       "type": "display",
-      "key": "│ ├󱄄",
+      "key": "│ ├󱄄 ",
       "keyColor": "green"
     },
     {
       "type": "disk",
-      "key": "│ ├󰋊",
+      "key": "│ ├󰋊 ",
       "keyColor": "green"
     },
     {
       "type": "memory",
-      "key": "│ ├",
+      "key": "│ ├ ",
       "keyColor": "green"
     },
     {
@@ -62,63 +62,53 @@
     },
     {
       "type": "os",
-      "key": " OS",
+      "key": " OS ",
       "keyColor": "yellow"
     },
     {
       "type": "kernel",
-      "key": "│ ├",
+      "key": "│ ├ ",
       "keyColor": "yellow"
     },
     {
       "type": "packages",
-      "key": "│ ├󰏖",
+      "key": "│ ├󰏖 ",
       "keyColor": "yellow"
     },
     {
       "type": "terminal",
-      "key": "│ ├",
+      "key": "│ ├ ",
       "keyColor": "yellow"
     },
     {
       "type": "shell",
-      "key": "└ └",
+      "key": "└ └ ",
       "keyColor": "yellow"
     },
     "break",
     {
-      "type": "de",
-      "key": " DE",
-      "keyColor": "magenta"
-    },
-    {
       "type": "wm",
-      "key": "🗔 DE",
-      "keyColor": "magenta"
-    },
-    {
-      "type": "wmtheme",
-      "key": "│ ├󰉼",
+      "key": "🗔 DE ",
       "keyColor": "magenta"
     },
     {
       "type": "icons",
-      "key": "│ ├󰀻",
+      "key": "│ ├ ",
       "keyColor": "magenta"
     },
     {
       "type": "cursor",
-      "key": "│ ├",
+      "key": "│ ├ ",
       "keyColor": "magenta"
     },
     {
       "type": "terminalfont",
-      "key": "│ ├",
+      "key": "│ ├ ",
       "keyColor": "magenta"
     },
     {
       "type": "colors",
-      "key": "└ └",
+      "key": "└ └ ",
       "keyColor": "magenta",
       "symbol": "circle"
     },
