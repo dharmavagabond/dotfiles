@@ -24,7 +24,7 @@
 #network,
 #pulseaudio,
 #workspaces {
-  background: @base;
+  background: rgba(25, 23, 36, 0.9);
   padding: 0 10px;
 }
 
@@ -39,7 +39,8 @@
 #custom-wireguard-manager {
   font-size: 0.7rem;
   padding: 0 5px;
-  background: @base;
+  background: rgba(25, 23, 36, 0.9);
+
 }
 
 #custom-wireguard-manager.connected {
@@ -68,7 +69,7 @@
 }
 
 #privacy {
-  background: #faf4ed; /* rose-pine-dawn @base */
+  background: rgba(250, 244, 237, 0.9); /* rose-pine-dawn @base */
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
   padding: 0 10px;
@@ -113,7 +114,7 @@
 }
 
 #custom-logo {
-  background-color: #faf4ed; /* rose-pine-dawn @base */
+  background-color: rgba(250, 244, 237, 0.9); /* rose-pine-dawn @base */
   color:  @base;
   padding-left: 6px;
   padding-right: 10px;
@@ -143,11 +144,8 @@
 }
 
 tooltip {
-  background: @overlay;
+  background: rgba(38, 35, 58, 0.9);
   border: 1px solid @surface;
-  border-radius: 5px;
-  transition: 0.3s;
-  opacity: 0.9;
 }
 
 tooltip label {
