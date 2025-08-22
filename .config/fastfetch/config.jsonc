@@ -8,6 +8,9 @@
       "left": 2
     }
   },
+  "display": {
+    "separator": " "
+  },
   "modules": [
     "break",
     {
