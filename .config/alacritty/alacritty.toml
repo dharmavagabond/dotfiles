@@ -4,9 +4,6 @@ general.import = ["~/.config/alacritty/rose-pine.toml"]
 TERM = "xterm-256color"
 
 [font]
-normal = { family = "CommitMono Nerd Font", style = "Regular" }
-bold = { family = "CommitMono Nerd Font", style = "Bold" }
-italic = { family = "CommitMono Nerd Font", style = "Italic" }
 size = 10
 offset = { y = 15 }
 glyph_offset.y = 5
