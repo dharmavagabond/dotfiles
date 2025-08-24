@@ -55,7 +55,7 @@
   "custom/gpu": {
     "interval": 5,
     "format": "",
-    "on-click": "alacritty --title=nvtop-w -e nvtop",
+    "on-click": "kitty --title=nvtop-w -e nvtop",
     "exec": "nvtop -s | jq --unbuffered --compact-output '.[0] | {tooltip: .mem_util}'",
     "return-type": "json",
     "tooltip": "{tooltip}"
@@ -81,11 +81,11 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "alacritty --title=btop-w -e btop"
+    "on-click": "kitty --title=btop-w -e btop"
   },
   "memory": {
     "format": "",
-    "on-click": "alacritty --title=btop-w -e btop"
+    "on-click": "kitty --title=btop-w -e btop"
   },
   "clock": {
     "format": "{:%a %d %I:%M %p}",
@@ -109,7 +109,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "alacritty --title=impala -e impala"
+    "on-click": "kitty --title=impala -e impala"
   },
   "privacy": {
     "icon-spacing": 4,
@@ -144,12 +144,12 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "alacritty --title=bluetui -e bluetui"
+    "on-click": "kitty --title=bluetui -e bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
     "tooltip-format": "Playing at {volume}%",
-    "on-click": "alacritty --title=wiremix -e wiremix",
+    "on-click": "kitty --title=wiremix -e wiremix",
     "on-click-right": "pamixer -t",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
