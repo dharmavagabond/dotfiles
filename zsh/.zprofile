@@ -87,8 +87,8 @@ export PATH=$HOME/bin:$PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cache/.bun/bin:$PATH"
 export PATH="$PATH:$HOME/.lmstudio/bin"
-export PATH="$PATH:$XDG_DATA_HOME/omarchy/bin"
 
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
