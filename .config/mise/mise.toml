@@ -55,6 +55,7 @@ mitmproxy = "latest"
 "pipx:pgcli" = "latest"
 "pipx:tldr" = "latest"
 shellcheck = "latest"
+buf = "latest"
 
 [settings]
 experimental = true
