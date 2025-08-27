@@ -20,3 +20,4 @@ keybind = global:super+t=ignore
 theme = rose-pine
 
 quit-after-last-window-closed = true
+gtk-single-instance = true
