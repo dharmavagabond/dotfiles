@@ -1,29 +1,48 @@
 # Git extras
-source /usr/share/doc/git-extras/git-extras-completion.zsh
+if [ -f /usr/share/doc/git-extras/git-extras-completion.zsh ]; then
+  source /usr/share/doc/git-extras/git-extras-completion.zsh
+fi
 
 # Forgit
-source $XDG_DATA_HOME/zsh/forgit/forgit.plugin.zsh
+if [ -f $XDG_DATA_HOME/zsh/forgit/forgit.plugin.zsh ]; then
+  source $XDG_DATA_HOME/zsh/forgit/forgit.plugin.zsh
+fi
 
 # F-Sy-H
-source $XDG_DATA_HOME/zsh/f-sy-h/F-Sy-H.plugin.zsh
+if [ -f $XDG_DATA_HOME/zsh/f-sy-h/F-Sy-H.plugin.zsh ]; then
+  source $XDG_DATA_HOME/zsh/f-sy-h/F-Sy-H.plugin.zsh
+fi
 
 # Mise
-eval "$(mise activate zsh)"
+if command -v mise &>/dev/null; then
+  eval "$(mise activate zsh)"
+fi
 
 # Carapace
-export LS_COLORS=$(vivid generate catppuccin-mocha)
-zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
-source <(carapace _carapace)
+if command -v carapace &>/dev/null && command -v vivid &>/dev/null; then
+  export LS_COLORS=$(vivid generate rose-pine)
+  zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+  source <(carapace _carapace)
+fi
 
 # FZF
-source <(fzf --zsh)
+if command -v fzf &>/dev/null; then
+  source <(fzf --zsh)
+fi
 
 # Atuin
-export ZSH_AUTOSUGGEST_STRATEGY=(atuin history completion)
-eval "$(atuin init zsh)"
+if command -v fzf &>/dev/null; then
+  export ZSH_AUTOSUGGEST_STRATEGY=(atuin history completion)
+  eval "$(atuin init zsh)"
+fi
+
 
 # Zoxide
-eval "$(zoxide init zsh)"
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
 
 # Zellij
-eval "$(zellij setup --generate-auto-start zsh)"
+if command -v zellij &>/dev/null; then
+  eval "$(zellij setup --generate-auto-start zsh)"
+fi
