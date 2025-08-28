@@ -23,6 +23,7 @@
 #memory,
 #network,
 #pulseaudio,
+#taskbar,
 #workspaces {
   background: rgba(25, 23, 36, 0.9);
   padding: 0 10px;
@@ -61,6 +62,13 @@
 #network,
 #pulseaudio {
   color: #907aa9; /* rose-pine-dawn @iris */
+}
+
+#taskbar {
+  background: rgba(235, 188, 186, 0.9); /* rose-pine-dawn @base */
+  border-radius: 3px;
+  margin-left: 0.5rem;
+  padding: 0;
 }
 
 #tray {
