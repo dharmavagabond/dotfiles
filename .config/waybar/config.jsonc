@@ -56,7 +56,7 @@
   "custom/gpu": {
     "interval": 5,
     "format": "",
-    "on-click": "kitty --title=nvtop-w -e nvtop",
+    "on-click": "kitty --single-instance --instance-group tui --title=nvtop-w -e nvtop",
     "exec": "nvtop -s | jq --unbuffered --compact-output '.[0] | {tooltip: .mem_util}'",
     "return-type": "json",
     "tooltip": "{tooltip}"
@@ -82,17 +82,17 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "kitty --title=btop-w -e btop"
+    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e btop"
   },
   "memory": {
     "format": "",
-    "on-click": "kitty --title=btop-w -e btop"
+    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e btop"
   },
   "clock": {
     "format": "{:%a %d %I:%M %p}",
     "tooltip": false,
     "timezone": "America/Mexico_City",
-    "on-click": "kitty --title=calcure -e calcure"
+    "on-click": "kitty --single-instance --instance-group tui --title=calcure -e calcure"
   },
   "network": {
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
@@ -105,7 +105,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "kitty --title=impala -e impala"
+    "on-click": "kitty --single-instance --instance-group tui --title=impala -e impala"
   },
   "privacy": {
     "icon-spacing": 4,
@@ -140,12 +140,12 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "kitty --title=bluetui -e bluetui"
+    "on-click": "kitty --single-instance --instance-group tui --title=bluetui -e bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
     "tooltip-format": "Playing at {volume}%",
-    "on-click": "kitty --title=wiremix -e wiremix",
+    "on-click": "kitty --single-instance --instance-group tui --title=wiremix -e wiremix",
     "on-click-right": "pamixer -t",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
