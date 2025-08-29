@@ -82,11 +82,11 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e btop"
+    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e mise x -- btop"
   },
   "memory": {
     "format": "",
-    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e btop"
+    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e mise x -- btop"
   },
   "clock": {
     "format": "{:%a %d %I:%M %p}",
