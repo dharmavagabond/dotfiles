@@ -7,6 +7,7 @@
 .config/yazi/flavors/*
 .config/zellij/plugins/*
 .config/zellij/themes/*
+.config/sunsetr/geo.toml
 
 !.config/bat/themes/.gitkeep
 !.config/mpv/scripts/.gitkeep
