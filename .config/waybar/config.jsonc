@@ -17,8 +17,6 @@
     "bluetooth",
     "network",
     "pulseaudio",
-    "cpu",
-    "custom/gpu",
     "memory",
     "custom/notification",
     "custom/wireguard-manager",
@@ -79,14 +77,10 @@
     "on-click": "~/.config/waybar/wireguard-manager/wireguard-manager.sh -t",
     "return-type": "json"
   },
-  "cpu": {
-    "interval": 5,
-    "format": "󰍛",
-    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e mise x -- btop"
-  },
   "memory": {
     "format": "",
-    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e mise x -- btop"
+    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e mise x -- btop",
+    "tooltip-format": "{percentage}%"
   },
   "clock": {
     "format": "{:%a %d %I:%M %p}",
