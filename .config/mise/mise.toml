@@ -56,6 +56,8 @@ mitmproxy = "latest"
 "pipx:tldr" = "latest"
 shellcheck = "latest"
 buf = "latest"
+yazi = "latest"
+btop = "latest"
 
 [settings]
 experimental = true
