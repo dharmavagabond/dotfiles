@@ -77,7 +77,7 @@ function web2app() {
 Version=1.0
 Name=$APP_NAME
 Comment=$APP_NAME
-Exec=brave --new-window --ozone-platform=wayland --app="$APP_URL" --name="$APP_NAME" --class="$APP_NAME"
+Exec=brave --new-window --ozone-platform=wayland --app=$APP_URL --name=$APP_NAME --class=$APP_NAME
 Terminal=false
 Type=Application
 Icon=$ICON_PATH
