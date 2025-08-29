@@ -51,7 +51,7 @@
   .notification-content
   .summary {
   margin: 0.5rem;
-  color: #dce0e8; /* rose-pine-dawn @crust */
+  color: #dce0e8; /* catppuccin @crust */
   font-weight: bold;
 }
 
@@ -63,6 +63,15 @@
   .body {
   margin: 0.5rem;
   color: #797593;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification.critical
+  .notification-content
+  .body {
+    color: #dce0e8; /* catppuccin @crust */
 }
 
 .floating-notifications.background
@@ -210,6 +219,16 @@
   .body {
   margin: 0.5rem;
   color: #908caa;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification.critical
+  .notification-content
+  .body {
+  margin: 0.5rem;
+  color: #dce0e8; /* catppuccin @crust */
 }
 
 .control-center
