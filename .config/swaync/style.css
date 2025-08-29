@@ -29,7 +29,8 @@
   .notification-row
   .notification-background
   .notification.critical {
-  border: 1px solid #eb6f92;
+  border: solid 1px #d20f39; /* catppuccin @red */
+  background-color: rgba(230, 69, 83, 0.9); /* catppuccin @maroon */
 }
 
 .floating-notifications.background
@@ -40,6 +41,17 @@
   .summary {
   margin: 0.5rem;
   color: #575279;
+  font-weight: bold;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification.critical
+  .notification-content
+  .summary {
+  margin: 0.5rem;
+  color: #dce0e8; /* rose-pine-dawn @crust */
   font-weight: bold;
 }
 
@@ -99,7 +111,7 @@
   .notification-row
   .notification-background
   .close-button {
-  margin: 0.5rem;
+  margin: 0.25rem;
   padding: 0.25rem;
   border-radius: 0.5rem;
   color: rgba(250, 244, 237, 0.7);
@@ -167,7 +179,8 @@
   .notification-row
   .notification-background
   .notification.critical {
-  border: 1px solid #eb6f92;
+    border: solid 1px #d20f39; /* catppuccin @red */
+    background-color: rgba(230, 69, 83, 0.9); /* catppuccin @maroon */
 }
 
 .control-center
@@ -242,7 +255,7 @@
 }
 
 .control-center .notification-row .notification-background .close-button {
-  margin: 0.5rem;
+  margin: 0.25rem;
   padding: 0.25rem;
   border-radius: 0.5rem;
   color: #e0def4;
@@ -268,6 +281,8 @@ trough {
 
 .notification.critical progress {
   background-color: #eb6f92;
+  background-color: #b4637a; /* rose-pine-dawn @rose */
+  color: #faf4ed; /* rose-pine-dawn @base */
 }
 
 .notification.low progress,
