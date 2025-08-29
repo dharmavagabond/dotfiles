@@ -90,8 +90,14 @@
     },
     "break",
     {
+      "type": "command",
+      "key": "\ue900 FL",
+      "keyColor": "magenta",
+      "text": "echo \"Omarchy $(omarchy-version) 󰘬 $(omarchy-version-branch)\""
+    },
+    {
       "type": "wm",
-      "key": "🗔 DE ",
+      "key": "│ ├🗔 ",
       "keyColor": "magenta"
     },
     {
