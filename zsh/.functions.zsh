@@ -12,7 +12,7 @@ function -(){
 }
 
 function update(){
-  paru;
+  paru -Syu;
   mise upgrade;
   go-global-update;
   bun update -g;
