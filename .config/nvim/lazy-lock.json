@@ -68,7 +68,7 @@
   "promise-async": { "branch": "main", "commit": "119e8961014c9bfaf1487bf3c2a393d254f337e2" },
   "protobuf.vim": { "branch": "master", "commit": "5479dba9729cdad93db71d752e21d0776d3b319a" },
   "relative-toggle.nvim": { "branch": "main", "commit": "669743be90a3a3c5fc0eceec478042e2bc7541a4" },
-  "render-markdown.nvim": { "branch": "main", "commit": "f626e90bbc4b3d8f4fd29c909d958b165af13f4a" },
+  "render-markdown.nvim": { "branch": "main", "commit": "e76eb2e4262f0f0a1a7bd7a454dd7d44f1299afd" },
   "rose-pine": { "branch": "main", "commit": "72a04c4065345b51b56aed4859ea1d884f734097" },
   "snacks.nvim": { "branch": "main", "commit": "bc0630e43be5699bb94dadc302c0d21615421d93" },
   "sudo.nvim": { "branch": "main", "commit": "9ab546adfea5331d24cb6086a7a97c5ec8d5b0b2" },
