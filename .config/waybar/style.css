@@ -18,15 +18,35 @@
 #custom-expand-icon,
 #custom-gpu,
 #custom-logo,
-#custom-weather,
 #custom-notification,
+#custom-weather,
+#custom-wireguard-manager,
 #memory,
 #network,
 #pulseaudio,
 #taskbar,
+#systemd-failed-units,
 #workspaces {
   background: rgba(25, 23, 36, 0.9);
   padding: 0 10px;
+}
+
+#systemd-failed-units {
+  color: @gold;
+  padding-left: 12px;
+  padding-right: 5px;
+}
+
+#systemd-failed-units.ok {
+  color: @pine;
+}
+
+#systemd-failed-units.degraded {
+  color: #d7827e; /* rose-pine-dawn @rose */
+}
+
+#custom-notification {
+  padding-right: 5px;
 }
 
 #custom-gpu {
@@ -39,7 +59,8 @@
 
 #custom-wireguard-manager {
   font-size: 0.7rem;
-  padding: 0 5px;
+  padding-right: 4px;
+  padding-top: 1px;
   background: rgba(25, 23, 36, 0.9);
 
 }
@@ -49,7 +70,7 @@
 }
 
 #custom-wireguard-manager.disconnected {
-  color: #d7827e; /* rose-pine-dawn @rose */
+  color: @gold;
 }
 
 #bluetooth,

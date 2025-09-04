@@ -20,6 +20,7 @@
     "memory",
     "custom/notification",
     "custom/wireguard-manager",
+    "systemd-failed-units",
     "clock",
     "custom/weather"
   ],
@@ -177,7 +178,7 @@
   },
   "custom/notification": {
     "tootltip": false,
-    "format": "{} {icon}",
+    "format": "{icon}",
     "format-icons": {
       "notification" : "󱅫",
       "none": "",
@@ -189,7 +190,7 @@
       "dnd-inhibited-none": " "
     },
     "return-type": "json",
-    "exec-if": "which swaync-client",
+    "exec-if": "command -v mise &>/dev/null",
     "exec": "swaync-client -swb",
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
@@ -206,5 +207,12 @@
     "rewrite": {
       "Firefox Web Browser": "Firefox"
     }
+  },
+  "systemd-failed-units": {
+    "hide-on-ok": true,
+    "format": "",
+    "format-ok": "",
+    "system": true,
+    "user": true
   }
 }
