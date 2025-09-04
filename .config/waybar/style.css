@@ -49,6 +49,15 @@
   padding-right: 5px;
 }
 
+#custom-notification.notification,
+#custom-notification.dnd-notification {
+  color: @gold;
+}
+
+#custom-notification.dnd-none {
+  color: @muted;
+}
+
 #custom-gpu {
   font-size: 0.65rem;
 }
