@@ -83,6 +83,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export GOPATH="$XDG_DATA_HOME/go"
 export ZDOTDIR="$XDG_DATA_HOME"/zsh
 export PATH=$HOME/.local/bin:$PATH
+export PATH=/usr/bin/core_perl:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH=$PATH:$GOPATH/bin
