@@ -1,30 +1,30 @@
 #!/usr/bin/env bash
 
-SERVICE_NAME="wg-quick@MX-20"
-STATUS_CONNECTED_STR='{"text":"Connected","class":"connected","alt":"connected"}'
-STATUS_DISCONNECTED_STR='{"text":"Disconnected","class":"disconnected","alt":"disconnected"}'
-
-function askpass() {
-  fuzzel --dmenu --password --prompt-only="Sudo password:"
-}
+SERVICE_NAME="MX-20"
 
 function status_wireguard() {
-  systemctl is-active $SERVICE_NAME >/dev/null 2>&1
-  return $?
+  networkctl status "$SERVICE_NAME" --json=short | jq -rc '
+  {
+    text: .OnlineState | (if . == "online" then "Connected" else "Disconnected" end),
+    class: .OnlineState | (if . == "online" then "connected" else "disconnected" end),
+    alt: .OnlineState | (if . == "online" then "connected" else "disconnected" end),
+  }'
 }
 
 function toggle_wireguard() {
-  (status_wireguard && systemctl stop $SERVICE_NAME) || systemctl start $SERVICE_NAME
+  STATUS=$(networkctl status "$SERVICE_NAME" --json=short | jq -r .OnlineState)
+  if [ "$STATUS" == "online" ]; then
+    pkexec sudo networkctl down "$SERVICE_NAME"
+  else
+    pkexec sudo -A networkctl up "$SERVICE_NAME"
+  fi
 }
 
 case $1 in
 -s | --status)
-  status_wireguard && echo "$STATUS_CONNECTED_STR" || echo "$STATUS_DISCONNECTED_STR"
+  status_wireguard
   ;;
 -t | --toggle)
   toggle_wireguard
-  ;;
-*)
-  askpass
   ;;
 esac
