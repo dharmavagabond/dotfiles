@@ -199,7 +199,7 @@
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 14,
-    "icon-theme": "Flat-Remix-Violet-Light",
+    "icon-theme": "Numix-Circle",
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
