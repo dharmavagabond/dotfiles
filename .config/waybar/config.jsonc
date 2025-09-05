@@ -55,7 +55,7 @@
   "custom/gpu": {
     "interval": 5,
     "format": "",
-    "on-click": "kitty --single-instance --instance-group tui --title=nvtop-w -e nvtop",
+    "on-click": "kitty --single-instance --instance-group tui --title=nvtop --class=tui-float -e nvtop",
     "exec": "nvtop -s | jq --unbuffered --compact-output '.[0] | {tooltip: .mem_util}'",
     "return-type": "json",
     "tooltip": "{tooltip}"
@@ -80,7 +80,7 @@
   },
   "memory": {
     "format": "",
-    "on-click": "kitty --single-instance --instance-group tui --title=btop-w -e mise x -- btop",
+    "on-click": "kitty --single-instance --instance-group tui --title=btop --class=tui-float -e mise x -- btop",
     "tooltip-format": "{percentage}%"
   },
   "clock": {
@@ -88,7 +88,7 @@
     "locale": "es_MX.UTF-8",
     "tooltip": false,
     "timezone": "America/Mexico_City",
-    "on-click": "kitty --single-instance --instance-group tui --title=calcure -e calcure"
+    "on-click": "kitty --single-instance --instance-group tui --title=calcure --class=tui-float -e calcure"
   },
   "network": {
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
@@ -101,7 +101,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "kitty --single-instance --instance-group tui --title=impala -e impala"
+    "on-click": "kitty --single-instance --instance-group tui --title=impala --class=tui-float -e impala"
   },
   "privacy": {
     "icon-spacing": 4,
@@ -136,12 +136,12 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "kitty --single-instance --instance-group tui --title=bluetui -e bluetui"
+    "on-click": "kitty --single-instance --instance-group tui --title=bluetui --class=tui-float -e bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
     "tooltip-format": "Playing at {volume}%",
-    "on-click": "kitty --single-instance --instance-group tui --title=wiremix -e wiremix",
+    "on-click": "kitty --single-instance --instance-group tui --title=wiremix --class=tui-float -e wiremix",
     "on-click-right": "pamixer -t",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
