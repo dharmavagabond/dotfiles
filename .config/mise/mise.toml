@@ -55,6 +55,7 @@ shellcheck = "latest"
 buf = "latest"
 yazi = "latest"
 btop = "latest"
+docker-slim = "latest"
 
 [settings]
 experimental = true
