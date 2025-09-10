@@ -11,4 +11,8 @@ return {
     "folke/tokyonight.nvim",
     enabled = false,
   },
+  {
+    "p00f/alabaster.nvim",
+    enabled = false,
+  },
 }
