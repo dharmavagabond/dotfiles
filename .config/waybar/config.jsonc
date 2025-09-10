@@ -190,7 +190,7 @@
       "dnd-inhibited-none": " "
     },
     "return-type": "json",
-    "exec-if": "command -v mise &>/dev/null",
+    "exec-if": "command -v swaync-client &>/dev/null",
     "exec": "swaync-client -swb",
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
