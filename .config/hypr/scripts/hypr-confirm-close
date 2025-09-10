@@ -3,5 +3,5 @@
 # https://jakegoldsborough.com/blog/2025/hyprland-tricks-close-window-confirmation/
 # Prompt "Close window?" with Yes/No via fuzzel
 choice=$(printf "Yes\nNo" |
-  fuzzel --dmenu --prompt="Close window? " --lines=2 --line-height=30 --vertical-pad=5)
+  fuzzel --dmenu --prompt="Close window? " --lines=2 --line-height=30 --vertical-pad=10)
 [ "$choice" = "Yes" ] && hyprctl dispatch killactive
