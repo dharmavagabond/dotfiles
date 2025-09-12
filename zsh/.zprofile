@@ -84,9 +84,6 @@ export GOPATH="$XDG_DATA_HOME/go"
 export ZDOTDIR="$XDG_DATA_HOME"/zsh
 export PATH=$HOME/.local/bin:$PATH
 export PATH=/usr/bin/core_perl:$PATH
-export PATH=$HOME/bin:$PATH
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.cache/.bun/bin:$PATH"
 export PATH="$PATH:$HOME/.lmstudio/bin"
@@ -104,9 +101,6 @@ export KUBE_EDITOR="$VISUAL"
 # gpg
 export GPG_TTY=$TTY
 
-#  Homebrew
-export HOMEBREW_NO_ANALYTICS=1
-
 # fx
 export FX_THEME=2
 
@@ -122,9 +116,6 @@ export MISE_NPM_BUN=true
 
 # LM Studio
 export OPENAI_API_KEY=lm-studio
-
-# ZSH help
-export HELPDIR=/usr/local/share/zsh/help
 
 # fzf
 export FZF_DEFAULT_COMMAND='fd --type f --color=always --strip-cwd-prefix --hidden --follow --exclude .git'
