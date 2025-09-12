@@ -3,7 +3,7 @@
 [core]
   autocrlf = input
   safecrlf = false
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes
   pager = "{ [ $COLUMNS -lt 160 ] && delta || delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}; }"
@@ -13,14 +13,9 @@
   type = cat-file -t
   dump = cat-file -p
   resign = "!re() { git rebase --exec 'git commit --amend --no-edit -n -S' -i $1; }; re"
-[diff]
-  colorMoved = default
-	tool = juxta
 [diff "sqlite3"]
   binary = true
   textconv = "echo .dump | sqlite3"
-[difftool]
-	prompt = false
 [merge]
   keepBackup = false
   conflictstyle = zdiff3
@@ -54,21 +49,13 @@
 [delta]
   features = line-numbers decorations
   navigate = true
-  syntax-theme = Dracula
-  plus-style = syntax "#003800"
-  minus-style = syntax "#3f0001"
+  syntax-theme = rose-pine
   whitespace-error-style = 22 reverse
   true-color = auto
 [delta "decorations"]
   commit-decoration-style = bold yellow box ul
   file-style = bold yellow ul
-  file-decoration-style = none
-  hunk-header-decoration-style = cyan box ul
-[delta "line-numbers"]
-  line-numbers-left-style = cyan
-  line-numbers-right-style = cyan
-  line-numbers-minus-style = 124
-  line-numbers-plus-style = 28
+  hunk-header-decoration-style = pink box ul
 [init]
   defaultBranch = main
 [commit]
