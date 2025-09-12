@@ -1,0 +1,12 @@
+[info]
+show=no
+
+[viewer]
+scale=fit
+antialiasing=box
+
+[keys.viewer]
+h = prev_file
+l = next_file
+j = zoom -10
+k = zoom +10
