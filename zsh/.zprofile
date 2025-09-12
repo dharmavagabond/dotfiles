@@ -91,9 +91,11 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 export GIT_EDITOR="$VISUAL"
+export PAGER="moor"
+export MANROFFOPT="-c"
 
-# man
-export MANPAGE="sh -c 'col -bx | bat -l man -p'"
+# moor
+export MOOR='-colors=auto -terminal-fg'
 
 # k9s
 export KUBE_EDITOR="$VISUAL"
