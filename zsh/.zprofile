@@ -80,8 +80,10 @@ fi
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
+
 export GOPATH="$XDG_DATA_HOME/go"
 export ZDOTDIR="$XDG_DATA_HOME"/zsh
+
 export PATH=$HOME/.local/bin:$PATH
 export PATH=/usr/bin/core_perl:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -109,28 +111,8 @@ export FX_THEME=2
 # rg
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
 
-# Zellij
-export ZELLIJ_AUTO_EXIT=true
-export ZELLIJ_LOCK=("vim" "nvim")
-
-# Mise
-export MISE_NPM_BUN=true
-
 # LM Studio
 export OPENAI_API_KEY=lm-studio
-
-# fzf
-export FZF_DEFAULT_COMMAND='fd --type f --color=always --strip-cwd-prefix --hidden --follow --exclude .git'
-export FZF_DEFAULT_OPTS="
-  --color=fg:#908caa,bg:#191724,hl:#ebbcba
-  --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
-  --color=border:#403d52,header:#31748f,gutter:#191724
-  --color=spinner:#f6c177,info:#9ccfd8
-  --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-# Carapace
-export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
 
 # Posting
 export POSTING_PAGER_JSON=fx
