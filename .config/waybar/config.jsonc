@@ -140,6 +140,7 @@
   },
   "pulseaudio": {
     "format": "{icon}",
+    "format-bluetooth": "{icon} ",
     "tooltip-format": "Playing at {volume}%",
     "on-click": "kitty --single-instance --instance-group tui --title=wiremix --class=tui-float -e wiremix",
     "on-click-right": "pamixer -t",
