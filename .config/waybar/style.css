@@ -145,6 +145,7 @@ tooltip label {
 
 #memory {
   font-size: 0.65rem;
+  padding-top: 1px;
   padding-left: 14px;
   padding-right: 5px;
 }
