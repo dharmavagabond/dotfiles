@@ -8,6 +8,15 @@
   font-size: 0.75rem;
 }
 
+tooltip {
+  background: rgba(38, 35, 58, 0.9);
+  border: 1px solid @surface;
+}
+
+tooltip label {
+  color: @text;
+}
+
 #waybar {
   background: rgba(0,0,0,0);
 }
@@ -19,6 +28,8 @@
 #custom-gpu,
 #custom-logo,
 #custom-notification,
+#custom-screenrecording-indicator,
+#custom-update,
 #custom-weather,
 #custom-wireguard-manager,
 #memory,
@@ -28,109 +39,20 @@
 #systemd-failed-units,
 #workspaces {
   background: rgba(25, 23, 36, 0.9);
-  padding: 0 10px;
+  color: @iris;
 }
 
-#systemd-failed-units {
-  color: @gold;
-  padding-left: 12px;
-  padding-right: 5px;
+/* Left modules */
+.modules-left {
+  padding-top: 5px;
+  padding-left: 7px;
 }
 
-#systemd-failed-units.ok {
-  color: @pine;
-}
-
-#systemd-failed-units.degraded {
-  color: #d7827e; /* rose-pine-dawn @rose */
-}
-
-#custom-notification {
-  padding-right: 5px;
-}
-
-#custom-notification.notification,
-#custom-notification.dnd-notification {
-  color: @gold;
-}
-
-#custom-notification.dnd-none {
-  color: @muted;
-}
-
-#custom-gpu {
-  font-size: 0.65rem;
-}
-
-#memory {
-  font-size: 0.65rem;
-}
-
-#custom-wireguard-manager {
-  font-size: 0.7rem;
-  padding-right: 4px;
-  padding-top: 1px;
-  background: rgba(25, 23, 36, 0.9);
-
-}
-
-#custom-wireguard-manager.connected {
-  color: @pine;
-}
-
-#custom-wireguard-manager.disconnected {
-  color: @gold;
-}
-
-#bluetooth,
-#cpu,
-#custom-expand-icon,
-#custom-gpu,
-#custom-notification,
-#custom-weather,
-#memory,
-#network,
-#pulseaudio {
-  color: #907aa9; /* rose-pine-dawn @iris */
-}
-
-#taskbar {
-  background: rgba(235, 188, 186, 0.9); /* rose-pine-dawn @rose */
-  border-radius: 3px;
-  margin-left: 0.5rem;
-  padding: 0;
-}
-
-#tray {
-  background: @surface;
-  padding: 0 10px;
-}
-
-#privacy {
-  background: rgba(250, 244, 237, 0.9); /* rose-pine-dawn @base */
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-  padding: 0 10px;
-  padding-bottom: 2px;
-  transition: 0.25s;
-}
-
-#privacy-item.screenshare {
-  color: #40a02b; /* catppuccin @green */
-}
-
-#privacy-item.audio-in {
-  color: #d7827e; /* rose-pine-dawn @rose */
-}
-
-#custom-logo,
-#custom-expand-icon {
-  border-radius: 3px 0px 0px 3px;
-}
-
-#workspaces,
-#custom-weather {
-  border-radius: 0px 3px 3px 0px;
+#custom-logo {
+  background-color: rgba(250, 244, 237, 0.9); /* rose-pine-dawn @base */
+  color:  @base;
+  padding-left: 6px;
+  padding-right: 10px;
 }
 
 #workspaces {
@@ -140,6 +62,7 @@
 #workspaces button {
   padding: 2px;
   color: @highlightMed;
+  transition: color 0.25s ease-out;
 }
 
 #workspaces button:hover {
@@ -151,41 +74,160 @@
   color: @gold;
 }
 
-#custom-logo {
-  background-color: rgba(250, 244, 237, 0.9); /* rose-pine-dawn @base */
-  color:  @base;
-  padding-left: 6px;
-  padding-right: 10px;
+#taskbar {
+  background: rgba(235, 188, 186, 0.9); /* rose-pine-dawn @rose */
+  border-radius: 3px;
+  margin-left: 0.5rem;
+  padding: 0;
 }
 
-#clock {
-  color: @text;
-  transition: 0.25s;
+/* Center modules */
+#privacy {
+  background: rgba(250, 244, 237, 0.9); /* rose-pine-dawn @base */
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  padding: 0 10px;
+  padding-bottom: 2px;
 }
 
-#custom-expand-icon {
-  padding-right: 5px;
+#privacy-item.screenshare {
+  color: #40a02b; /* catppuccin @green */
 }
 
-#custom-weather {
-  padding-left: 0;
+#privacy-item.audio-in {
+  color: #d7827e; /* rose-pine-dawn @rose */
 }
 
-.modules-left {
-  padding-top: 5px;
-  padding-left: 7px;
-}
+/* Right modules */
 
 .modules-right {
   padding-top: 5px;
   padding-right: 7px;
 }
 
-tooltip {
-  background: rgba(38, 35, 58, 0.9);
-  border: 1px solid @surface;
+#custom-expand-icon {
+  padding-left: 6px;
+  padding-right: 0px;
 }
 
-tooltip label {
+#tray {
+  background: @surface;
+  padding: 0 10px;
+}
+
+#bluetooth {
+  padding-left: 12px;
+}
+
+#network {
+  padding-left: 15px;
+  padding-right: 3px;
+}
+
+#pulseaudio {
+  font-size: 0.85rem;
+  padding-left: 16px;
+  padding-right: 2px;
+}
+
+#pulseaudio.muted {
+  color: @muted;
+}
+
+#pulseaudio.bluetooth {
+  font-size: 0.75rem;
+  padding-right: 0;
+}
+
+#pulseaudio.bluetooth.muted {
+  font-size: 0.85rem;
+}
+
+#memory {
+  font-size: 0.65rem;
+  padding-left: 14px;
+  padding-right: 5px;
+}
+
+#custom-update {
+  padding-left: 14px;
+  padding-right: 4px;
+}
+#custom-screenrecording-indicator {
+  padding-left: 12px;
+  padding-right: 3px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: @love;
+}
+
+#custom-notification {
+  color: @muted;
+  font-size: 0.7rem;
+  padding-left: 14px;
+  padding-right: 2px;
+}
+
+#custom-notification.notification,
+#custom-notification.dnd-notification {
+  color: @gold;
+}
+
+#custom-notification.dnd-notification {
+  padding-left: 12px;
+  padding-right: 5px;
+  font-size: 0.65rem;
+}
+
+#custom-notification.dnd-none {
+  color: @muted;
+}
+
+#custom-wireguard-manager {
+  font-size: 0.7rem;
+  padding-left: 12px;
+  padding-right: 4px;
+}
+
+#custom-wireguard-manager.connected {
+  color: @pine;
+}
+
+#custom-wireguard-manager.disconnected {
+  color: @gold;
+}
+
+#systemd-failed-units {
+  padding-left: 12px;
+  padding-right: 6px;
+}
+
+#systemd-failed-units.ok {
+  color: @pine;
+}
+
+#systemd-failed-units.degraded {
+  color: #d7827e; /* rose-pine-dawn @rose */
+}
+
+#clock {
   color: @text;
+  padding-left: 10px;
+}
+
+#custom-weather {
+  padding-left: 5px;
+  padding-right: 6px;
+}
+
+/* Edges border radius */
+#custom-logo,
+#custom-expand-icon {
+  border-radius: 3px 0px 0px 3px;
+}
+
+#workspaces,
+#custom-weather {
+  border-radius: 0px 3px 3px 0px;
 }

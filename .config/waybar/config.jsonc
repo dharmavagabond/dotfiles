@@ -18,6 +18,8 @@
     "network",
     "pulseaudio",
     "memory",
+    "custom/update",
+    "custom/screenrecording-indicator",
     "custom/notification",
     "custom/wireguard-manager",
     "systemd-failed-units",
@@ -140,13 +142,7 @@
   },
   "pulseaudio": {
     "format": "{icon}",
-    "format-bluetooth": "{icon} ",
-    "tooltip-format": "Playing at {volume}%",
-    "on-click": "kitty --single-instance --instance-group tui --title=wiremix --class=tui-float -e wiremix",
-    "on-click-right": "pamixer -t",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
-    "scroll-step": 5,
+    "format-bluetooth": "{icon}<span color=\"#9ccfd8\" size=\"x-small\"> </span>",
     "format-muted": "󰝟",
     "format-icons": {
       "headphone": "󰋋",
@@ -156,7 +152,13 @@
       "portable": "󰄝",
       "car": "󰄋",
       "default": ["󰕿", "󰖀", "󰕾"]
-    }
+    },
+    "tooltip-format": "Playing at {volume}%",
+    "on-click": "kitty --single-instance --instance-group tui --title=wiremix --class=tui-float -e wiremix",
+    "on-click-right": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5
   },
   "group/tray-expander": {
     "orientation": "inherit",
@@ -166,7 +168,7 @@
     },
     "modules": [
       "custom/expand-icon",
-    "tray"
+      "tray"
     ]
   },
   "custom/expand-icon": {
@@ -182,13 +184,13 @@
     "format": "{icon}",
     "format-icons": {
       "notification" : "󱅫",
-      "none": "",
-      "dnd-notification" : " ",
+      "none": "",
+      "dnd-notification" : "",
       "dnd-none": "󰂛",
-      "inhibited-notification" : " ",
+      "inhibited-notification" : "",
       "inhibited-none": "",
-      "dnd-inhibited-notification" : " ",
-      "dnd-inhibited-none": " "
+      "dnd-inhibited-notification" : "",
+      "dnd-inhibited-none": ""
     },
     "return-type": "json",
     "exec-if": "command -v swaync-client &>/dev/null",
@@ -215,5 +217,19 @@
     "format-ok": "",
     "system": true,
     "user": true
+  },
+  "custom/screenrecording-indicator": {
+    "on-click": "omarchy-cmd-screenrecord",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+    "signal": 8,
+    "return-type": "json"
+  },
+  "custom/update": {
+    "format": "",
+    "exec": "omarchy-update-available",
+    "on-click": "omarchy-launch-update-tui",
+    "tooltip-format": "Omarchy update available",
+    "signal": 7,
+    "interval": 3600
   }
 }
