@@ -1,6 +1,7 @@
 return {
   {
     "ray-x/go.nvim",
+    enabled = false,
     ft = { "go", "gomod" },
     branch = "master",
     dependencies = {

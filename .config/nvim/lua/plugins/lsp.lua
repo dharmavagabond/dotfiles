@@ -26,13 +26,6 @@ return {
           },
         },
       },
-      setup = {
-        gopls = function()
-          local cfg = require("go.lsp").config()
-          require("lspconfig").gopls.setup(cfg)
-          return true
-        end,
-      },
     },
   },
   {

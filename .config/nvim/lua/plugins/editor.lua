@@ -84,6 +84,7 @@ return {
   },
   {
     "gorbit99/codewindow.nvim",
+    enabled = false,
     event = "VeryLazy",
     opts = {
       auto_enable = true,
