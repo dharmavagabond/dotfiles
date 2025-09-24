@@ -16,6 +16,7 @@ return {
   },
   {
     "rafaelsq/nvim-goc.lua",
+    enabled = false,
     ft = { "go" },
     keys = {
       {
