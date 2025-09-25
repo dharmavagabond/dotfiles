@@ -62,22 +62,16 @@ tooltip label {
   background: rgba(235, 188, 186, 0.9); /* rose-pine @rose */
   border-radius: 3px;
   margin-left: 7px;
-  padding-left: 7px;
-  padding-right: 7px;
 }
 
 #taskbar button {
-  padding-left: 5px;
+  padding-left: 7px;
   padding-right: 5px;
   transition: background-color 0.25s ease-out;
 }
 
-#taskbar button:first-child {
-  padding-left:0;
-}
-
 #taskbar button:last-child {
-  padding-right:0;
+  padding-right: 7px;
 }
 
 #taskbar button:hover {
