@@ -11,8 +11,6 @@ vim.filetype.add({
   },
 })
 
-opt.number = false
-opt.relativenumber = false
 opt.listchars:append({
   space = " ",
   tab = "→\\ ",
@@ -22,6 +20,9 @@ opt.listchars:append({
   precedes = "‹",
 })
 opt.scrolloff = 0
+
+o.number = false
+o.relativenumber = false
 
 -- UFO
 o.foldcolumn = "1"
