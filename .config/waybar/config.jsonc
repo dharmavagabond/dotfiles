@@ -23,8 +23,8 @@
     "custom/notification",
     "custom/wireguard-manager",
     "systemd-failed-units",
-    "clock",
-    "custom/weather"
+    "custom/weather",
+    "clock"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
