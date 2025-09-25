@@ -1,9 +1,8 @@
 return {
   {
     "ray-x/go.nvim",
-    enabled = false,
     ft = { "go", "gomod" },
-    branch = "master",
+    branch = "treesitter-main",
     dependencies = {
       "ray-x/guihua.lua",
     },
