@@ -18,45 +18,24 @@ tooltip label {
 }
 
 #waybar {
-  background: rgba(0,0,0,0);
-}
-
-#bluetooth,
-#clock,
-#cpu,
-#custom-expand-icon,
-#custom-gpu,
-#custom-logo,
-#custom-notification,
-#custom-screenrecording-indicator,
-#custom-update,
-#custom-weather,
-#custom-wireguard-manager,
-#memory,
-#network,
-#pulseaudio,
-#taskbar,
-#systemd-failed-units,
-#workspaces {
-  background: rgba(25, 23, 36, 0.9);
-  color: @iris;
+  background: rgba(255,0,0,0);
 }
 
 /* Left modules */
 .modules-left {
-  padding-top: 5px;
-  padding-left: 7px;
+  margin-top: 5px;
+  margin-left: 7px;
 }
 
 #custom-logo {
   background-color: rgba(250, 244, 237, 0.9); /* rose-pine-dawn @base */
-  color:  @base;
+  color: rgba(25, 23, 36, 0.9); /* rose-pine @base */
   padding-left: 6px;
   padding-right: 10px;
 }
 
 #workspaces {
-  padding-right: 2px;
+  background: rgba(25, 23, 36, 0.9);
 }
 
 #workspaces button {
@@ -70,15 +49,49 @@ tooltip label {
   background: @base;
 }
 
+#workspaces button:last-child:hover {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
 #workspaces button.active {
   color: @gold;
 }
 
 #taskbar {
-  background: rgba(235, 188, 186, 0.9); /* rose-pine-dawn @rose */
+  background: rgba(235, 188, 186, 0.9); /* rose-pine @rose */
   border-radius: 3px;
-  margin-left: 0.5rem;
-  padding: 0;
+  margin-left: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#taskbar button {
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: background-color 0.25s ease-out;
+}
+
+#taskbar button:first-child {
+  padding-left:0;
+}
+
+#taskbar button:last-child {
+  padding-right:0;
+}
+
+#taskbar button:hover {
+  background: rgb(215, 130, 126); /* rose-pine-dawn @rose */
+}
+
+#taskbar button:first-child:hover {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+#taskbar button:last-child:hover {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 /* Center modules */
@@ -99,14 +112,16 @@ tooltip label {
 }
 
 /* Right modules */
-
 .modules-right {
-  padding-top: 5px;
-  padding-right: 7px;
+  background: rgba(25, 23, 36, 0.9); /* rose-pine @base */
+  border-radius: 3px;
+  color: @iris;
+  margin-top: 5px;
+  margin-right: 7px;
 }
 
 #custom-expand-icon {
-  padding-left: 6px;
+  padding-left: 7px;
   padding-right: 0px;
 }
 
@@ -212,14 +227,14 @@ tooltip label {
   color: #d7827e; /* rose-pine-dawn @rose */
 }
 
+#custom-weather {
+  padding-left: 10px;
+}
+
 #clock {
   color: @text;
   padding-left: 10px;
-  padding-right: 6px;
-}
-
-#custom-weather {
-  padding-left: 10px;
+  padding-right: 7px;
 }
 
 /* Edges border radius */
