@@ -1,4 +1,5 @@
 github.com/Gelio/go-global-update
 github.com/kevwan/tproxy
 github.com/masahiro331/go-commitlinter
-github.com/GeertJohan/gomatrix@latest
+github.com/GeertJohan/gomatrix
+github.com/pdfcpu/pdfcpu/cmd/pdfcpu
