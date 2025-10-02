@@ -119,3 +119,6 @@ export POSTING_PAGER_JSON=fx
 
 # Stow
 export STOW_DIR="$HOME/dotfiles"
+
+# app2unit
+export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
