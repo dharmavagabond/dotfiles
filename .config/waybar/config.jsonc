@@ -86,7 +86,7 @@
     "tooltip-format": "{percentage}%"
   },
   "clock": {
-    "format": "{:L%a %d %h %I:%M}",
+    "format": "{:L%a %d %h %I:%M %p}",
     "locale": "es_MX.UTF-8",
     "tooltip": false,
     "timezone": "America/Mexico_City",
