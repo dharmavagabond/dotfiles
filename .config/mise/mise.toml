@@ -50,6 +50,7 @@ mitmproxy = "latest"
 "pipx:posting" = "latest"
 "pipx:pgcli" = "latest"
 "pipx:tldr" = "latest"
+"pipx:rich-cli" = "latest"
 shellcheck = "latest"
 buf = "latest"
 yazi = "latest"
@@ -57,6 +58,7 @@ btop = "latest"
 docker-slim = "latest"
 jc = "latest"
 dua = "latest"
+duckdb = "latest"
 
 [settings]
 experimental = true

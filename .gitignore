@@ -5,6 +5,7 @@
 .config/mpv/shaders/*
 .config/waybar/themes/*
 .config/yazi/flavors/*
+.config/yazi/plugins/*
 .config/zellij/plugins/*
 .config/zellij/themes/*
 .config/sunsetr/geo.toml
