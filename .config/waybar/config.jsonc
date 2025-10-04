@@ -89,7 +89,6 @@
     "format": "{:L%a %d %h %I:%M %p}",
     "locale": "es_MX.UTF-8",
     "tooltip": false,
-    "timezone": "America/Mexico_City",
     "on-click": "kitty --single-instance --instance-group tui --title=calcure --class=kitty.tui.float -e calcure"
   },
   "network": {
