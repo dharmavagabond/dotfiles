@@ -9,6 +9,9 @@ vim.filetype.add({
   filename = {
     [".sqlfluff"] = "toml",
   },
+  pattern = {
+    [".*%.conf"] = "dosini",
+  },
 })
 
 opt.listchars:append({
