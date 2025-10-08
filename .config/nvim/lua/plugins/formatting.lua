@@ -4,6 +4,7 @@ return {
     event = "VeryLazy",
     opts = {
       formatters_by_ft = {
+        c = { "clang-format" },
         html = { "htmlbeautifier" },
         javascript = { "biome-check" },
         typescript = { "biome-check" },
