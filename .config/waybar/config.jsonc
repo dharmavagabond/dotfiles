@@ -63,11 +63,8 @@
     "tooltip": "{tooltip}"
   },
   "custom/weather": {
-    "exec": "sh ~/.config/waybar/scripts/weather.sh",
-    "interval": 108000,
-    "return-type": "json",
-    "format": "{text}",
-    "tooltip": "{tooltip}"
+    "exec": "python -O ~/.config/waybar/scripts/weather-script/weather.py",
+    "interval": 108000
    },
   "custom/wireguard-manager": {
     "interval": 5,

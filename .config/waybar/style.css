@@ -201,7 +201,7 @@ tooltip label {
 }
 
 #custom-wireguard-manager.connected {
-  color: @pine;
+  color: @iris;
 }
 
 #custom-wireguard-manager.disconnected {
@@ -227,7 +227,7 @@ tooltip label {
 
 #clock {
   color: @text;
-  padding-left: 10px;
+  padding-left: 7px;
   padding-right: 7px;
 }
 
