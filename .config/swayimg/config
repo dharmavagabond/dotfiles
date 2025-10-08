@@ -10,3 +10,9 @@ h = prev_file
 l = next_file
 j = zoom -10
 k = zoom +10
+
+[keys.gallery]
+h = step_left
+l = step_right
+j = step_down
+k = step_up
