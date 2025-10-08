@@ -71,13 +71,13 @@
    },
   "custom/wireguard-manager": {
     "interval": 5,
-    "exec": "exec ~/.config/waybar/wireguard-manager/wireguard-manager.sh -s",
+    "exec": "exec ~/.config/waybar/scripts/wireguard-manager.sh -s",
     "format": "{icon}",
     "format-icons": {
       "connected": "",
       "disconnected": ""
     },
-    "on-click": "~/.config/waybar/wireguard-manager/wireguard-manager.sh -t",
+    "on-click": "~/.config/waybar/scripts/wireguard-manager.sh -t",
     "return-type": "json"
   },
   "memory": {
