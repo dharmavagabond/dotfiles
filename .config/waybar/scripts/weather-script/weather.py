@@ -1,3 +1,5 @@
+# https://github.com/flipflop133/weather-script
+
 """Small script to generate weather data."""
 import json
 import os
@@ -30,6 +32,7 @@ class Weather:
             key = self.data['key']
             unit = "°C" if self.data['unit'] == "Celsius" else "°F"
             parameters = self.data['parameters']
+            only_icon = self.only_icon()
             icon_pos = self.icon_position()
 
             # retrieve weather from weatherapi.com
@@ -42,11 +45,18 @@ class Weather:
             # determine the icon
             icon = self.get_icon()
 
-            # display weather
-            if icon_pos == "left":
-                print(f"{icon} {int(round(temp))}{unit}")
-            else:
-                print(f"{int(round(temp))}{unit} {icon} ")
+            fmt_temp =  f"{int(round(temp))}{unit}"
+            text = f"{icon} {fmt_temp}"
+
+            if icon_pos == "right":
+                text = f"{fmt_temp} {icon}"
+
+            weather = {"text": text, "tooltip": text}
+
+            if only_icon:
+                weather["text"] = icon
+
+            print(json.dumps(weather))
         except requests.ConnectionError:
             self.error_handling()
         except json.JSONDecodeError:
@@ -76,6 +86,12 @@ class Weather:
                 else:
                     icon = item["icon-night"]
         return icon
+
+    def only_icon(self):
+        """Determine if should display only the icon """
+        if "only-icon" in self.data:
+            return self.data["only-icon"]
+        return false
 
     def icon_position(self):
         """Determine icon position."""
