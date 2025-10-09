@@ -17,6 +17,11 @@ if [ -f $XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh ]; then
   source $XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh
 fi
 
+# fzf-tab
+if [ -f $XDG_DATA_HOME/zsh/fzf-tab/fzf-tab.plugin.zsh ]; then
+  source $XDG_DATA_HOME/zsh/fzf-tab/fzf-tab.plugin.zsh
+fi
+
 # Mise
 if command -v mise &>/dev/null; then
   export MISE_NPM_BUN=true
