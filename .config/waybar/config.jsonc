@@ -64,7 +64,7 @@
   },
   "custom/weather": {
     "exec": "python -O ~/.config/waybar/scripts/weather-script/weather.py",
-    "interval": 108000
+    "interval": 600
    },
   "custom/wireguard-manager": {
     "interval": 5,
