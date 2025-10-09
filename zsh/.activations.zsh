@@ -12,9 +12,9 @@ if [ -f $XDG_DATA_HOME/zsh/forgit/forgit.plugin.zsh ]; then
   source $XDG_DATA_HOME/zsh/forgit/forgit.plugin.zsh
 fi
 
-# F-Sy-H
-if [ -f $XDG_DATA_HOME/zsh/f-sy-h/F-Sy-H.plugin.zsh ]; then
-  source $XDG_DATA_HOME/zsh/f-sy-h/F-Sy-H.plugin.zsh
+# fast-syntax-highlighting
+if [ -f $XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh ]; then
+  source $XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh
 fi
 
 # Mise
