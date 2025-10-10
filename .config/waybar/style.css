@@ -75,7 +75,7 @@ tooltip label {
 }
 
 #taskbar button:hover {
-  background: rgb(215, 130, 126); /* rose-pine-dawn @rose */
+  background: rgb(144, 122, 169); /* rose-pine-dawn @iris */
 }
 
 #taskbar button:first-child:hover {
