@@ -53,7 +53,7 @@ class Weather:
 
             weather = {"text": text, "tooltip": text}
 
-            if only_icon:
+            if only_icon and len(icon) > 0:
                 weather["text"] = icon
 
             print(json.dumps(weather))
