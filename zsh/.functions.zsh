@@ -3,8 +3,8 @@ function mdir() {
 }
 
 function emptyfile() {
-  :> $1  # cat /dev/null > $1
-  noti -t "Archivo vaciado"
+  :>! $1
+  notify-send -a zsh -i kitty "Archivo vaciado"
 }
 
 function -(){
