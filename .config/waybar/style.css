@@ -221,6 +221,7 @@ tooltip label {
 }
 
 #custom-weather {
+  font-size: 0.9rem;
   padding-left: 10px;
   padding-right: 6px;
 }
