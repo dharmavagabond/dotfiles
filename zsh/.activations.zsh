@@ -67,3 +67,13 @@ if command -v zellij &>/dev/null; then
   export ZELLIJ_LOCK=("vim" "nvim")
   eval "$(zellij setup --generate-auto-start zsh)"
 fi
+
+# fastfetch
+if command -v fastfetch &>/dev/null; then
+  fastfetch
+fi
+
+# Oh my posh
+if command -v oh-my-posh &>/dev/null; then
+  eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/oh-my-posh/config.toml)"
+fi
