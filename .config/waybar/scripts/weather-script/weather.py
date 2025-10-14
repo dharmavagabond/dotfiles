@@ -78,13 +78,15 @@ class Weather:
             data = json.load(read_file)
         # get icon
         icon = ''
+        current_condition = self.data['current']['condition']['text'].lower()
+
         for item in data:
-            if self.data['current']['condition']['text'] in (item["night"],
-                                                             item["day"]):
+            if current_condition in (item["night"], item["day"]):
                 if self.data['current']['is_day'] == 1:
                     icon = item["icon"]
                 else:
                     icon = item["icon-night"]
+
         return icon
 
     def only_icon(self):

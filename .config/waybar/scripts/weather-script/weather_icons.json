@@ -1,337 +1,337 @@
 [
 	{
 		"code": 1000,
-		"day": "Sunny",
-		"night": "Clear",
+		"day": "sunny",
+		"night": "clear",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1003,
-		"day": "Partly Cloudy",
-		"night": "Partly Cloudy",
+		"day": "partly cloudy",
+		"night": "partly cloudy",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1006,
-		"day": "Cloudy",
-		"night": "Cloudy",
+		"day": "cloudy",
+		"night": "cloudy",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1009,
-		"day": "Overcast",
-		"night": "Overcast",
+		"day": "overcast",
+		"night": "overcast",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1030,
-		"day": "Mist",
-		"night": "Mist",
+		"day": "mist",
+		"night": "mist",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1063,
-		"day": "Patchy rain possible",
-		"night": "Patchy rain possible",
+		"day": "patchy rain possible",
+		"night": "patchy rain possible",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1066,
-		"day": "Patchy snow possible",
-		"night": "Patchy snow possible",
+		"day": "patchy snow possible",
+		"night": "patchy snow possible",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1069,
-		"day": "Patchy sleet possible",
-		"night": "Patchy sleet possible",
+		"day": "patchy sleet possible",
+		"night": "patchy sleet possible",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1072,
-		"day": "Patchy freezing drizzle possible",
-		"night": "Patchy freezing drizzle possible",
+		"day": "patchy freezing drizzle possible",
+		"night": "patchy freezing drizzle possible",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1087,
-		"day": "Thundery outbreaks possible",
-		"night": "Thundery outbreaks possible",
+		"day": "thundery outbreaks possible",
+		"night": "thundery outbreaks possible",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1114,
-		"day": "Blowing snow",
-		"night": "Blowing snow",
+		"day": "blowing snow",
+		"night": "blowing snow",
 		"icon": "ﭽ",
 		"icon-night": "ﭽ"
 	},
 	{
 		"code": 1117,
-		"day": "Blizzard",
-		"night": "Blizzard",
+		"day": "blizzard",
+		"night": "blizzard",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1135,
-		"day": "Fog",
-		"night": "Fog",
+		"day": "fog",
+		"night": "fog",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1147,
-		"day": "Freezing fog",
-		"night": "Freezing fog",
+		"day": "freezing fog",
+		"night": "freezing fog",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1150,
-		"day": "Patchy light drizzle",
-		"night": "Patchy light drizzle",
+		"day": "patchy light drizzle",
+		"night": "patchy light drizzle",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1153,
-		"day": "Light drizzle",
-		"night": "Light drizzle",
+		"day": "light drizzle",
+		"night": "light drizzle",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1168,
-		"day": "Freezing drizzle",
-		"night": "Freezing drizzle",
+		"day": "freezing drizzle",
+		"night": "freezing drizzle",
 		"icon": "ﭽ",
 		"icon-night": "ﭽ"
 	},
 	{
 		"code": 1171,
-		"day": "Heavy freezing drizzle",
-		"night": "Heavy freezing drizzle",
+		"day": "heavy freezing drizzle",
+		"night": "heavy freezing drizzle",
 		"icon": "ﭽ",
 		"icon-night": "ﭽ"
 	},
 	{
 		"code": 1180,
-		"day": "Patchy light rain",
-		"night": "Patchy light rain",
+		"day": "patchy light rain",
+		"night": "patchy light rain",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1183,
-		"day": "Light rain",
-		"night": "Light rain",
+		"day": "light rain",
+		"night": "light rain",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1186,
-		"day": "Moderate rain at times",
-		"night": "Moderate rain at times",
+		"day": "moderate rain at times",
+		"night": "moderate rain at times",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1189,
-		"day": "Moderate rain",
-		"night": "Moderate rain",
+		"day": "moderate rain",
+		"night": "moderate rain",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1192,
-		"day": "Heavy rain at times",
-		"night": "Heavy rain at times",
+		"day": "heavy rain at times",
+		"night": "heavy rain at times",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1195,
-		"day": "Heavy rain",
-		"night": "Heavy rain",
+		"day": "heavy rain",
+		"night": "heavy rain",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1198,
-		"day": "Light freezing rain",
-		"night": "Light freezing rain",
+		"day": "light freezing rain",
+		"night": "light freezing rain",
 		"icon": "ﭽ",
 		"icon-night": "ﭽ"
 	},
 	{
 		"code": 1201,
-		"day": "Moderate or heavy freezing rain",
-		"night": "Moderate or heavy freezing rain",
+		"day": "moderate or heavy freezing rain",
+		"night": "moderate or heavy freezing rain",
 		"icon": "ﭽ",
 		"icon-night": "ﭽ"
 	},
 	{
 		"code": 1204,
-		"day": "Light sleet",
-		"night": "Light sleet",
+		"day": "light sleet",
+		"night": "light sleet",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1207,
-		"day": "Moderate or heavy sleet",
-		"night": "Moderate or heavy sleet",
+		"day": "moderate or heavy sleet",
+		"night": "moderate or heavy sleet",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1210,
-		"day": "Patchy light snow",
-		"night": "Patchy light snow",
+		"day": "patchy light snow",
+		"night": "patchy light snow",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1213,
-		"day": "Light snow",
-		"night": "Light snow",
+		"day": "light snow",
+		"night": "light snow",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1216,
-		"day": "Patchy moderate snow",
-		"night": "Patchy moderate snow",
+		"day": "patchy moderate snow",
+		"night": "patchy moderate snow",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1219,
-		"day": "Moderate snow",
-		"night": "Moderate snow",
+		"day": "moderate snow",
+		"night": "moderate snow",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1222,
-		"day": "Patchy heavy snow",
-		"night": "Patchy heavy snow",
+		"day": "patchy heavy snow",
+		"night": "patchy heavy snow",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1225,
-		"day": "Heavy snow",
-		"night": "Heavy snow",
+		"day": "heavy snow",
+		"night": "heavy snow",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1237,
-		"day": "Ice pellets",
-		"night": "Ice pellets",
+		"day": "ice pellets",
+		"night": "ice pellets",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1240,
-		"day": "Light rain shower",
-		"night": "Light rain shower",
+		"day": "light rain shower",
+		"night": "light rain shower",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1243,
-		"day": "Moderate or heavy rain shower",
-		"night": "Moderate or heavy rain shower",
+		"day": "moderate or heavy rain shower",
+		"night": "moderate or heavy rain shower",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1246,
-		"day": "Torrential rain shower",
-		"night": "Torrential rain shower",
+		"day": "torrential rain shower",
+		"night": "torrential rain shower",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1249,
-		"day": "Light sleet showers",
-		"night": "Light sleet showers",
+		"day": "light sleet showers",
+		"night": "light sleet showers",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1252,
-		"day": "Moderate or heavy sleet showers",
-		"night": "Moderate or heavy sleet showers",
+		"day": "moderate or heavy sleet showers",
+		"night": "moderate or heavy sleet showers",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1255,
-		"day": "Light snow showers",
-		"night": "Light snow showers",
+		"day": "light snow showers",
+		"night": "light snow showers",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1258,
-		"day": "Moderate or heavy snow showers",
-		"night": "Moderate or heavy snow showers",
+		"day": "moderate or heavy snow showers",
+		"night": "moderate or heavy snow showers",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1261,
-		"day": "Light showers of ice pellets",
-		"night": "Light showers of ice pellets",
+		"day": "light showers of ice pellets",
+		"night": "light showers of ice pellets",
 		"icon": "晴",
 		"icon-night": "晴"
 	},
 	{
 		"code": 1264,
-		"day": "Moderate or heavy showers of ice pellets",
-		"night": "Moderate or heavy showers of ice pellets",
+		"day": "moderate or heavy showers of ice pellets",
+		"night": "moderate or heavy showers of ice pellets",
 		"icon": "晴",
 		"icon-night": "晴"
 	},
 	{
 		"code": 1273,
-		"day": "Patchy light rain with thunder",
-		"night": "Patchy light rain with thunder",
+		"day": "patchy light rain with thunder",
+		"night": "patchy light rain with thunder",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1276,
-		"day": "Moderate or heavy rain with thunder",
-		"night": "Moderate or heavy rain with thunder",
+		"day": "moderate or heavy rain with thunder",
+		"night": "moderate or heavy rain with thunder",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1279,
-		"day": "Patchy light snow with thunder",
-		"night": "Patchy light snow with thunder",
+		"day": "patchy light snow with thunder",
+		"night": "patchy light snow with thunder",
 		"icon": "",
 		"icon-night": ""
 	},
 	{
 		"code": 1282,
-		"day": "Moderate or heavy snow with thunder",
-		"night": "Moderate or heavy snow with thunder",
+		"day": "moderate or heavy snow with thunder",
+		"night": "moderate or heavy snow with thunder",
 		"icon": "",
 		"icon-night": ""
 	}
