@@ -54,14 +54,6 @@
     "format": "",
     "tooltip": false
   },
-  "custom/gpu": {
-    "interval": 5,
-    "format": "",
-    "on-click": "kitty --single-instance --instance-group tui --title=nvtop --class=kitty.tui.float -e nvtop",
-    "exec": "nvtop -s | jq --unbuffered --compact-output '.[0] | {tooltip: .mem_util}'",
-    "return-type": "json",
-    "tooltip": "{tooltip}"
-  },
   "custom/weather": {
     "exec": "python -O ~/.config/waybar/scripts/weather-script/weather.py",
     "interval": 600,
@@ -80,15 +72,15 @@
     "return-type": "json"
   },
   "memory": {
-    "format": "",
-    "on-click": "kitty --single-instance --instance-group tui --title=btop --class=kitty.tui.float -e mise x -- btop",
+    "format": "",
+    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT mise x -- btop",
     "tooltip-format": "{percentage}%"
   },
   "clock": {
     "format": "{:L%a %d %h %I:%M %p}",
     "locale": "es_MX.UTF-8",
     "tooltip": false,
-    "on-click": "kitty --single-instance --instance-group tui --title=calcure --class=kitty.tui.float -e calcure"
+    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT calcure"
   },
   "network": {
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
@@ -97,11 +89,11 @@
     "format-ethernet" : "󰈀",
     "format-disconnected" : "󰖪",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+    "tooltip-format-ethernet": "  {bandwidthUpBits}   {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "kitty --single-instance --instance-group tui --title=impala --class=kitty.tui.float -e impala"
+    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT impala"
   },
   "privacy": {
     "icon-spacing": 4,
@@ -136,7 +128,7 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "kitty --single-instance --instance-group tui --title=bluetui --class=kitty.tui.float -e bluetui"
+    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -152,7 +144,7 @@
       "default": ["󰕿", "󰖀", "󰕾"]
     },
     "tooltip-format": "Playing at {volume}%",
-    "on-click": "kitty --single-instance --instance-group tui --title=wiremix --class=kitty.tui.float -e wiremix",
+    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT wiremix",
     "on-click-right": "pamixer -t",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
