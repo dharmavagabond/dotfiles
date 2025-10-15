@@ -61,13 +61,6 @@ if command -v zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
-# Zellij
-if command -v zellij &>/dev/null; then
-  export ZELLIJ_AUTO_EXIT=true
-  export ZELLIJ_LOCK=("vim" "nvim")
-  eval "$(zellij setup --generate-auto-start zsh)"
-fi
-
 # fastfetch
 if command -v fastfetch &>/dev/null; then
   fastfetch
