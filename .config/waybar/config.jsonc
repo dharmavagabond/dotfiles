@@ -54,7 +54,7 @@
     "tooltip": false
   },
   "custom/weather": {
-    "exec": "python -O ~/.config/waybar/scripts/weather-script/weather.py",
+    "exec": "waybar-weather",
     "interval": 600,
     "return-type": "json",
     "tooltip": "{tooltip}"
