@@ -193,20 +193,6 @@ tooltip label {
   color: @muted;
 }
 
-#custom-wireguard-manager {
-  font-size: 0.7rem;
-  padding-left: 12px;
-  padding-right: 4px;
-}
-
-#custom-wireguard-manager.connected {
-  color: @iris;
-}
-
-#custom-wireguard-manager.disconnected {
-  color: @gold;
-}
-
 #systemd-failed-units {
   padding-left: 12px;
   padding-right: 6px;

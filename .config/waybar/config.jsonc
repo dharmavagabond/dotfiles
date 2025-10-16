@@ -21,7 +21,6 @@
     "custom/update",
     "custom/screenrecording-indicator",
     "custom/notification",
-    "custom/wireguard-manager",
     "systemd-failed-units",
     "custom/weather",
     "clock"
@@ -60,17 +59,6 @@
     "return-type": "json",
     "tooltip": "{tooltip}"
    },
-  "custom/wireguard-manager": {
-    "interval": 5,
-    "exec": "exec ~/.config/waybar/scripts/wireguard-manager.sh -s",
-    "format": "{icon}",
-    "format-icons": {
-      "connected": "",
-      "disconnected": ""
-    },
-    "on-click": "~/.config/waybar/scripts/wireguard-manager.sh -t",
-    "return-type": "json"
-  },
   "memory": {
     "format": "",
     "on-click": "app2unit -- kitty.desktop:TUI-FLOAT mise x -- btop",
@@ -88,12 +76,14 @@
     "format-wifi" : "{icon}",
     "format-ethernet" : "󰈀",
     "format-disconnected" : "󰖪",
+    "format-linked": "󰒍",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "  {bandwidthUpBits}   {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+    "tooltip-format-ethernet": "  {bandwidthUpBits}   {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}",
+    "tooltip-format-linked": "{ifname}\n{ipaddr}/{cidr}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT impala"
+    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT gazelle"
   },
   "privacy": {
     "icon-spacing": 4,
