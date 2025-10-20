@@ -61,14 +61,14 @@
    },
   "memory": {
     "format": "",
-    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT mise x -- btop",
+    "on-click": "app2unit -- kitty.desktop:tui-float mise x -- btop",
     "tooltip-format": "{percentage}%"
   },
   "clock": {
     "format": "{:L%a %d %h %I:%M %p}",
     "locale": "es_MX.UTF-8",
     "tooltip": false,
-    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT calcure"
+    "on-click": "app2unit -- kitty.desktop:tui-float calcure"
   },
   "network": {
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
@@ -83,7 +83,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT gazelle"
+    "on-click": "app2unit -- kitty.desktop:tui-float gazelle"
   },
   "privacy": {
     "icon-spacing": 4,
@@ -118,7 +118,7 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT bluetui"
+    "on-click": "app2unit -- kitty.desktop:tui-float bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -134,7 +134,7 @@
       "default": ["󰕿", "󰖀", "󰕾"]
     },
     "tooltip-format": "Playing at {volume}%",
-    "on-click": "app2unit -- kitty.desktop:TUI-FLOAT wiremix",
+    "on-click": "app2unit -- kitty.desktop:tui-float wiremix",
     "on-click-right": "pamixer -t",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5",
@@ -207,7 +207,7 @@
   "custom/update": {
     "format": "",
     "exec": "omarchy-update-available",
-    "on-click": "omarchy-launch-update-tui",
+    "on-click": "app2unit -- kitty.desktop:omarchy-update-tui",
     "tooltip-format": "Omarchy update available",
     "signal": 7,
     "interval": 3600
