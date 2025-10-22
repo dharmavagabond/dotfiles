@@ -54,7 +54,7 @@
     "tooltip": false
   },
   "custom/weather": {
-    "exec": "waybar-weather",
+    "exec": "waybar-weather --settings ~/.config/waybar/scripts/weather/weather-settings.json",
     "interval": 600,
     "return-type": "json",
     "tooltip": "{tooltip}"
