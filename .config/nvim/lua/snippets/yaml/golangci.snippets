@@ -1,111 +1,129 @@
 snippet golangci "golangci-lint config"
-        ---
-        # See: https://olegk.dev/go-linters-configuration-the-right-version
+  ---
+  version: '2'
 
-        run:
-          issues-exit-code: 1
-          tests: true
-          modules-download-mode: readonly
-          allow-parallel-runners: true
+  run:
+    modules-download-mode: readonly
+    issues-exit-code: 1
+    tests: true
+    allow-parallel-runners: true
 
-        linters:
-          disable-all: true
-          enable:
-            - asciicheck
-            - bidichk
-            - bodyclose
-            - contextcheck
-            - containedctx
-            - decorder
-            - durationcheck
-            - errname
-            - errchkjson
-            - errorlint
-            - exportloopref
-            - gocritic
-            - godot
-            - gofumpt
-            - goimports
-            - gomoddirectives
-            - gosec
-            - misspell
-            - nakedret
-            - nilerr
-            - nilnil
-            - noctx
-            - nolintlint
-            - prealloc
-            - predeclared
-            - promlinter
-            - reassign
-            - revive
-            - rowserrcheck
-            - sqlclosecheck
-            - stylecheck
-            - tagliatelle
-            - tenv
-            - testableexamples
-            - thelper
-            - tparallel
-            - unconvert
-            - unparam
-            - usestdlibvars
-            - wastedassign
+  output:
+    sort-order:
+      - linter
+      - severity
+      - file
+    path-prefix: ''
 
-        linters-settings:
-          gocritic:
-            enabled-tags:
-              - diagnostic
-              - experimental
-              - opinionated
-              - performance
-              - style
-            disabled-checks:
-              - hugeParam
-              - rangeExprCopy
-              - rangeValCopy
+  linters:
+    enable:
+      - asciicheck
+      - bidichk
+      - bodyclose
+      - containedctx
+      - contextcheck
+      - decorder
+      - durationcheck
+      - errchkjson
+      - errname
+      - errorlint
+      - gocritic
+      - godot
+      - gomoddirectives
+      - gosec
+      - misspell
+      - nakedret
+      - nilerr
+      - nilnil
+      - noctx
+      - nolintlint
+      - prealloc
+      - predeclared
+      - promlinter
+      - reassign
+      - revive
+      - rowserrcheck
+      - sqlclosecheck
+      - staticcheck
+      - tagliatelle
+      - testableexamples
+      - thelper
+      - tparallel
+      - unconvert
+      - unparam
+      - usestdlibvars
+      - wastedassign
 
-          errcheck:
-            check-type-assertions: true
-            check-blank: true
-            exclude-functions:
-              - io/ioutil.ReadFile
-              - io.Copy(*bytes.Buffer)
-              - io.Copy(os.Stdout)
+    exclusions:
+      generated: lax
+      presets:
+        - comments
+        - common-false-positives
+        - legacy
+        - std-error-handling
+      paths:
+        - assets
+        - configs
+        - doc
+        - proto
+        - scripts
+        - tasks
+        - web
+        - third_party$
+        - builtin$
+        - examples$
 
-          nakedret:
-            max-func-lines: 1
+    settings:
+      gocritic:
+        enabled-tags:
+          - diagnostic
+          - experimental
+          - opinionated
+          - performance
+          - style
+        disabled-checks:
+          - hugeParam
+          - rangeExprCopy
+          - rangeValCopy
+      errcheck:
+        check-type-assertions: true
+        check-blank: true
+        exclude-functions:
+          - io/ioutil.ReadFile
+          - io.Copy(*bytes.Buffer)
+          - io.Copy(os.Stdout)
+      nakedret:
+        max-func-lines: 1
+      tagliatelle:
+        case:
+          rules:
+            json: snake
+            yaml: snake
+            xml: camel
+            bson: snake
+            avro: snake
+            mapstructure: kebab
 
-          tagliatelle:
-            case:
-              rules:
-                json: snake
-                yaml: snake
-                xml: camel
-                bson: snake
-                avro: snake
-                mapstructure: kebab
+  issues:
+    max-issues-per-linter: 0
+    max-same-issues: 0
+    new: true
+    fix: false
 
-        output:
-          formats:
-            - format: line-number
-              path: stdout
-          print-issued-lines: false
-          uniq-by-line: false
-          path-prefix: ''
-          sort-results: true
-
-        issues:
-          max-issues-per-linter: 0
-          max-same-issues: 0
-          new: true
-          fix: false
-          exclude-dirs:
-            - assets
-            - configs
-            - doc
-            - proto
-            - scripts
-            - tasks
-            - web
-          exclude-dirs-use-default: true
+  formatters:
+    enable:
+      - gofumpt
+      - goimports
+    exclusions:
+      generated: lax
+      paths:
+        - assets
+        - configs
+        - doc
+        - proto
+        - scripts
+        - tasks
+        - web
+        - third_party$
+        - builtin$
+        - examples$
