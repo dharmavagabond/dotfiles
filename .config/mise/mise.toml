@@ -59,6 +59,7 @@ docker-slim = "latest"
 jc = "latest"
 dua = "latest"
 duckdb = "latest"
+golangci-lint = "latest"
 
 [settings]
 experimental = true
