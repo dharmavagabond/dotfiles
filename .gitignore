@@ -9,7 +9,7 @@
 .config/zellij/plugins/*
 .config/zellij/themes/*
 .config/sunsetr/geo.toml
-.config/waybar/scripts/weather/weather-settings.json
+.config/waybar/scripts/weather/
 
 !.config/bat/themes/.gitkeep
 !.config/mpv/scripts/.gitkeep
