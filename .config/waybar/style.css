@@ -66,11 +66,12 @@ tooltip label {
 
 #taskbar button {
   padding-left: 7px;
-  padding-right: 5px;
+  padding-right: 7px;
   transition: background-color 0.25s ease-out;
 }
 
-#taskbar button:last-child {
+#taskbar button:first-child {
+  padding-left: 7px;
   padding-right: 7px;
 }
 
@@ -192,6 +193,8 @@ tooltip label {
 #custom-notification.dnd-none {
   color: @muted;
 }
+
+
 
 #systemd-failed-units {
   padding-left: 12px;

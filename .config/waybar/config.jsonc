@@ -3,7 +3,7 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 26,
+  "height": 30,
   "modules-left": [
     "custom/logo",
     "hyprland/workspaces",
@@ -22,7 +22,7 @@
     "custom/screenrecording-indicator",
     "custom/notification",
     "systemd-failed-units",
-    "custom/weather",
+    // "custom/weather",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -51,6 +51,7 @@
   },
   "custom/logo": {
     "format": "",
+    "on-click": "app2unit -- kitty.desktop:tui-float -e zsh -c 'mise x -- fastfetch; read -k 1 -s'",
     "tooltip": false
   },
   "custom/weather": {
@@ -182,7 +183,7 @@
   },
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 20,
+    "icon-size": 16,
     "icon-theme": "Numix-Circle",
     "tooltip-format": "{title}",
     "on-click": "activate",
