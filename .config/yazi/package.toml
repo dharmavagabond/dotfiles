@@ -23,11 +23,6 @@ use = "yazi-rs/plugins:piper"
 rev = "d1c8baa"
 hash = "a20327710c3a8d37ee0972128dcb6a31"
 
-[[plugin.deps]]
-use = "yazi-rs/plugins:mime-ext"
-rev = "8f1d971"
-hash = "4c49c446328c4553a4ccab7facc10b21"
-
 [[flavor.deps]]
 use = "Mintass/rose-pine"
 rev = "8343340"
