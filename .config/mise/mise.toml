@@ -60,6 +60,7 @@ jc = "latest"
 dua = "latest"
 duckdb = "latest"
 golangci-lint = "latest"
+lnav = "latest"
 
 [settings]
 experimental = true
