@@ -58,8 +58,7 @@
     "exec": "waybar-weather --settings ~/.config/waybar/scripts/weather/weather-settings.json",
     "exec-if": "command -v waybar-weather &>/dev/null",
     "interval": 600,
-    "return-type": "json",
-    "tooltip": "{tooltip}"
+    "return-type": "json"
    },
   "memory": {
     "format": "",
