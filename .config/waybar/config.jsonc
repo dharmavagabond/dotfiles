@@ -22,7 +22,7 @@
     "custom/screenrecording-indicator",
     "custom/notification",
     "systemd-failed-units",
-    // "custom/weather",
+    "custom/weather",
     "clock"
   ],
   "hyprland/workspaces": {
