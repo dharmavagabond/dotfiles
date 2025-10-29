@@ -2,22 +2,13 @@ layout {
     default_tab_template {
         pane size=1 borderless=true {
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-              format_left  "{mode} #[fg=#b4befe,bold]{session} {tabs}"
-              format_right "{datetime}"
-              format_space ""
+              format_left  "{mode} #[fg=#c4a7e7,bold]{session} {tabs}"
 
               hide_frame_for_single_pane "true"
 
-              mode_normal  "#[bg=#89b4fa] "
-              mode_tmux    "#[bg=#f9e2af] "
-              mode_locked "#[bg=#f38ba8] "
-
-              tab_normal   "#[fg=#6c7086] {name} "
-              tab_active   "#[fg=#9399b2,bold,italic] {name} "
-
-              datetime        "#[fg=#6c7086,bold] {format} "
-              datetime_format "%A, %d %b %Y %H:%M"
-              datetime_timezone "America/Mexico_City"
+              mode_normal  "#[bg=#9ccfd8] "
+              mode_tmux    "#[bg=#ebbcba] "
+              mode_locked "#[bg=#eb6f92] "
             }
         }
         children
