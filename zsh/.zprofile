@@ -6,56 +6,6 @@
 #
 
 #
-# Browser
-#
-
-if [[ -z "$BROWSER" && "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
-
-#
-# Editors
-#
-
-# if [[ -z "$EDITOR" ]]; then
-#   export EDITOR='nano'
-# fi
-# if [[ -z "$VISUAL" ]]; then
-#   export VISUAL='nano'
-# fi
-# if [[ -z "$PAGER" ]]; then
-#   export PAGER='less'
-# fi
-
-#
-# Language
-#
-
-if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
-fi
-
-#
-# Paths
-#
-
-# Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
-
-# Set the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
-
-# Set the list of directories that Zsh searches for programs.
-path=(
-  $HOME/{,s}bin(N)
-  /opt/{homebrew,local}/{,s}bin(N)
-  /usr/local/{,s}bin(N)
-  $path
-)
-
-#
 # Less
 #
 
@@ -82,13 +32,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 
 export GOPATH="$XDG_DATA_HOME/go"
-export ZDOTDIR="$XDG_DATA_HOME"/zsh
-
-export PATH=$HOME/.local/bin:$PATH
-export PATH=/usr/bin/core_perl:$PATH
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.cache/.bun/bin:$PATH"
-export PATH="$PATH:$HOME/.lmstudio/bin"
+export ZDOTDIR="$XDG_DATA_HOME/zsh"
 
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
@@ -122,3 +66,24 @@ export STOW_DIR="$HOME/dotfiles"
 
 # app2unit (uwsm integration)
 export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
+
+#
+# Paths
+#
+
+# Ensure path arrays do not contain duplicates.
+typeset -gU cdpath fpath mailpath path
+
+path=('/usr/bin/core_perl/' $path)
+path=("$HOME/.cargo/bin" $path)
+path=("$XDG_CACHE_HOME/.bun/bin" $path)
+path=("$HOME/.local/bin" $path)
+path+=("$HOME/.lmstudio/bin")
+
+# Set the list of directories that Zsh searches for programs.
+path=(
+  $HOME/.local/bin
+  /opt/{homebrew,local}/{,s}bin(N)
+  /usr/local/{,s}bin(N)
+  $path
+)
