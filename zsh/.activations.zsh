@@ -8,8 +8,8 @@ if [ -f /usr/share/doc/git-extras/git-extras-completion.zsh ]; then
 fi
 
 # Forgit
-if [ -f $XDG_DATA_HOME/zsh/forgit/forgit.plugin.zsh ]; then
-  source $XDG_DATA_HOME/zsh/forgit/forgit.plugin.zsh
+if [ -f /usr/share/zsh/plugins/forgit/forgit.plugin.zsh ]; then
+  source /usr/share/zsh/plugins/forgit/forgit.plugin.zsh
 fi
 
 # fast-syntax-highlighting
