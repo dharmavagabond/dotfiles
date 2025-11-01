@@ -1,0 +1,64 @@
+---
+log-file: /dev/null
+input-file: ''
+output-file: ''
+
+ignore-dirs:
+  - /proc
+  - /dev
+  - /sys
+  - /run
+
+ignore-dir-patterns: []
+ignore-from-file: ''
+max-cores: 16
+sequential-scanning: false
+show-apparent-size: false
+show-relative-size: false
+show-annexed-size: false
+show-item-count: false
+show-mtime: false
+no-color: false
+no-mouse: false
+non-interactive: false
+no-progress: false
+no-unicode: false
+no-cross: false
+no-hidden: false
+no-delete: false
+follow-symlinks: false
+profiling: false
+const-gc: false
+use-storage: false
+storage-path: /tmp/badger
+read-from-storage: false
+summarize: false
+top: 0
+use-si-prefix: false
+no-prefix: false
+change-cwd: false
+delete-in-background: false
+delete-in-parallel: false
+
+style:
+  selected-row:
+    text-color: ''
+    background-color: ''
+  progress-modal:
+    current-item-path-max-len: 0
+  use-old-size-bar: false
+  footer:
+    text-color: '#e0def4'
+    background-color: '#26233a'
+    number-color: '#f6c177'
+  header:
+    text-color: '#e0def4'
+    background-color: '#1f1d2e'
+    hidden: false
+  result-row:
+    number-color: '#f6c177'
+    directory-color: '#31748f'
+
+sorting:
+  by: ''
+  order: ''

@@ -4,7 +4,6 @@ bat = "latest"
 bun = "latest"
 delta = "latest"
 duf = "latest"
-dust = "latest"
 fd = "latest"
 fx = "latest"
 fzf = "latest"
@@ -61,6 +60,7 @@ dua = "latest"
 duckdb = "latest"
 golangci-lint = "latest"
 lnav = "latest"
+gdu = "latest"
 
 [settings]
 experimental = true
