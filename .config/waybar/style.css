@@ -129,6 +129,10 @@ tooltip label {
   padding-left: 12px;
 }
 
+#bluetooth.off, #bluetooth.disabled {
+  color: @muted;
+}
+
 #network {
   padding-left: 15px;
   padding-right: 3px;
