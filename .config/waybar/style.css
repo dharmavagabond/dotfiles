@@ -4,8 +4,8 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: DM Sans;
-  font-size: 0.75rem;
+  font-family: CommitMono Nerd Font Propo;
+  font-size: 0.625rem;
 }
 
 tooltip {
@@ -28,10 +28,11 @@ tooltip label {
 }
 
 #custom-logo {
+  font-size: 0.75rem;
   background-color: rgba(250, 244, 237, 0.9); /* rose-pine-dawn @base */
   color: rgba(25, 23, 36, 0.9); /* rose-pine @base */
-  padding-left: 6px;
-  padding-right: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 #workspaces {
@@ -117,7 +118,7 @@ tooltip label {
 
 #custom-expand-icon {
   padding-left: 7px;
-  padding-right: 0px;
+  padding-right: 3px;
 }
 
 #tray {
@@ -127,6 +128,8 @@ tooltip label {
 
 #bluetooth {
   padding-left: 12px;
+  padding-right: 6px;
+  font-size: 0.75rem;
 }
 
 #bluetooth.off, #bluetooth.disabled {
@@ -135,17 +138,17 @@ tooltip label {
 
 #network {
   padding-left: 15px;
-  padding-right: 3px;
+  padding-right: 6px;
 }
 
 #network.linked {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 #pulseaudio {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   padding-left: 16px;
-  padding-right: 2px;
+  padding-right: 6px;
 }
 
 #pulseaudio.muted {
@@ -154,17 +157,16 @@ tooltip label {
 
 #pulseaudio.bluetooth {
   font-size: 0.75rem;
-  padding-right: 0;
 }
 
 #pulseaudio.bluetooth.muted {
-  font-size: 0.85rem;
+  font-size: 0.875rem;
 }
 
 #memory {
-  font-size: 0.65rem;
+  font-size: 0.625rem;
   padding-left: 14px;
-  padding-right: 5px;
+  padding-right: 6px;
 }
 
 #custom-update {
@@ -182,9 +184,9 @@ tooltip label {
 
 #custom-notification {
   color: @muted;
-  font-size: 0.7rem;
+  font-size: 0.688rem;
   padding-left: 14px;
-  padding-right: 2px;
+  padding-right: 6px;
 }
 
 #custom-notification.notification,
@@ -195,13 +197,12 @@ tooltip label {
 #custom-notification.dnd-notification {
   padding-left: 12px;
   padding-right: 5px;
-  font-size: 0.65rem;
+  font-size: 0.625rem;
 }
 
 #custom-notification.dnd-none {
   color: @muted;
 }
-
 
 
 #systemd-failed-units {
@@ -219,12 +220,13 @@ tooltip label {
 
 #custom-weather {
   font-size: 1rem;
-  padding-left: 10px;
+  padding-left: 14px;
   padding-right: 6px;
 }
 
 #clock {
   color: @text;
+  font-family: Zalando Sans;
   padding-left: 7px;
   padding-right: 7px;
 }
