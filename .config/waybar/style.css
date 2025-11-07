@@ -5,7 +5,7 @@
   border-radius: 0;
   min-height: 0;
   font-family: CommitMono Nerd Font Propo;
-  font-size: 0.625rem;
+  font-size: 0.563rem;
 }
 
 tooltip {
@@ -15,6 +15,8 @@ tooltip {
 
 tooltip label {
   color: @text;
+  font-family: Zalando Sans;
+  font-size: 0.625rem;
 }
 
 #waybar {
@@ -67,13 +69,13 @@ tooltip label {
 
 #taskbar button {
   padding-left: 7px;
-  padding-right: 7px;
+  padding-right: 3px;
   transition: background-color 0.25s ease-out;
 }
 
 #taskbar button:first-child {
   padding-left: 7px;
-  padding-right: 7px;
+  padding-right: 3px;
 }
 
 #taskbar button:hover {
@@ -117,6 +119,7 @@ tooltip label {
 }
 
 #custom-expand-icon {
+  font-size: 0.75rem;
   padding-left: 7px;
   padding-right: 3px;
 }
@@ -137,6 +140,7 @@ tooltip label {
 }
 
 #network {
+  font-size: 0.75rem;
   padding-left: 15px;
   padding-right: 6px;
 }
