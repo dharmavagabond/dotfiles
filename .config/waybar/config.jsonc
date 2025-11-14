@@ -197,11 +197,8 @@
     }
   },
   "systemd-failed-units": {
-    "hide-on-ok": true,
     "format": "",
-    "format-ok": "",
-    "system": true,
-    "user": true
+    "format-ok": ""
   },
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-cmd-screenrecord",
