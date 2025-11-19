@@ -88,7 +88,7 @@
   },
   "privacy": {
     "icon-spacing": 4,
-    "icon-size": 12,
+    "icon-size": 16,
     "transition-duration": 250,
     "modules": [
       {
