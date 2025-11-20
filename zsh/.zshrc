@@ -10,6 +10,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/prezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-source $HOME/.aliases.zsh
-source $HOME/.functions.zsh
-source $HOME/.activations.zsh
+source "${ZDOTDIR:-$HOME}/.aliases.zsh"
+source "${ZDOTDIR:-$HOME}/.functions.zsh"
+source "${ZDOTDIR:-$HOME}/.activations.zsh"
