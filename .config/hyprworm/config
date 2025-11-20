@@ -1,5 +1,5 @@
 # Launcher command - any dmenu-compatible launcher
-launcher = uwsm-app -- fuzzel --dmenu
+launcher = app2unit --fuzzel-compat -- fuzzel --dmenu
 
 # Show window titles in display (true/false)
 show_title = true
