@@ -96,6 +96,12 @@
       "text": "echo \"Omarchy $(omarchy-version) 󰘬 $(omarchy-version-branch)\""
     },
     {
+      "type": "command",
+      "key": "│ ├󱞠",
+      "keyColor": "magenta",
+      "text": "channel=$(omarchy-version-channel); echo \"$channel\""
+    },
+    {
       "type": "wm",
       "key": "│ ├🗔 ",
       "keyColor": "magenta"
