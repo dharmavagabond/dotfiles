@@ -1,9 +1,6 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "vrischmann/tree-sitter-templ",
-    },
     opts = {
       autotag = {
         enable = true,
@@ -24,8 +21,12 @@ return {
     },
   },
   {
+    "vrischmann/tree-sitter-templ",
+    ft = { "templ" },
+  },
+  {
     "drybalka/tree-climber.nvim",
-    event = "VeryLazy",
+    event = "LazyFile",
     keys = {
       {
         "ah",

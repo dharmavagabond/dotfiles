@@ -10,12 +10,8 @@ return {
     },
   },
   {
-    "akinsho/bufferline.nvim",
-    version = "*",
-  },
-  {
     "brenoprata10/nvim-highlight-colors",
-    event = "VeryLazy",
+    event = "LazyFile",
     opts = {
       render = "virtual",
       virtual_symbol = "",
@@ -29,7 +25,7 @@ return {
     name = "barbecue",
     version = "*",
     dependencies = "SmiteshP/nvim-navic",
-    event = "VeryLazy",
+    event = "LazyFile",
     opts = {
       theme = "rose-pine",
     },

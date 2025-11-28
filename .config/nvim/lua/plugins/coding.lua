@@ -103,7 +103,7 @@ return {
   },
   {
     "nvim-neotest/neotest",
-    event = "VeryLazy",
+    event = "LazyFile",
     dependencies = {
       "nvim-neotest/nvim-nio",
       "antoinemadec/FixCursorHold.nvim",
@@ -123,15 +123,15 @@ return {
   },
   {
     "marilari88/neotest-vitest",
-    event = "VeryLazy",
+    event = "LazyFile",
   },
   {
     "mrcjkb/neotest-haskell",
-    event = "VeryLazy",
+    event = "LazyFile",
   },
   {
     "sindrets/diffview.nvim",
-    event = "VeryLazy",
+    event = "LazyFile",
   },
   {
     "akinsho/git-conflict.nvim",

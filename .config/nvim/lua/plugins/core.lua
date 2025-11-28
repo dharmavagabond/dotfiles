@@ -22,6 +22,7 @@ return {
   },
   {
     "denialofsandwich/sudo.nvim",
+    event = "CmdlineEnter",
     dependencies = "MunifTanjim/nui.nvim",
     config = true,
   },
