@@ -2,7 +2,7 @@ return {
   {
     "ray-x/go.nvim",
     ft = { "go", "gomod" },
-    branch = "treesitter-main",
+    branch = "master",
     dependencies = {
       "ray-x/guihua.lua",
     },
