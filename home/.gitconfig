@@ -9,7 +9,6 @@
   pager = "{ [ $COLUMNS -lt 160 ] && delta || delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}; }"
 [alias]
   gr = grep --break --heading --line-number
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
   resign = "!re() { git rebase --exec 'git commit --amend --no-edit -n -S' -i $1; }; re"

@@ -43,6 +43,6 @@ function y() {
 }
 
 function reload() {
-  source $HOME/.aliases.zsh;
-  source $HOME/.functions.zsh
+  source $XDG_DATA_HOME/zsh/.aliases.zsh;
+  source $XDG_DATA_HOME/zsh/.functions.zsh
 }

@@ -55,7 +55,6 @@ if command -v fzf &>/dev/null; then
   eval "$(atuin init zsh)"
 fi
 
-
 # Zoxide
 if command -v zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
