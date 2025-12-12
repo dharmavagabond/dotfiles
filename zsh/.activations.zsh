@@ -7,19 +7,24 @@ if [ -f /usr/share/doc/git-extras/git-extras-completion.zsh ]; then
   source /usr/share/doc/git-extras/git-extras-completion.zsh
 fi
 
-# Forgit
-if [ -f /usr/share/zsh/plugins/forgit/forgit.plugin.zsh ]; then
-  source /usr/share/zsh/plugins/forgit/forgit.plugin.zsh
-fi
-
 # fast-syntax-highlighting
-if [ -f $XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh ]; then
-  source $XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh
+if [ -f $ZDOTDIR/fsh/fast-syntax-highlighting.plugin.zsh ]; then
+  source $ZDOTDIR/fsh/fast-syntax-highlighting.plugin.zsh
 fi
 
 # fzf-tab
-if [ -f $XDG_DATA_HOME/zsh/fzf-tab/fzf-tab.plugin.zsh ]; then
-  source $XDG_DATA_HOME/zsh/fzf-tab/fzf-tab.plugin.zsh
+if [ -f $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh ]; then
+  source $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh
+fi
+
+# Prezto
+if [ -f $ZDOTDIR/prezto/init.zsh ]; then
+  source $ZDOTDIR/prezto/init.zsh
+fi
+
+# Forgit
+if [ -f /usr/share/zsh/plugins/forgit/forgit.plugin.zsh ]; then
+  source /usr/share/zsh/plugins/forgit/forgit.plugin.zsh
 fi
 
 # Mise

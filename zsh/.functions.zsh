@@ -1,7 +1,3 @@
-function mdir() {
-  mkdir -p $1 && cd $1
-}
-
 function emptyfile() {
   :>! $1
   notify-send -a zsh -i kitty "Archivo vaciado"
@@ -43,6 +39,6 @@ function y() {
 }
 
 function reload() {
-  source $XDG_DATA_HOME/zsh/.aliases.zsh;
-  source $XDG_DATA_HOME/zsh/.functions.zsh
+  source $ZDOTDIR/.aliases.zsh;
+  source $ZDOTDIR/.functions.zsh
 }
