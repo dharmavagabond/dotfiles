@@ -64,7 +64,7 @@
   "memory": {
     "format": "",
     "on-click": "app2unit -- kitty.desktop:tui-float mise x -- btop",
-    "tooltip-format": "{percentage}%"
+    "tooltip-format": "{used:0.1f}G / {total:0.1f}G\n{percentage}% in use"
   },
   "clock": {
     "format": "{:L%a %d %h %I:%M %p}",
