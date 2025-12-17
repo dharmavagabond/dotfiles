@@ -99,13 +99,7 @@
       "type": "command",
       "key": "\ue900 FL",
       "keyColor": "magenta",
-      "text": "echo \"Omarchy $(omarchy-version) 󰘬 $(omarchy-version-branch)\""
-    },
-    {
-      "type": "command",
-      "key": "│ ├󱞠",
-      "keyColor": "magenta",
-      "text": "channel=$(omarchy-version-channel); echo \"$channel\""
+      "text": "echo \"Omarchy $(omarchy-version) 󰘬 $(omarchy-version-branch) 󱞠 $(omarchy-version-channel)\""
     },
     {
       "type": "wm",
