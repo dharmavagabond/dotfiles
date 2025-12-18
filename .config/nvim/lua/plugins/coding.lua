@@ -110,7 +110,7 @@ return {
     },
     opts = {
       adapters = {
-        ["neotest-vitest"] = {
+        ["neotest-bun"] = {
           filter_dir = function(name)
             return name ~= "node_modules"
           end,
@@ -121,10 +121,7 @@ return {
       },
     },
   },
-  {
-    "marilari88/neotest-vitest",
-    event = "LazyFile",
-  },
+  { "arthur944/neotest-bun", event = "LazyFile" },
   {
     "mrcjkb/neotest-haskell",
     event = "LazyFile",

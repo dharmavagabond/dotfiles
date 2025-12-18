@@ -25,72 +25,56 @@ return {
     ft = { "templ" },
   },
   {
-    "drybalka/tree-climber.nvim",
+    "aaronik/treewalker.nvim",
     event = "LazyFile",
     keys = {
       {
         "ah",
         mode = { "n", "v", "o" },
-        function()
-          require("tree-climber").goto_parent()
-        end,
+        "<cmd>Treewalker Up<cr>",
         desc = "Go to parent node",
       },
       {
         "al",
         mode = { "n", "v", "o" },
-        function()
-          require("tree-climber").goto_child()
-        end,
+        "<cmd>Treewalker Down<cr>",
         desc = "Go to child node",
       },
       {
         "aj",
         mode = { "n", "v", "o" },
-        function()
-          require("tree-climber").goto_next()
-        end,
+        "<cmd>Treewalker Right<cr>",
         desc = "Go to next node",
       },
       {
         "ak",
         mode = { "n", "v", "o" },
-        function()
-          require("tree-climber").goto_prev()
-        end,
+        "<cmd>Treewalker Left<cr>",
         desc = "Go to previous node",
-      },
-      {
-        "inn",
-        mode = { "v", "o" },
-        function()
-          require("tree-climber").select_node()
-        end,
-        desc = "Selects node",
       },
       {
         "<leader><c-k>",
         mode = { "n" },
-        function()
-          require("tree-climber").swap_prev()
-        end,
+        "<cmd>Treewalker SwapUp<cr>",
         desc = "Swaps previous node",
       },
       {
         "<leader><c-j>",
         mode = { "n" },
-        function()
-          require("tree-climber").swap_next()
-        end,
+        "<cmd>Treewalker SwapDown<cr>",
         desc = "Swaps next node",
       },
       {
-        "<leader><c-i>",
+        "<leader><c-h>",
         mode = { "n" },
-        function()
-          require("tree-climber").highlight_node()
-        end,
-        desc = "Highlights node",
+        "<cmd>Treewalker SwapLeft<cr>",
+        desc = "Swaps next node",
+      },
+      {
+        "<leader><c-l>",
+        mode = { "n" },
+        "<cmd>Treewalker SwapRight<cr>",
+        desc = "Swaps next node",
       },
     },
   },

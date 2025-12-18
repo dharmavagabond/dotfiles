@@ -36,7 +36,7 @@ return {
   },
   {
     "kevinhwang91/nvim-ufo",
-    event = "VeryLazy",
+    event = "LazyFile",
     dependencies = "kevinhwang91/promise-async",
     keys = {
       {
