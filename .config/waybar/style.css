@@ -187,7 +187,6 @@ tooltip label {
 }
 
 #custom-notification {
-  color: @muted;
   font-size: 0.688rem;
   padding-left: 14px;
   padding-right: 6px;
@@ -199,8 +198,7 @@ tooltip label {
 }
 
 #custom-notification.dnd-notification {
-  padding-left: 12px;
-  padding-right: 5px;
+  color: @muted;
   font-size: 0.625rem;
 }
 
@@ -208,10 +206,16 @@ tooltip label {
   color: @muted;
 }
 
-
-#systemd-failed-units {
+#custom-weather {
+  font-size: 1rem;
   padding-left: 12px;
   padding-right: 6px;
+}
+
+#systemd-failed-units {
+  font-size: 0.75rem;
+  padding-left: 10px;
+  padding-right: 11px;
 }
 
 #systemd-failed-units.ok {
@@ -220,12 +224,6 @@ tooltip label {
 
 #systemd-failed-units.degraded {
   color: #d7827e; /* rose-pine-dawn @rose */
-}
-
-#custom-weather {
-  font-size: 1rem;
-  padding-left: 14px;
-  padding-right: 6px;
 }
 
 #clock {
