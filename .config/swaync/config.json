@@ -1,4 +1,5 @@
 {
+  "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
   "positionY": "top",
   "layer": "overlay",
@@ -26,5 +27,30 @@
   "transition-time": 200,
   "hide-on-clear": false,
   "hide-on-action": true,
-  "script-fail-notify": false
+  "script-fail-notify": false,
+  "widgets": [
+    "title",
+    "dnd",
+    "notifications",
+    "mpris"
+  ],
+  "widget-config": {
+    "notifications": {
+      "vexpand": true
+    },
+    "title": {
+      "text": "Notificaciones",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "No molestar"
+    },
+    "mpris": {
+      "blacklist": [],
+      "autohide": false,
+      "show-album-art": "always",
+      "loop-carousel": false
+    }
+  }
 }
