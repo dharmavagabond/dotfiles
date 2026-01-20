@@ -96,23 +96,22 @@ trough {
 
 .notification .notification-action {
   border-radius: 7px;
-  color: #cdd6f4;
-  box-shadow: inset 0 0 0 1px #45475a;
+  color: #faf4ed;
   margin: 4px;
   padding: 8px;
   font-size: 0.2rem; /* controls the button size not text size*/
 }
 
 .notification .notification-action {
-  background-color: #313244;
+  background-color: #c4a7e7;
 }
 
 .notification .notification-action:hover {
-  background-color: #45475a;
+  background-color: rgba(196, 167, 231, 0.8);
 }
 
 .notification .notification-action:active {
-  background-color: #585b70;
+  background-color: rgba(196, 167, 231, 0.6);
 }
 
 .notification.critical progress {
@@ -144,6 +143,8 @@ trough {
 .control-center .notification-background {
   border-radius: 7px;
   margin: 4px 10px;
+  background-color: rgba(38, 35, 58, 0.9);
+  border: solid 1px #403d52;
 }
 
 .control-center .notification-background .notification {
@@ -152,6 +153,15 @@ trough {
 
 .control-center .notification-background .notification.low {
   opacity: 0.8;
+}
+
+.control-center .notification-content .summary {
+  color: #908caa;
+  font-weight: bold;
+}
+
+.control-center .notification-content .body {
+  color: #e0def4;
 }
 
 .control-center .widget-title > label {
