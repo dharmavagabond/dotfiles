@@ -78,6 +78,12 @@ trough {
   color: #575279;
 }
 
+.notification-content .image {
+  -gtk-icon-filter: none;
+  -gtk-icon-size: 32px;
+  margin: 0;
+}
+
 .notification > *:last-child > * {
   min-height: 3.4em;
 }
