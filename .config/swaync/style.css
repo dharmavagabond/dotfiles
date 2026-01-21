@@ -138,11 +138,11 @@ trough {
 
 /* control center */
 .control-center {
-  border: solid 1px #c4a7e7;
+  border: solid 2px #c4a7e7;
   border-radius: 8px;
   background-color: rgba(25, 23, 36, 0.9);
   color: #e0def4;
-  margin: 6px;
+  margin: 5px;
   padding: 14px;
 }
 
