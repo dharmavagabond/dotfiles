@@ -1,0 +1,11 @@
+*[Cc]ache*
+*.log
+*.backup*
+*~
+build
+.lmstudio
+.local/share/Steam
+.local/share/[Tt]rash
+.local/share/go
+.local/share/mise
+.lmstudio-home-pointer
