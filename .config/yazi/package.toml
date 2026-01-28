@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "0742fff"
-hash = "2bd799b42b8e42b8ef100310be71f8d1"
+rev = "594b8a2"
+hash = "c9e628fc0312d198db22ae2fa74883b"
 
 [[plugin.deps]]
 use = "wylie102/duckdb"
@@ -10,25 +10,25 @@ hash = "87b9233a74325e95011670ed20bbd0d4"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "d1c8baa"
-hash = "435a2af56ecfb3d05755fd5e24977d8b"
+rev = "e07bf41"
+hash = "563e4068979d1466d3dfc2e70a296947"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:no-status"
-rev = "d1c8baa"
+rev = "e07bf41"
 hash = "3e023d31f29201efdac2a6ae35fedb78"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "d1c8baa"
-hash = "a20327710c3a8d37ee0972128dcb6a31"
+rev = "e07bf41"
+hash = "25aee698dd1081001008ce0cb1cc4da3"
 
 [[flavor.deps]]
 use = "Mintass/rose-pine"
-rev = "8343340"
-hash = "e2336631865c0f90276dcbc553d532fc"
+rev = "d91f8f2"
+hash = "87da3630653b6d272e43658418599188"
 
 [[flavor.deps]]
 use = "Mintass/rose-pine-dawn"
-rev = "5c6d353"
-hash = "d9d9463d5d43ced18e18986d05439ace"
+rev = "d82f54f"
+hash = "15ae5f83d3770b9ffc276af77f642e2b"
