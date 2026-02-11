@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "loginctl lock-session",
+    "action" : "~/.local/bin/omarchy-lock-screen",
     "text" : "Lock",
     "keybind" : "l"
 }
