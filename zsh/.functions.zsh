@@ -42,3 +42,10 @@ function reload() {
   source $ZDOTDIR/.aliases.zsh;
   source $ZDOTDIR/.functions.zsh
 }
+
+exit_zsh() { exit }
+
+clear-screen-and-scrollback() {
+  printf '\x1Bc'
+  zle clear-screen
+}

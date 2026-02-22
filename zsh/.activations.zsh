@@ -23,6 +23,9 @@ if [ -f /usr/share/zsh/plugins/forgit/forgit.plugin.zsh ]; then
   source /usr/share/zsh/plugins/forgit/forgit.plugin.zsh
 fi
 
+# Oh my zsh plugins
+source $ZDOTDIR/.ohmyzsh-plugins.zsh
+
 # Mise
 if command -v mise &>/dev/null; then
   export MISE_NPM_BUN=true
@@ -59,6 +62,11 @@ fi
 # Zoxide
 if command -v zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
+fi
+
+# Batman
+if command -v batman &>/dev/null; then
+  eval "$(batman --export-env)"
 fi
 
 # fastfetch

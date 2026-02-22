@@ -1,3 +1,5 @@
 source "$ZDOTDIR/.activations.zsh"
 source "$ZDOTDIR/.functions.zsh"
 source "$ZDOTDIR/.aliases.zsh"
+source "$ZDOTDIR/.keybinds.zsh"
+source "$ZDOTDIR/.hooks.zsh"
