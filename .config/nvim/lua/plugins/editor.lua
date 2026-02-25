@@ -35,6 +35,10 @@ return {
     },
   },
   {
+    "malewicz1337/oil-git.nvim",
+    dependencies = { "stevearc/oil.nvim" },
+  },
+  {
     "kevinhwang91/nvim-ufo",
     event = "LazyFile",
     dependencies = "kevinhwang91/promise-async",
