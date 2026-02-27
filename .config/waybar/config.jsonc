@@ -76,7 +76,7 @@
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
     "format" : "{icon}",
     "format-wifi" : "{icon}",
-    "format-ethernet" : "󰈀",
+    "format-ethernet" : "",
     "format-disconnected" : "󰖪",
     "format-linked": "󱂇",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣ {bandwidthDownBytes} ⇡ {bandwidthUpBytes}",

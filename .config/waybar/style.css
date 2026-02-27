@@ -142,7 +142,7 @@ tooltip label {
 #network {
   font-size: 0.75rem;
   padding-left: 15px;
-  padding-right: 6px;
+  padding-right: 4px;
 }
 
 #network.linked {
