@@ -19,7 +19,7 @@
     },
     {
       "type": "host",
-      "key": " PC ",
+      "key": "  PC",
       "keyColor": "green"
     },
     {
@@ -96,15 +96,15 @@
     },
     "break",
     {
-      "type": "command",
-      "key": "\ue900 FL",
-      "keyColor": "magenta",
-      "text": "echo \"Omarchy $(omarchy-version) 󰘬 $(omarchy-version-branch) 󱞠 $(omarchy-version-channel)\""
+      "type": "wm",
+      "key": "🗔  DE",
+      "keyColor": "magenta"
     },
     {
-      "type": "wm",
-      "key": "│ ├🗔 ",
-      "keyColor": "magenta"
+      "type": "command",
+      "key": "│ ├\ue900 ",
+      "keyColor": "magenta",
+      "text": "echo \"Omarchy $(omarchy-version) 󰘬 $(omarchy-version-branch) 󱞠 $(omarchy-version-channel)\""
     },
     {
       "type": "icons",
