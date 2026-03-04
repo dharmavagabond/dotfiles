@@ -142,9 +142,9 @@
     },
     "tooltip-format": "Playing at {volume}%",
     "on-click": "app2unit -- kitty.desktop:tui-float wiremix",
-    "on-click-right": "pamixer -t",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
+    "on-click-right": "pamixer --toggle-mute",
+    "on-scroll-up": "pamixer --increase 5",
+    "on-scroll-down": "pamixer --decrease 5",
     "scroll-step": 5
   },
   "group/tray-expander": {
