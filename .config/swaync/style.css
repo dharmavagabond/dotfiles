@@ -1,40 +1,8 @@
-
 * {
   all: unset;
   font-size: 14px;
   font-family: "DM Sans";
   transition: 200ms;
-}
-
-trough highlight {
-  background: #cdd6f4;
-}
-
-scale {
-  margin: 0 7px;
-}
-
-scale trough {
-  margin: 0rem 1rem;
-  min-height: 8px;
-  min-width: 70px;
-  border-radius: 12.6px;
-}
-
-trough slider {
-  margin: -10px;
-  border-radius: 12.6px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
-  transition: all 0.2s ease;
-  background-color: #89b4fa;
-}
-
-trough slider:hover {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 0 0 8px #89b4fa;
-}
-
-trough {
-  background-color: #313244;
 }
 
 /* notifications */
