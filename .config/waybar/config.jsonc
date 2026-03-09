@@ -73,6 +73,7 @@
     "on-click": "app2unit -- kitty.desktop:tui-float calcure"
   },
   "network": {
+    "interface": "eno*",
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
     "format" : "{icon}",
     "format-wifi" : "{icon}",
