@@ -1,6 +1,6 @@
 function emptyfile() {
   :>! $1
-  notify-send -a zsh -i kitty "Archivo vaciado"
+  notify-send --app-name=zsh --icon=kitty "Archivo vaciado"
 }
 
 function -(){
@@ -8,10 +8,10 @@ function -(){
 }
 
 function update(){
-  paru -Syu;
+  paru --sync --refresh --sysupgrade;
   mise upgrade;
   go-global-update;
-  bun update -g;
+  bun update --global;
 }
 
 function fzf-preview(){
@@ -20,12 +20,12 @@ function fzf-preview(){
 
 function zel() {
   ZJ_SESSIONS=$(zellij list-sessions)
-  NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -l)
+  NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc --lines)
 
   if [ "${NO_SESSIONS}" -ge 2 ]; then
     echo "${ZJ_SESSIONS}" | fzf --bind 'enter:become(zellij attach {})'
   else
-    zellij attach -c
+    zellij attach --create
   fi
 }
 
@@ -35,7 +35,7 @@ function y() {
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		builtin cd -- "$cwd"
 	fi
-	rm -f -- "$tmp"
+	rm --force -- "$tmp"
 }
 
 function reload() {
