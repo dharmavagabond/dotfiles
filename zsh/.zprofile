@@ -74,11 +74,9 @@ export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=ses
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
-path=('/usr/bin/core_perl/' $path)
-path=("$HOME/.cargo/bin" $path)
-path=("$XDG_CACHE_HOME/.bun/bin" $path)
-path=("$HOME/.local/bin" $path)
+path+=("$HOME/.cargo/bin")
 path+=("$HOME/.lmstudio/bin")
+path+=("$XDG_CACHE_HOME/.bun/bin")
 
 # Set the list of directories that Zsh searches for programs.
 path=(
