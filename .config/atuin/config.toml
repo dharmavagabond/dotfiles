@@ -11,6 +11,10 @@ history_filter = [
   "^man",
   "^gpf$",
   "^sudo",
+  "^sc-",
+  "^scu-",
+  "^vim$",
+  "^nvim$",
 ]
 inline_height = 10
 keymap_mode = "vim-normal"
