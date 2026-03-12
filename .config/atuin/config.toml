@@ -1,12 +1,24 @@
 ctrl_n_shortcuts = true
 enter_accept = true
+history_filter = [
+  "^ga$",
+  "^glo$",
+  "^grb$",
+  "^gwr$",
+  "^gws$",
+  "^git reset",
+  "^git push secret",
+  "^man",
+  "^gpf$",
+  "^sudo",
+]
 inline_height = 10
 keymap_mode = "vim-normal"
 style = "compact"
 sync_frequency = "168h"
 
 [theme]
-name = "catppuccin-mocha-lavender"
+name = "rose-pine"
 
 [sync]
 records = true
