@@ -36,6 +36,8 @@ export ZDOTDIR="$XDG_DATA_HOME/zsh"
 
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
+export SUDO_EDITOR="$VISUAL"
+export DOAS_EDITOR="$VISUAL"
 export GIT_EDITOR="$VISUAL"
 export PAGER="moor"
 export MANROFFOPT="-c"
