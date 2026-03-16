@@ -1,20 +1,24 @@
 ctrl_n_shortcuts = true
 enter_accept = true
 history_filter = [
-  "^ga$",
-  "^glo$",
-  "^grb$",
-  "^gwr$",
-  "^gws$",
+  "^g(a|lo|rb|pf)$",
+  "^gd(\\s--staged)?$",
+  "^gw(r|s)$",
   "^git reset",
   "^git push secret",
   "^man",
-  "^gpf$",
-  "^sudo",
-  "^sc-",
-  "^scu-",
-  "^vim$",
-  "^nvim$",
+  "^(sudo|doas)(edit)?",
+  "^scu?-",
+  "^n?vim$",
+  "^(a|p)sd ",
+  "^z ",
+  "^uuctl$",
+  "^update$",
+  "^paru(i)?(\\s-Ss)?",
+  "^md5sum ",
+  "^secret-tool",
+  "^yazi",
+  "^pac((?i)u|x|i)(?-i)",
 ]
 inline_height = 10
 keymap_mode = "vim-normal"
