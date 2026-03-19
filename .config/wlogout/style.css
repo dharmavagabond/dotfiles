@@ -21,7 +21,8 @@ button {
 
 button:active, button:hover {
 	background-color: rgba(25, 23, 36, 0.9);
-  transition: background-color 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  background-size: 45%;
+  transition: background 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 #lock {
