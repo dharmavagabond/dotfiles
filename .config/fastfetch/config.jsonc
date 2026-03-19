@@ -104,7 +104,7 @@
       "type": "command",
       "key": "│ ├\ue900 ",
       "keyColor": "magenta",
-      "text": "echo \"Omarchy $(omarchy-version) 󰘬 $(omarchy-version-branch) 󱞠 $(omarchy-version-channel)\""
+      "text": "echo \"Omarchy $(omarchy-version) 󰘬 $(omarchy-version-branch)\""
     },
     {
       "type": "icons",
