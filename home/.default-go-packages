@@ -3,3 +3,4 @@ github.com/kevwan/tproxy
 github.com/masahiro331/go-commitlinter
 github.com/GeertJohan/gomatrix
 github.com/pdfcpu/pdfcpu/cmd/pdfcpu
+github.com/golangci/golines
