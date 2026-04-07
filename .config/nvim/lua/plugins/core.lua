@@ -1,9 +1,6 @@
 return {
   {
     "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "rose-pine",
-    },
   },
   {
     "folke/which-key.nvim",

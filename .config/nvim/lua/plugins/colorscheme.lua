@@ -5,14 +5,17 @@ return {
   },
   {
     "rebelot/kanagawa.nvim",
-    enabled = false,
   },
   {
     "folke/tokyonight.nvim",
-    enabled = false,
   },
   {
-    "p00f/alabaster.nvim",
-    enabled = false,
+    "dchinmay2/alabaster.nvim",
+  },
+  {
+    "zaldih/themery.nvim",
+    opts = {
+      themes = { "rose-pine", "kanagawa", "tokyonight", "alabaster" },
+    },
   },
 }
