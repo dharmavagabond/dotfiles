@@ -1,2 +1,2 @@
-ZDOTDIR=$HOME/.local/share/zsh
+export ZDOTDIR=$HOME/.local/share/zsh
 . $ZDOTDIR/.zshenv
