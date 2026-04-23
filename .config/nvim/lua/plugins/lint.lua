@@ -4,7 +4,7 @@ return {
     event = "VeryLazy",
     opts = {
       linters_by_ft = {
-        ["*"] = { "editorconfig-checker", "codespell" },
+        ["*"] = { "codespell" },
         ["yaml.yml"] = { "actionlint", "yamllint" },
         css = { "stylelint" },
         editorconfig = { "editorconfig-checker" },
