@@ -35,4 +35,10 @@ return {
       z_dir_changed_cmd = { "zoxide", "add" },
     },
   },
+  {
+    "wsdjeg/rooter.nvim",
+    opts = {
+      command = "tcd",
+    },
+  },
 }
