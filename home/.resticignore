@@ -3,6 +3,7 @@
 *.backup*
 *~
 build
+restic-ignore
 .lmstudio
 .local/share/Steam
 .local/share/[Tt]rash
