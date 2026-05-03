@@ -1,0 +1,90 @@
+# ============================================================
+# Emergency thermal protection
+# ============================================================
+
+[[rule]]
+if = { is-more-than = 88.0, value = "$cpu-temperature" }
+name = "emergency-thermal-protection"
+priority = 100
+
+cpu.energy-perf-bias = { if.is-energy-perf-bias-available = "power", then = "power" }
+cpu.energy-performance-preference = { if.is-energy-performance-preference-available = "power", then = "power" }
+cpu.frequency-mhz-maximum = 2000
+cpu.governor = { if.is-governor-available = "powersave", then = "powersave" }
+cpu.turbo = { if = "?turbo-available", then = false }
+
+
+# ============================================================
+# High performance mode
+# ============================================================
+[[rule]]
+if.all = [
+  { is-more-than = 0.75, value = { cpu-usage-since = "5sec" } },
+  { is-less-than = 75.0, value = "$cpu-temperature" },
+]
+name = "high-performance"
+priority = 80
+
+cpu.energy-perf-bias = { if.is-energy-perf-bias-available = "performance", then = "performance" }
+cpu.energy-performance-preference = { if.is-energy-performance-preference-available = "performance", then = "performance" }
+cpu.governor = { if.is-governor-available = "performance", then = "performance" }
+cpu.turbo = { if = "?turbo-available", then = true }
+
+# ============================================================
+# Moderate performance
+# ============================================================
+[[rule]]
+if.all = [
+  { is-more-than = 0.15, value = { cpu-usage-since = "5sec" } },
+]
+name = "moderate-performance"
+priority = 60
+
+cpu.energy-perf-bias = { if.is-energy-perf-bias-available = "balance-performance", then = "balance-performance" }
+cpu.energy-performance-preference = { if.is-energy-performance-preference-available = "balance_performance", then = "balance_performance" }
+cpu.governor = { if.is-governor-available = "schedutil", then = "schedutil" }
+
+# ============================================================
+# Light activity
+# ============================================================
+[[rule]]
+if.all = [
+  { is-less-than = 0.15, value = { cpu-usage-since = "10sec" } },
+  { is-more-than = 0.06, value = { cpu-usage-since = "10sec" } },
+  { is-more-than = 20.0, value = "$cpu-idle-seconds" },
+]
+name = "light-activity"
+priority = 50
+
+cpu.energy-perf-bias = { if.is-energy-perf-bias-available = "balance-power", then = "balance-power" }
+cpu.energy-performance-preference = { if.is-energy-performance-preference-available = "balance_power", then = "balance_power" }
+cpu.governor = { if.is-governor-available = "powersave", then = "powersave" }
+cpu.turbo = { if = "?turbo-available", then = false }
+
+# ============================================================
+# Power saving
+# ============================================================
+[[rule]]
+if.all = [
+  { is-less-than = 0.06, value = { cpu-usage-since = "15sec" } },
+  { is-more-than = 120.0, value = "$cpu-idle-seconds" },
+]
+name = "power-saving"
+priority = 40
+
+cpu.energy-perf-bias = { if.is-energy-perf-bias-available = "power", then = "power" }
+cpu.energy-performance-preference = { if.is-energy-performance-preference-available = "power", then = "power" }
+cpu.frequency-mhz-maximum = 1600
+cpu.governor = { if.is-governor-available = "powersave", then = "powersave" }
+cpu.turbo = { if = "?turbo-available", then = false }
+
+# ============================================================
+# Balanced performance for general use - Default fallback rule
+# ============================================================
+[[rule]]
+name = "default-balanced"
+priority = 0
+
+cpu.energy-perf-bias = { if.is-energy-perf-bias-available = "balance-performance", then = "balance-performance" }
+cpu.energy-performance-preference = { if.is-energy-performance-preference-available = "balance_performance", then = "balance_performance" }
+cpu.governor = { if.is-governor-available = "schedutil", then = "schedutil" }
