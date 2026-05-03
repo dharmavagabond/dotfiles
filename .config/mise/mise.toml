@@ -62,6 +62,7 @@ lnav = "latest"
 gdu = "latest"
 jaq = "latest"
 ruby = "latest"
+opencode = "latest"
 
 [settings]
 experimental = true
