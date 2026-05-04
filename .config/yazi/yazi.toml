@@ -34,7 +34,7 @@ prepend_previewers = [
 
   # piper
   { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow --style=tokyo-night "$1"' },
-  { url = "*/", run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes --all "$1"' },
+  { url = "*/", run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes --follow-symlinks --all "$1"' },
 ]
 
 prepend_preloaders = [
