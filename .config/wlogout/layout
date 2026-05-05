@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "~/.local/bin/omarchy-lock-screen",
+    "action" : "omarchy-system-lock",
     "text" : "Lock",
     "keybind" : "l"
 }
