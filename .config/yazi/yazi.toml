@@ -1,4 +1,4 @@
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+#:schema https://yazi-rs.github.io/schemas/yazi.json
 
 [mgr]
 show_hidden = true
@@ -38,11 +38,11 @@ prepend_previewers = [
 ]
 
 prepend_preloaders = [
-  { url = "*.csv", run = "duckdb", multi = false },
-  { url = "*.tsv", run = "duckdb", multi = false },
-  { url = "*.parquet", run = "duckdb", multi = false },
-  { url = "*.txt", run = "duckdb", multi = false },
-  { url = "*.xlsx", run = "duckdb", multi = false },
+  { url = "*.csv", run = "duckdb" },
+  { url = "*.tsv", run = "duckdb" },
+  { url = "*.parquet", run = "duckdb" },
+  { url = "*.txt", run = "duckdb" },
+  { url = "*.xlsx", run = "duckdb" },
 ]
 
 [opener]
