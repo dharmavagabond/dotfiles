@@ -88,19 +88,22 @@ return {
   },
   {
     "gorbit99/codewindow.nvim",
-    enabled = false,
-    event = "VeryLazy",
+    event = "LazyFile",
+    keys = {
+      {
+        "<leader>mm",
+        function()
+          local cw = require("codewindow")
+          cw.toggle_minimap()
+        end,
+      },
+    },
     opts = {
       auto_enable = true,
-      minimap_width = 15,
+      minimap_width = 10,
       screen_bounds = "background",
       window_border = "",
     },
-    config = function(_, opts)
-      local codewindow = require("codewindow")
-      codewindow.setup(opts)
-      codewindow.apply_default_keybinds()
-    end,
   },
   {
     "folke/snacks.nvim",

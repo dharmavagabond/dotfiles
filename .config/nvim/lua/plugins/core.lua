@@ -41,4 +41,9 @@ return {
       command = "tcd",
     },
   },
+  {
+    "polirritmico/lazy-local-patcher.nvim",
+    event = "VeryLazy",
+    config = true,
+  },
 }
