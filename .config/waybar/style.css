@@ -169,7 +169,7 @@ tooltip label {
 
 #pulseaudio.bluetooth {
   font-size: 0.75rem;
-  padding-right: 0;
+  padding-right: 2px;
 }
 
 #pulseaudio.bluetooth.muted {
@@ -179,7 +179,7 @@ tooltip label {
 #memory {
   font-size: 0.625rem;
   padding-left: 14px;
-  padding-right: 6px;
+  padding-right: 4px;
 }
 
 #custom-update {
@@ -199,7 +199,7 @@ tooltip label {
 #custom-notification {
   font-size: 0.688rem;
   padding-left: 14px;
-  padding-right: 6px;
+  padding-right: 4px;
 }
 
 #custom-notification.notification,
@@ -211,7 +211,7 @@ tooltip label {
   color: @muted;
   font-size: 0.625rem;
   padding-left: 13px;
-  padding-right: 4px;
+  padding-right: 2px;
 }
 
 #custom-notification.dnd-none,
