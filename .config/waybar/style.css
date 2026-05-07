@@ -210,9 +210,13 @@ tooltip label {
 #custom-notification.dnd-notification {
   color: @muted;
   font-size: 0.625rem;
+  padding-left: 13px;
+  padding-right: 4px;
 }
 
-#custom-notification.dnd-none {
+#custom-notification.dnd-none,
+#custom-notification.inhibited-none,
+#custom-notification.dnd-inhibited-none {
   color: @muted;
 }
 
