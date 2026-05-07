@@ -6,7 +6,7 @@
   editor = nvim
   excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes
-  pager = "{ [ $COLUMNS -lt 160 ] && delta || delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}; }"
+  pager = "{ [ $COLUMNS -lt 80 ] && delta --pager='ov -F' || delta --pager='ov -F' --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}; }"
 [alias]
   gr = grep --break --heading --line-number
   type = cat-file -t

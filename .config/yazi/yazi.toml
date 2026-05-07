@@ -33,7 +33,7 @@ prepend_previewers = [
   { url = "*.duckdb", run = "duckdb" },
 
   # piper
-  { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow --style=tokyo-night "$1"' },
+  { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow --style=tokyo-night --width=0 "$1"' },
   { url = "*/", run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes --follow-symlinks --all "$1"' },
 ]
 
