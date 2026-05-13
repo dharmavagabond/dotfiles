@@ -6,13 +6,13 @@
 }
 {
     "label" : "logout",
-    "action" : "uwsm stop",
+    "action" : "omarchy-system-logout",
     "text" : "Logout",
     "keybind" : "o"
 }
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "omarchy-system-shutdown",
     "text" : "Shutdown",
     "keybind" : "s"
 }
@@ -24,7 +24,7 @@
 }
 {
     "label" : "reboot",
-    "action" : "systemctl reboot",
+    "action" : "omarchy-system-reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }
