@@ -14,7 +14,7 @@
   resign = "!re() { git rebase --exec 'git commit --amend --no-edit -n -S' -i $1; }; re"
 [diff "sqlite3"]
   binary = true
-  textconv = "echo .dump | sqlite3"
+  textconv = "sqlite3 .dump"
 [merge]
   keepBackup = false
   conflictstyle = zdiff3
