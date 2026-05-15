@@ -1,9 +1,5 @@
----
- lua/codewindow/highlight.lua | 34 ++++++++++++++++++++++++++++++----
- 1 file changed, 30 insertions(+), 4 deletions(-)
-
 diff --git a/lua/codewindow/highlight.lua b/lua/codewindow/highlight.lua
-index 535b43d..fa1d33b 100644
+index 535b43d..4335e1c 100644
 --- a/lua/codewindow/highlight.lua
 +++ b/lua/codewindow/highlight.lua
 @@ -3,7 +3,6 @@ local M = {}
@@ -11,57 +7,36 @@ index 535b43d..fa1d33b 100644
  local utils = require("codewindow.utils")
  local highlighter
 -local ts_utils
-
+ 
  local hl_namespace
  local screenbounds_namespace
-@@ -29,6 +28,35 @@ function M.setup()
-   api.nvim_set_hl(0, "CodewindowBoundsBackground", { link = "CursorLine", default = true })
- end
-
-+-- Get a compatible vim range (1 index based) from a TS node range.
-+--
-+-- TS nodes start with 0 and the end col is ending exclusive.
-+-- They also treat a EOF/EOL char as a char ending in the first
-+-- col of the next row.
-+---comment
-+---@param range integer[]
-+---@param buf integer|nil
-+---@return integer, integer, integer, integer
-+local function get_vim_range(range, buf)
-+  ---@type integer, integer, integer, integer
-+  local srow, scol, erow, ecol = unpack(range)
-+  srow = srow + 1
-+  scol = scol + 1
-+  erow = erow + 1
-+
-+  if ecol == 0 then
-+    -- Use the value of the last col of the previous row instead.
-+    erow = erow - 1
-+    if not buf or buf == 0 then
-+      ecol = vim.fn.col({ erow, "$" }) - 1
-+    else
-+      ecol = vim.api.nvim_buf_get_lines(buf, erow - 1, erow, false)[1]
-+    end
-+    ecol = math.max(ecol, 1)
-+  end
-+  return srow, scol, erow, ecol
-+end
-+
- local function create_hl_namespaces(buffer)
-   api.nvim_buf_clear_namespace(buffer, hl_namespace, 0, -1)
-   api.nvim_buf_clear_namespace(buffer, screenbounds_namespace, 0, -1)
-@@ -99,8 +127,7 @@ local function extract_highlighting(buffer, lines)
+@@ -99,13 +98,21 @@ local function extract_highlighting(buffer, lines)
        if hl then
          local c = query._query.captures[capture]
          if c ~= nil then
 -          local start_row, start_col, end_row, end_col =
 -            ts_utils.get_vim_range({ vim.treesitter.get_node_range(node) }, buffer)
-+          local start_row, start_col, end_row, end_col = get_vim_range({ vim.treesitter.get_node_range(node) }, buffer)
-
++          -- vim.treesitter.get_node_range returns 0-indexed rows and columns
++          -- Rows: 0-indexed inclusive -> 1-indexed inclusive
++          -- Cols: 0-indexed with end exclusive [start_col, end_col) -> 1-indexed inclusive
++          local start_row, start_col, end_row, end_col = vim.treesitter.get_node_range(node)
++          start_row = start_row + 1
++          end_row = end_row + 1
++          start_col = start_col + 1
++          -- end_col is already "one past" in 0-based; in 1-based it's the inclusive end
+ 
            for y = start_row, end_row do
              for x = start_col, math.min(end_col, minimap_char_width) do
-@@ -124,7 +151,6 @@ end
-
+               local minimap_x, minimap_y = utils.buf_to_minimap(x, y)
+-              highlights[minimap_y][minimap_x][c] = (highlights[minimap_y][minimap_x][c] or 0) + 1
++              if minimap_y >= 1 and minimap_y <= minimap_height and minimap_x >= 1 and minimap_x <= minimap_width then
++                highlights[minimap_y][minimap_x][c] = (highlights[minimap_y][minimap_x][c] or 0) + 1
++              end
+             end
+           end
+         end
+@@ -124,7 +131,6 @@ end
+ 
  if config.use_treesitter then
    highlighter = require("vim.treesitter.highlighter")
 -  ts_utils = require("nvim-treesitter.ts_utils")
