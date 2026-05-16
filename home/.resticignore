@@ -1,6 +1,6 @@
 *[Cc]ache*
 *.log
-*.backup*
+*backup*
 *~
 build
 restic-ignore
