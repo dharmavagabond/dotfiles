@@ -82,6 +82,7 @@ for i = 1, 10 do
 	local keycode = 9 + i -- 10, 11, 12, ..., 19
 	hl.bind("SUPER + code:" .. keycode, hl.dsp.focus({ workspace = i }))
 	hl.bind("SUPER + SHIFT + code:" .. keycode, hl.dsp.window.move({ workspace = i }))
+	hl.bind("SUPER + CTRL + SHIFT + code:" .. keycode, hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
 -- Resize active window
