@@ -95,7 +95,7 @@ hl.bind("SUPER + SHIFT + equal", hl.dsp.window.resize({ x = 0, y = 100, relative
 hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
--- # Move/resize windows with mainMod + LMB/RMB and dragging
+-- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag())
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize())
 
@@ -126,7 +126,7 @@ hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("pkill hyprpicker || hyprpicker -a"), {
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brilloctl +"))
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brilloctl -"))
 
--- # Volume
+-- Volume
 hl.bind("XF86AudioRaiseVolume", D.volume_ctl("speaker", "up"))
 hl.bind("XF86AudioLowerVolume", D.volume_ctl("speaker", "down"))
 hl.bind("XF86AudioMute", D.volume_ctl("speaker", "toggle-mute"))
@@ -137,7 +137,7 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"))
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"))
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"))
 
--- # Gaming Mode
+-- Gaming Mode
 hl.bind(
 	"SUPER + SHIFT + S",
 	hl.dsp.exec_cmd("app2unit -- kitty.desktop:tui-float gaming-start"),
