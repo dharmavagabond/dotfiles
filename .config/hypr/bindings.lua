@@ -2,7 +2,7 @@ local tui = "app2unit -- kitty.desktop:tui "
 local browser = io.popen("xdg-settings get default-web-browser"):read("*a"):gsub("\n", ""):gsub(".desktop$", "")
 
 -- Close window
-hl.bind("SUPER + Q", hl.dsp.window.kill(), { description = "Quit app" })
+hl.bind("SUPER + Q", hl.dsp.window.close(), { description = "Quit app" })
 
 -- Tiling
 hl.bind("SUPER + SLASH", hl.dsp.layout("togglesplit"))
