@@ -49,3 +49,18 @@ clear-screen-and-scrollback() {
   printf '\x1Bc'
   zle clear-screen
 }
+
+pbcopy() {
+    local content
+
+    if [ ! -t 0 ]; then
+        content=$(cat)
+    else
+        content="$1"
+    fi
+
+    [ -z "$content" ] && return 1
+
+    printf "%s" "$content" | clipse -c
+    printf "%s" "$content" | clipse -a
+}

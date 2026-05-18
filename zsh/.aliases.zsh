@@ -6,3 +6,4 @@ alias vimdiff="nvim -d -R"
 alias sudo=doas
 alias sudoedit=doasedit
 alias yay=paru
+alias pbpaste="wl-paste"
