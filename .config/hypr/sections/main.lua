@@ -1,0 +1,8 @@
+require("hypr.sections.general")
+require("hypr.sections.decoration")
+require("hypr.sections.dwindle")
+require("hypr.sections.layout")
+require("hypr.sections.misc")
+require("hypr.sections.quirks")
+require("hypr.sections.render")
+require("hypr.sections.plugin")

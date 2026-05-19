@@ -1,0 +1,6 @@
+hl.config({
+	render = {
+		cm_auto_hdr = 0,
+		direct_scanout = 2,
+	},
+})
