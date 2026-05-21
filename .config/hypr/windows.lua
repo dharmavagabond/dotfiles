@@ -1,4 +1,4 @@
--- # Float and center
+-- Float and center
 hl.window_rule({
 	match = { tag = "floating-window" },
 	size = { 845, 800 },
@@ -8,7 +8,20 @@ hl.window_rule({
 	tag = "+floating-window",
 })
 
--- Clipse
+-- Fullscreen
+hl.window_rule({
+	match = { class = "kitty.tui.fullscreen" },
+	fullscreen = true,
+	fullscreen_state = 2,
+})
+
+-- sigye
+hl.window_rule({
+	match = { title = "sigye", class = "kitty.tui.fullscreen" },
+	workspace = 1,
+})
+
+-- clipse
 hl.window_rule({
 	match = { class = "clipse" },
 	float = true,
@@ -24,29 +37,28 @@ hl.window_rule({
 	size = { 875, 600 },
 })
 
--- # localsend
+-- localsend
 hl.window_rule({
 	match = { class = "localsend" },
 	size = { 445, 700 },
 })
 
--- # Workspaces
+-- Workspaces
 hl.window_rule({
 	match = { class = "(tidal-hifi|luna)" },
 	workspace = 3,
 })
 hl.window_rule({
-	match = { class = "gamescope" },
+	match = { class = "(gamescope|steam)" },
 	workspace = 4,
 })
 hl.window_rule({
-	match = { class = "(equibop|streamlink-twitch-gui|steam)" },
+	match = { class = "(equibop|streamlink-twitch-gui)" },
 	workspace = 5,
 })
 
--- Screen-sharing indicator - https://github.com/basecamp/omarchy/discussions/3052
 hl.window_rule({
-	match = { title = "^(.*is sharing.*\\.)$" },
+	match = { title = ".*is sharing.*", workspace = "special silent" },
 	tag = "+screen-share-indicator",
 })
 
