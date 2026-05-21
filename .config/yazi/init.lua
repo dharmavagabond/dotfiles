@@ -14,3 +14,5 @@ end
 
 require("no-status"):setup()
 require("duckdb"):setup()
+require("recycle-bin"):setup()
+require("git"):setup({ order = 1500 })

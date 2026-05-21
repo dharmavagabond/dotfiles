@@ -22,6 +22,8 @@ prepend_previewers = [
   { mime = "application/x-zstd", run = "ouch" },
   { mime = "application/zstd", run = "ouch" },
   { mime = "application/java-archive", run = "ouch" },
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
+  { mime = "application/subrip", run = "mediainfo" },
 
   # DuckDB
   { url = "*.csv", run = "duckdb" },
@@ -43,9 +45,16 @@ prepend_preloaders = [
   { url = "*.parquet", run = "duckdb" },
   { url = "*.txt", run = "duckdb" },
   { url = "*.xlsx", run = "duckdb" },
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
+  { mime = "application/subrip", run = "mediainfo" },
 ]
+
+prepend_fetchers = [{ url = "*/", run = "git", group = "git" }]
 
 [opener]
 extract = [
   { run = 'ouch d -y "$@"', desc = "Extract here with ouch", for = "unix" },
 ]
+
+[tasks]
+image_alloc = 1073741824
