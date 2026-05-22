@@ -6,7 +6,7 @@ hl.config({
 
 			shake = {
 				enabled = true,
-				threshold = 3.0,
+				threshold = 6.0,
 			},
 		},
 	},
