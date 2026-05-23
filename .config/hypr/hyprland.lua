@@ -27,3 +27,4 @@ require("hypr.permissions")
 
 -- env vars
 hl.env("QT_STYLE_OVERRIDE", "")
+hl.env("XCURSOR_SIZE", "0")
