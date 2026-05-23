@@ -1,13 +1,16 @@
-hl.config({
-	plugin = {
-		dynamic_cursors = {
-			mode = "tilt",
-			threshold = 2,
+-- hypr-dynamic-cursors
+if hl.plugin.dynamic_cursors then
+	hl.config({
+		plugin = {
+			dynamic_cursors = {
+				mode = "tilt",
+				threshold = 2,
 
-			shake = {
-				enabled = true,
-				threshold = 6.0,
+				shake = {
+					enabled = true,
+					threshold = 6.0,
+				},
 			},
 		},
-	},
-})
+	})
+end
