@@ -24,3 +24,6 @@ require("hypr.monitors")
 require("hypr.windows")
 require("hypr.workspaces")
 require("hypr.permissions")
+
+-- env vars
+hl.env("QT_STYLE_OVERRIDE", "")
