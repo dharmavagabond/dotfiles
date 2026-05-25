@@ -183,6 +183,7 @@ tooltip label {
 }
 
 #custom-update {
+  font-size: 0.75rem;
   padding-left: 14px;
   padding-right: 4px;
 }
