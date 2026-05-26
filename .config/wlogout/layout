@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "omarchy-system-lock",
+    "action" : "loginctl lock-session",
     "text" : "Lock",
     "keybind" : "l"
 }
@@ -18,7 +18,7 @@
 }
 {
     "label" : "suspend",
-    "action" : "omarchy-system-lock && systemctl suspend --no-wall",
+    "action" : "loginctl lock-session & sleep 1; systemctl suspend --no-wall",
     "text" : "Suspend",
     "keybind" : "u"
 }
