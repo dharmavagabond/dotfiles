@@ -8,10 +8,12 @@ function -(){
 }
 
 function update(){
+  systemctl --user stop hypridle.service;
   paru --sync --refresh --sysupgrade;
   mise upgrade;
   go-global-update;
   bun update --global;
+  systemctl --user start hypridle.service;
 }
 
 function fzf-preview(){
