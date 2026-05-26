@@ -49,12 +49,16 @@ hl.window_rule({
 	workspace = 3,
 })
 hl.window_rule({
-	match = { class = "(gamescope|steam)" },
+	match = { class = "gamescope" },
 	workspace = 4,
 })
 hl.window_rule({
 	match = { class = "(equibop|streamlink-twitch-gui)" },
 	workspace = 5,
+})
+hl.window_rule({
+	match = { class = "steam" },
+	workspace = 6,
 })
 
 hl.window_rule({
