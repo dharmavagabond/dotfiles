@@ -61,6 +61,16 @@ hl.window_rule({
 	workspace = 6,
 })
 
+-- cliamp
+hl.window_rule({
+	match = { class = "cliamp", title = "cliamp" },
+	float = true,
+	move = { "monitor_w - window_w - 7", "37" },
+	size = { 800, 400 },
+	workspace = 6,
+})
+
+-- Screen share
 hl.window_rule({
 	match = { title = ".*is sharing.*", workspace = "special silent" },
 	tag = "+screen-share-indicator",
