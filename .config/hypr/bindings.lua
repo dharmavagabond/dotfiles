@@ -120,7 +120,7 @@ hl.bind(
 )
 
 -- Color picker
-hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("pkill hyprpicker || hyprpicker -a"), { description = "Color picker" })
+hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("pgrep -x hyprpicker || hyprpicker -a"), { description = "Color picker" })
 
 -- Brightness
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brilloctl +"))
