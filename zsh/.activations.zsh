@@ -1,8 +1,3 @@
-# Git extras
-if [ -f /usr/share/doc/git-extras/git-extras-completion.zsh ]; then
-  source /usr/share/doc/git-extras/git-extras-completion.zsh
-fi
-
 # fast-syntax-highlighting
 if [ -f $ZDOTDIR/fsh/fast-syntax-highlighting.plugin.zsh ]; then
   source $ZDOTDIR/fsh/fast-syntax-highlighting.plugin.zsh
@@ -54,7 +49,7 @@ if command -v fzf &>/dev/null; then
 fi
 
 # Atuin
-if command -v fzf &>/dev/null; then
+if command -v atuin &>/dev/null; then
   export ZSH_AUTOSUGGEST_STRATEGY=(atuin history completion)
   eval "$(atuin init zsh)"
 fi

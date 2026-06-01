@@ -66,3 +66,52 @@ pbcopy() {
     printf "%s" "$content" | clipse -c
     printf "%s" "$content" | clipse -a
 }
+
+optim_jpg() {
+  if [ $# -eq 0 ]; then
+    echo "Uso: optimizar_jpegs <directorio>"
+    return 1
+  fi
+
+  local directorio="$1"
+
+  if [ ! -d "$directorio" ]; then
+    echo "Error: El directorio '$directorio' no existe"
+    return 1
+  fi
+
+  echo "Optimizando imágenes JPEG en: $directorio"
+
+  fd \
+    --extension jpg \
+    --extension jpeg \
+    --print0 \
+    --type file \
+    . "$directorio" | parallel --jobs 8 --null --bar --eta jpegoptim --overwrite --strip-all {}
+
+  echo "Optimización completada"
+}
+
+optim_png() {
+  if [ $# -eq 0 ]; then
+    echo "Uso: optim_png <directorio>"
+    return 1
+  fi
+
+  local directorio="$1"
+
+  if [ ! -d "$directorio" ]; then
+    echo "Error: El directorio '$directorio' no existe"
+    return 1
+  fi
+
+  echo "Optimizando imágenes PNG en: $directorio"
+
+  fd \
+    --extension png \
+    --print0 \
+    --type file \
+    . "$directorio" | parallel --jobs 8 --null --bar --eta trimage --file={}
+
+  echo "Optimización completada"
+}
