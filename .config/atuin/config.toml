@@ -16,9 +16,11 @@ history_filter = [
   "^update$",
   "^paru(i)?(\\s-Ss)?",
   "^md5sum ",
-  "^secret-tool",
   "^yazi",
   "^pac((?i)u|x|i)(?-i)",
+  "^ssd-cryptsetup-open",
+  "secret-tool",
+  "pass-cli",
 ]
 inline_height = 10
 keymap_mode = "vim-normal"
