@@ -45,28 +45,15 @@ hl.window_rule({
 
 -- Workspaces
 hl.window_rule({
-	match = { class = "(tidal-hifi|luna)" },
+	match = { class = "(tidal-hifi|cliamp)" },
 	workspace = 3,
 })
 hl.window_rule({
-	match = { class = "gamescope" },
+	match = { class = "(gamescope|com.libretro.RetroArch)" },
 	workspace = 4,
 })
 hl.window_rule({
-	match = { class = "(equibop|streamlink-twitch-gui)" },
-	workspace = 5,
-})
-hl.window_rule({
-	match = { class = "steam" },
-	workspace = 6,
-})
-
--- cliamp
-hl.window_rule({
-	match = { class = "cliamp", title = "cliamp" },
-	float = true,
-	move = { "monitor_w - window_w - 7", "37" },
-	size = { 800, 400 },
+	match = { class = "(equibop|steam|streamlink-twitch-gui)" },
 	workspace = 6,
 })
 
