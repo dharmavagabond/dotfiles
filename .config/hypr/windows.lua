@@ -49,7 +49,9 @@ hl.window_rule({
 	workspace = 3,
 })
 hl.window_rule({
-	match = { class = "(gamescope|com.libretro.RetroArch)" },
+	match = {
+		class = "(gamescope|com.libretro.RetroArch|org.duckstation.DuckStation|pcsx2-qt|dolphin-emu|PPSSPPSDL)",
+	},
 	workspace = 4,
 })
 hl.window_rule({
