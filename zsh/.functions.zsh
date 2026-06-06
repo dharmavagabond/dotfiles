@@ -8,6 +8,7 @@ function -(){
 }
 
 function update(){
+  mount-ssd 2T
   systemctl --user stop hypridle.service;
   paru --sync --refresh --sysupgrade;
   mise upgrade;
