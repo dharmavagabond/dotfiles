@@ -15,9 +15,9 @@ hl.window_rule({
 	fullscreen_state = 2,
 })
 
--- sigye
+-- Screensaver - terminal
 hl.window_rule({
-	match = { title = "sigye", class = "kitty.tui.fullscreen" },
+	match = { title = "(sigye|matrix)", class = "kitty.tui.fullscreen" },
 	workspace = 1,
 })
 
