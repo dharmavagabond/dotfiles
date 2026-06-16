@@ -50,7 +50,7 @@ hl.window_rule({
 })
 hl.window_rule({
 	match = {
-		class = "(gamescope|com.libretro.RetroArch|org.duckstation.DuckStation|pcsx2-qt|dolphin-emu|PPSSPPSDL)",
+		class = "(gamescope|com.libretro.RetroArch|org.duckstation.DuckStation|pcsx2-qt|dolphin-emu|PPSSPPSDL|Azahar)",
 	},
 	workspace = 4,
 })
