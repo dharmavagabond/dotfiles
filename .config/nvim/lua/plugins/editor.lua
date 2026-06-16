@@ -154,4 +154,36 @@ return {
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
   },
+  {
+    "mrjones2014/smart-splits.nvim",
+    enabled = true,
+    event = "BufEnter",
+    keys = {
+      {
+        "<M-S-h>",
+        function()
+          require("smart-splits").resize_left()
+        end,
+      },
+      {
+        "<M-S-l>",
+        function()
+          require("smart-splits").resize_right()
+        end,
+      },
+      {
+        "<M-S-j>",
+        function()
+          require("smart-splits").resize_down()
+        end,
+      },
+      {
+        "<M-S-k>",
+        function()
+          require("smart-splits").resize_up()
+        end,
+      },
+    },
+    build = "./kitty/install-kittens.bash",
+  },
 }

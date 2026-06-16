@@ -74,6 +74,7 @@
   "render-markdown.nvim": { "branch": "main", "commit": "5adf0895310c1904e5abfaad40a2baad7fe44a07" },
   "rooter.nvim": { "branch": "master", "commit": "584d7dd2c53b6607ce33bd93a6feb496de853a78" },
   "rose-pine": { "branch": "main", "commit": "ff483051a47e27d84bdef47703538df1ed9f4a47" },
+  "smart-splits.nvim": { "branch": "master", "commit": "6806149fd36d1c5e797debe3e18b2c07219b685a" },
   "snacks.nvim": { "branch": "main", "commit": "882c996cf28183f4d63640de0b4c02ec886d01f2" },
   "sudo.nvim": { "branch": "main", "commit": "10c211716f0f0149ea91732bc12338ade76d4af8" },
   "themery.nvim": { "branch": "main", "commit": "bfa58f4b279d21cb515b28023e1b68ec908584b2" },
