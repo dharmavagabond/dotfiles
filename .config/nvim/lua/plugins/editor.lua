@@ -186,4 +186,9 @@ return {
     },
     build = "./kitty/install-kittens.bash",
   },
+  {
+    "nvim-zh/colorful-winsep.nvim",
+    config = true,
+    event = { "WinLeave" },
+  },
 }
