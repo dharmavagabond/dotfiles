@@ -58,6 +58,8 @@ hl.bind(
 	hl.dsp.exec_cmd(string.format("omarchy-launch-or-focus %s 'app2unit -- %s.desktop'", browser, browser))
 )
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(tui .. "--title browsh -- browsh"))
+hl.bind("SUPER + ALT + B", hl.dsp.exec_cmd("btctl connect"))
+hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("btctl disconnect"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd(tui .. "--title calcure -- calcure"))
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd(tui .. "--title cava -- cava"))
 hl.bind("SUPER + D", hl.dsp.exec_cmd(tui .. "--title gdu -- mise x -- gdu"))
