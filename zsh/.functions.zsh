@@ -116,9 +116,3 @@ optim_png() {
 
   echo "Optimización completada"
 }
-
-function open() {
-    local file_path
-    file_path=$(realpath "$1" 2>/dev/null || echo "$(pwd)/$1")
-    { app2unit-open "$file_path" || xdg-open "$file_path"; } &>/dev/null &
-}
