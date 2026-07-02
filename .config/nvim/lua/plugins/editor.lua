@@ -183,6 +183,30 @@ return {
           require("smart-splits").resize_up()
         end,
       },
+      {
+        "<C-M-S-h>",
+        function()
+          require("smart-splits").swap_buf_left()
+        end,
+      },
+      {
+        "<C-M-S-l>",
+        function()
+          require("smart-splits").swap_buf_right()
+        end,
+      },
+      {
+        "<C-M-S-j>",
+        function()
+          require("smart-splits").swap_buf_down()
+        end,
+      },
+      {
+        "<C-M-S-k>",
+        function()
+          require("smart-splits").swap_buf_up()
+        end,
+      },
     },
     build = "./kitty/install-kittens.bash",
   },
