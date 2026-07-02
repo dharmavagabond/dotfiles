@@ -52,6 +52,7 @@ prepend_preloaders = [
 prepend_fetchers = [{ url = "*/", run = "git", group = "git" }]
 
 [opener]
+open = [{ run = 'open "$@"', orphan = true, desc = "Open", for = "unix" }]
 extract = [
   { run = 'ouch d -y "$@"', desc = "Extract here with ouch", for = "unix" },
 ]
