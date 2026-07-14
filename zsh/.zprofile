@@ -35,7 +35,7 @@ path+=("$HOME/.cargo/bin" "$HOME/.lmstudio/bin" "$XDG_CACHE_HOME/.bun/bin")
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $HOME/.local/bin
+  $XDG_BIN_HOME
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   $path
