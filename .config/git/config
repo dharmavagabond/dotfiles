@@ -1,11 +1,11 @@
 [include]
-  path = ~/.gitconfig.local
+  path = ~/.config/git/config.local
 [core]
   autocrlf = input
   safecrlf = false
   editor = nvim
-  excludesfile = ~/.gitignore_global
-  attributesfile = ~/.gitattributes
+  excludesfile = ~/.config/git/ignore
+  attributesfile = ~/.config/git/attributes
   pager = "{ [ $COLUMNS -lt 80 ] && delta --pager='ov -F' || delta --pager='ov -F' --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}; }"
 [alias]
   gr = grep --break --heading --line-number
