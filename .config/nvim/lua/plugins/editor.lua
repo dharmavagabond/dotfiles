@@ -153,6 +153,9 @@ return {
       vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
+    opts = {
+      app = "zen-browser",
+    },
   },
   {
     "mrjones2014/smart-splits.nvim",
