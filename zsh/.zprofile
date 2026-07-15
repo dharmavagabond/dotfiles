@@ -31,7 +31,7 @@ source $HOME/.profile
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
-path+=("$HOME/.cargo/bin" "$HOME/.lmstudio/bin" "$XDG_CACHE_HOME/.bun/bin")
+path+=("$CARGO_HOME/bin" "$HOME/.lmstudio/bin" "$XDG_CACHE_HOME/.bun/bin")
 
 # Set the list of directories that Zsh searches for programs.
 path=(
