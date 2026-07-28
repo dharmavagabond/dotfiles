@@ -57,8 +57,8 @@
     "tooltip": false
   },
   "custom/weather": {
-    "exec": "waybar-weather --settings ~/.config/waybar/scripts/weather/weather-settings.json",
-    "exec-if": "command -v waybar-weather &>/dev/null",
+    "exec": "waybar-weather --settings $XDG_CONFIG_HOME/waybar/scripts/weather/weather-settings.json",
+    "exec-if": "command -v waybar-weather &>/dev/null && is-vpn-running &>/dev/null",
     "interval": 600,
     "return-type": "json"
    },
@@ -206,16 +206,9 @@
   },
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-capture-screenrecording --stop-recording",
+    "exec-if": "test -f $OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "signal": 8,
     "return-type": "json"
-  },
-  "custom/update": {
-    "format": "",
-    "exec": "omarchy-update-available",
-    "on-click": "app2unit -- kitty.desktop:omarchy-update-tui",
-    "tooltip-format": "Omarchy update available",
-    "signal": 7,
-    "interval": 3600
   }
 }
