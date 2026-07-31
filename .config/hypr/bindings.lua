@@ -41,7 +41,6 @@ hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.cycle_next({ prev = true, tiled = t
 
 -- Launchers
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("pgrep -x fuzzel || fuzzel"))
-hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd("omarchy-menu"))
 hl.bind("XF86LaunchA", hl.dsp.exec_cmd("pgrep -x fuzzel || hyprworm"))
 hl.bind("XF86LaunchB", hl.dsp.exec_cmd("ff"))
 
@@ -49,35 +48,29 @@ hl.bind("XF86LaunchB", hl.dsp.exec_cmd("ff"))
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd('app2unit-term --dir="$(omarchy-cmd-terminal-cwd)"'))
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("app2unit -- kitty.desktop:zellij"))
 hl.bind("SUPER + A", hl.dsp.exec_cmd(tui .. "--title btop -- mise x -- btop"))
-hl.bind(
-	"SUPER + SHIFT + A",
-	hl.dsp.exec_cmd('omarchy-launch-or-focus resources "app2unit -- net.nokyan.Resources.desktop"')
-)
-hl.bind(
-	"SUPER + B",
-	hl.dsp.exec_cmd(string.format("omarchy-launch-or-focus %s 'app2unit -- %s.desktop'", browser, browser))
-)
+hl.bind("SUPER + SHIFT + A", hl.dsp.exec_cmd('launch-or-focus resources "app2unit -- net.nokyan.Resources.desktop"'))
+hl.bind("SUPER + B", hl.dsp.exec_cmd(string.format("launch-or-focus %s 'app2unit -- %s.desktop'", browser, browser)))
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(tui .. "--title browsh -- browsh"))
 hl.bind("SUPER + ALT + B", hl.dsp.exec_cmd("btctl connect"))
 hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("btctl disconnect"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd(tui .. "--title calcure -- calcure"))
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd(tui .. "--title cava -- cava"))
 hl.bind("SUPER + D", hl.dsp.exec_cmd(tui .. "--title gdu -- mise x -- gdu"))
-hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd('omarchy-launch-or-focus equibop "app2unit -- equibop.desktop"'))
+hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd('launch-or-focus equibop "app2unit -- equibop.desktop"'))
 hl.bind("SUPER + F", hl.dsp.exec_cmd(tui .. "--title yazi -- mise x -- yazi"))
-hl.bind("SUPER + G", hl.dsp.exec_cmd('omarchy-launch-or-focus github "app2unit -- GitHub.desktop"'))
-hl.bind("SUPER + M", hl.dsp.exec_cmd('omarchy-launch-or-focus "Proton Mail" "app2unit -- proton-mail.desktop"'))
-hl.bind("SUPER + N", hl.dsp.exec_cmd('omarchy-launch-or-focus nvim "app2unit -- nvim.desktop"'))
-hl.bind("SUPER + P", hl.dsp.exec_cmd('omarchy-launch-or-focus "Proton Pass" "app2unit -- proton-pass.desktop"'))
-hl.bind("SUPER + T", hl.dsp.exec_cmd('omarchy-launch-or-focus tidal-hifi "app2unit -- tidal-hifi.desktop"'))
-hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd('omarchy-launch-or-focus twitter "app2unit -- Twitter.desktop"'))
-hl.bind("SUPER + W", hl.dsp.exec_cmd('omarchy-launch-or-focus whatsapp "app2unit -- WhatsApp.desktop"'))
+hl.bind("SUPER + G", hl.dsp.exec_cmd('launch-or-focus github "app2unit -- GitHub.desktop"'))
+hl.bind("SUPER + M", hl.dsp.exec_cmd('launch-or-focus "Proton Mail" "app2unit -- proton-mail.desktop"'))
+hl.bind("SUPER + N", hl.dsp.exec_cmd('launch-or-focus nvim "app2unit -- nvim.desktop"'))
+hl.bind("SUPER + P", hl.dsp.exec_cmd('launch-or-focus "Proton Pass" "app2unit -- proton-pass.desktop"'))
+hl.bind("SUPER + T", hl.dsp.exec_cmd('launch-or-focus tidal-hifi "app2unit -- tidal-hifi.desktop"'))
+hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd('launch-or-focus twitter "app2unit -- Twitter.desktop"'))
+hl.bind("SUPER + W", hl.dsp.exec_cmd('launch-or-focus whatsapp "app2unit -- WhatsApp.desktop"'))
 hl.bind("SUPER + X", hl.dsp.exec_cmd(tui .. "--title clipse --class clipse -- clipse"))
 hl.bind(
 	"SUPER + SHIFT + X",
 	hl.dsp.exec_cmd('clipse --clear-all && notify-send -a clipse -i kitty "Clipse" "Historial eliminado"')
 )
-hl.bind("SUPER + Y", hl.dsp.exec_cmd('omarchy-launch-or-focus youtube "app2unit -- YouTube.desktop"'))
+hl.bind("SUPER + Y", hl.dsp.exec_cmd('launch-or-focus youtube "app2unit -- YouTube.desktop"'))
 
 -- Switch workspaces & move windows with mainMod + [0-9] and mainMod + SHIFT + [0-9]
 for i = 1, 10 do

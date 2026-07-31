@@ -6,13 +6,13 @@
 }
 {
     "label" : "logout",
-    "action" : "omarchy-system-logout",
+    "action" : "system-logout",
     "text" : "Logout",
     "keybind" : "o"
 }
 {
     "label" : "shutdown",
-    "action" : "omarchy-system-shutdown",
+    "action" : "system-shutdown",
     "text" : "Shutdown",
     "keybind" : "s"
 }
@@ -24,7 +24,7 @@
 }
 {
     "label" : "reboot",
-    "action" : "omarchy-system-reboot",
+    "action" : "system-reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }
