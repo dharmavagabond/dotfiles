@@ -139,8 +139,4 @@ hl.bind(
 	hl.dsp.exec_cmd("app2unit -- kitty.desktop:tui-float gaming-start"),
 	{ description = "Gamescope steam gaming mode" }
 )
-hl.bind(
-	"SUPER + SHIFT + R",
-	hl.dsp.exec_cmd("app2unit -- kitty.desktop:tui-float gaming-stop"),
-	{ description = "Exit gaming mode" }
-)
+hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("app2unit -- gaming-stop"), { description = "Exit gaming mode" })
