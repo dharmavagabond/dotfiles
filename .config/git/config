@@ -12,6 +12,7 @@
   type = cat-file -t
   dump = cat-file -p
   resign = "!re() { git rebase --exec 'git commit --amend --no-edit -n -S' -i $1; }; re"
+  df = "!f() { GIT_EXTERNAL_DIFF=difft git diff --ext-diff \"$@\"; }; f"
 [diff "sqlite3"]
   binary = true
   textconv = "sqlite3 .dump"
