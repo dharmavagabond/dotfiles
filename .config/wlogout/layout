@@ -18,7 +18,7 @@
 }
 {
     "label" : "suspend",
-    "action" : "loginctl lock-session & sleep 1; systemctl suspend --no-wall",
+    "action" : "system-suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
