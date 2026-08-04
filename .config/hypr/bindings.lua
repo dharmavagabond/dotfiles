@@ -136,7 +136,11 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"))
 -- Gaming Mode
 hl.bind(
 	"SUPER + SHIFT + S",
-	hl.dsp.exec_cmd("app2unit -- kitty.desktop:tui-float gaming-start"),
+	hl.dsp.exec_cmd("systemctl --user start gamescope-steam.service"),
 	{ description = "Gamescope steam gaming mode" }
 )
-hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("app2unit -- gaming-stop"), { description = "Exit gaming mode" })
+hl.bind(
+	"SUPER + SHIFT + R",
+	hl.dsp.exec_cmd("systemctl --user stop gamescope-steam.service"),
+	{ description = "Exit gaming mode" }
+)
