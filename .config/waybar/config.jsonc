@@ -195,10 +195,7 @@
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": [],
-    "rewrite": {
-      "Firefox Web Browser": "Firefox"
-    }
+    "ignore-list": []
   },
   "systemd-failed-units": {
     "format": "",
