@@ -8,13 +8,13 @@ function -(){
 }
 
 function update(){
-  ssdctl mount 2T
   systemctl --user stop hypridle.service
+  trap 'systemctl --user start hypridle.service' EXIT
+  ssdctl mount 2T
   paru --sync --refresh --sysupgrade
   mise upgrade
   go-global-update
   bun update --global
-  systemctl --user start hypridle.service
 }
 
 function fzf-preview(){
