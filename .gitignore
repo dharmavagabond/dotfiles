@@ -1,20 +1,18 @@
 .config/mpv/watch_later
-.config/wtf/log.txt
 .config/bat/themes/*
 .config/mpv/scripts/*
 .config/mpv/shaders/*
-.config/waybar/themes/*
 .config/yazi/flavors/*
 .config/yazi/plugins/*
 .config/zellij/plugins/*
 .config/zellij/themes/*
+
+.config/noctalia/location.toml
 .config/sunsetr/geo.toml
-.config/waybar/scripts/weather/
 
 !.config/bat/themes/.gitkeep
 !.config/mpv/scripts/.gitkeep
 !.config/mpv/shaders/.gitkeep
-!.config/waybar/themes/.gitkeep
 !.config/yazi/flavors/.gitkeep
 !.config/zellij/plugins/.gitkeep
 !.config/zellij/themes/.gitkeep

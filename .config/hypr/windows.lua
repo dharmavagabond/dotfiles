@@ -72,3 +72,9 @@ hl.window_rule({
 	pin = true,
 	move = { "monitor_w - window_w - 20", "monitor_h - window_h - 20" },
 })
+
+-- Noctalia Settings
+hl.window_rule({
+	match = { class = "dev.noctalia.Noctalia" },
+	tag = "+floating-window",
+})

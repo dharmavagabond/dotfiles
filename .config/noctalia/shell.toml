@@ -1,0 +1,33 @@
+[lockscreen]
+enabled = false
+
+[shell]
+avatar_path = "~/Imágenes/dharma-avatar.jpg"
+clipboard_image_action_command = "satty -f -"
+corner_radius_scale = 0.6
+font_family = "DM Sans"
+launch_apps_custom_command = "app2unit -- $CMD"
+polkit_agent = true
+settings_show_advanced = true
+settings_window_translucent = true
+shared_gl_context = true
+telemetry_enabled = false
+
+[shell.animation]
+enabled = true
+speed = 1.25
+
+[shell.panel]
+floating_layer = "top"
+transparency_mode = "glass"
+
+[shell.launcher]
+categories = false
+
+[shell.screenshot]
+directory = "~/Imágenes/screenshots"
+pipe_to_command = true
+pipe_command = "trimage -f"
+
+[shell.shadow]
+alpha = 0.3

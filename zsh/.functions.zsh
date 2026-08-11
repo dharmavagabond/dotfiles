@@ -8,8 +8,8 @@ function -(){
 }
 
 function update(){
-  systemctl --user stop hypridle.service
-  trap 'systemctl --user start hypridle.service' EXIT
+  noctalia msg caffeine-disable
+  trap 'noctalia msg caffeine-enable' EXIT
   ssdctl mount 2T
   paru --sync --refresh --sysupgrade
   mise upgrade
@@ -64,8 +64,7 @@ pbcopy() {
 
     [ -z "$content" ] && return 1
 
-    printf "%s" "$content" | clipse -c
-    printf "%s" "$content" | clipse -a
+    printf "%s" "$content" | wl-copy
 }
 
 optim_jpg() {

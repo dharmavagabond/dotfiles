@@ -1,4 +1,5 @@
 local tui = "app2unit -- kitty.desktop:tui "
+local ipc = "noctalia msg "
 local browser = io.popen("xdg-settings get default-web-browser"):read("*a"):gsub("\n", ""):gsub(".desktop$", "")
 
 -- Close window
@@ -40,12 +41,13 @@ hl.bind("SUPER + TAB", hl.dsp.window.cycle_next({ next = true, tiled = true }))
 hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.cycle_next({ prev = true, tiled = true }))
 
 -- Launchers
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("pgrep -x fuzzel || fuzzel"))
-hl.bind("XF86LaunchA", hl.dsp.exec_cmd("pgrep -x fuzzel || hyprworm"))
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-open launcher"))
+hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd(ipc .. "panel-open control-center"))
+hl.bind("XF86LaunchA", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 hl.bind("XF86LaunchB", hl.dsp.exec_cmd("ff"))
 
 -- Application bindings
-hl.bind("SUPER + RETURN", hl.dsp.exec_cmd('app2unit-term --dir="$(omarchy-cmd-terminal-cwd)"'))
+hl.bind("SUPER + RETURN", hl.dsp.exec_cmd('app2unit-term --dir="$(terminal-cwd)"'))
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("app2unit -- kitty.desktop:zellij"))
 hl.bind("SUPER + A", hl.dsp.exec_cmd(tui .. "--title btop -- mise x -- btop"))
 hl.bind("SUPER + SHIFT + A", hl.dsp.exec_cmd('launch-or-focus resources "app2unit -- net.nokyan.Resources.desktop"'))
@@ -54,7 +56,6 @@ hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(tui .. "--title browsh -- browsh"))
 hl.bind("SUPER + ALT + B", hl.dsp.exec_cmd("btctl connect"))
 hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("btctl disconnect"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd(tui .. "--title calcure -- calcure"))
-hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd(tui .. "--title cava -- cava"))
 hl.bind("SUPER + D", hl.dsp.exec_cmd(tui .. "--title gdu -- mise x -- gdu"))
 hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd('launch-or-focus equibop "app2unit -- equibop.desktop"'))
 hl.bind("SUPER + F", hl.dsp.exec_cmd(tui .. "--title yazi -- mise x -- yazi"))
@@ -65,10 +66,10 @@ hl.bind("SUPER + P", hl.dsp.exec_cmd('launch-or-focus "Proton Pass" "app2unit --
 hl.bind("SUPER + T", hl.dsp.exec_cmd('launch-or-focus tidal-hifi "app2unit -- tidal-hifi.desktop"'))
 hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd('launch-or-focus twitter "app2unit -- Twitter.desktop"'))
 hl.bind("SUPER + W", hl.dsp.exec_cmd('launch-or-focus whatsapp "app2unit -- WhatsApp.desktop"'))
-hl.bind("SUPER + X", hl.dsp.exec_cmd(tui .. "--title clipse --class clipse -- clipse"))
+hl.bind("SUPER + X", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
 hl.bind(
 	"SUPER + SHIFT + X",
-	hl.dsp.exec_cmd('clipse --clear-all && notify-send -a clipse -i kitty "Clipse" "Historial eliminado"')
+	hl.dsp.exec_cmd(ipc .. 'clipboard-clear && notify-send -a clipse -i kitty "Clipboard" "Historial eliminado"')
 )
 hl.bind("SUPER + Y", hl.dsp.exec_cmd('launch-or-focus youtube "app2unit -- YouTube.desktop"'))
 
@@ -98,13 +99,21 @@ hl.bind("SUPER + mouse:273", hl.dsp.window.resize())
 hl.bind("SUPER + ESCAPE", D.show_wlogout)
 
 -- Notifications
-hl.bind("SUPER + COMMA", hl.dsp.exec_cmd("swaync-client --close-latest"))
-hl.bind("SUPER + SHIFT + COMMA", hl.dsp.exec_cmd("swaync-client --close-all"))
-hl.bind("SUPER + CTRL + COMMA", hl.dsp.exec_cmd("swaync-client --toggle-dnd"))
-hl.bind("SUPER + CTRL + SHIFT + COMMA", hl.dsp.exec_cmd("swaync-client --toggle-panel"))
+hl.bind("SUPER + COMMA", hl.dsp.exec_cmd(ipc .. "notification-clear-active"))
+hl.bind("SUPER + SHIFT + COMMA", hl.dsp.exec_cmd(ipc .. "notification-clear-history"))
+hl.bind("SUPER + CTRL + COMMA", hl.dsp.exec_cmd(ipc .. "notification-dnd-toggle "))
+hl.bind("SUPER + CTRL + SHIFT + COMMA", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center notifications"))
 
 -- Screenshots
-hl.bind("PRINT", hl.dsp.exec_cmd("omarchy-capture-screenshot"), { description = "Screenshot" })
+hl.bind("PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-fullscreen pick"))
+
+-- Color picker
+hl.bind(
+	"SUPER + SHIFT + PRINT",
+	hl.dsp.exec_cmd("pgrep -x hyprpicker || hyprpicker -a"),
+	{ description = "Color picker" }
+)
 
 -- Screenrecord
 hl.bind("ALT + PRINT", hl.dsp.exec_cmd("omarchy-capture-screenrecording"), { description = "Screen record" })
@@ -114,24 +123,21 @@ hl.bind(
 	{ description = "Screen record with audio" }
 )
 
--- Color picker
-hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("pgrep -x hyprpicker || hyprpicker -a"), { description = "Color picker" })
-
 -- Brightness
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brilloctl +"))
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brilloctl -"))
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"))
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"))
 
 -- Volume
-hl.bind("XF86AudioRaiseVolume", D.volume_ctl("speaker", "up"))
-hl.bind("XF86AudioLowerVolume", D.volume_ctl("speaker", "down"))
-hl.bind("XF86AudioMute", D.volume_ctl("speaker", "toggle-mute"))
-hl.bind("XF86AudioMicMute", D.volume_ctl("microphone", "toggle-mute"))
-hl.bind("CTRL + F12", D.volume_ctl("microphone", "toggle-mute"))
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume-mute"))
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(ipc .. "mic-mute"))
+hl.bind("CTRL + F12", hl.dsp.exec_cmd(ipc .. "mic-mute"))
 
 -- Music
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"))
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"))
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd(ipc .. "media next"))
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(ipc .. "media previous"))
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(ipc .. "media toggle"))
 
 -- Gaming Mode
 hl.bind(

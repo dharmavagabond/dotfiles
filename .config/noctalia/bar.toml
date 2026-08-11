@@ -1,0 +1,35 @@
+[bar]
+order = ["main"]
+
+[bar.default]
+start = [
+  "control-center",
+  "spacer",
+  "workspaces",
+  "spacer",
+  "taskbar",
+  "spacer",
+  "media",
+  "audio_visualizer",
+]
+center = ["privacy"]
+end = [
+  "tray",
+  "recorder",
+  "bluetooth",
+  "network",
+  "volume",
+  "notifications",
+  "weather",
+  "clock",
+]
+background_opacity = 0.9
+shadow = false
+thickness = 28
+scale = 0.7
+font_weight = 400
+font_family = "DM Sans"
+
+[bar.default.monitor.hdmi]
+match = "HDMI-A-1"
+scale = 0.6

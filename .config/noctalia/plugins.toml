@@ -1,0 +1,9 @@
+[plugins]
+enabled = ["noctalia/screen_recorder"]
+auto_update = true
+
+[plugin_settings."noctalia/screen_recorder"]
+color_range = "full"
+directory = "~/Vídeos"
+video_codec = "hevc"
+hide_inactive = true

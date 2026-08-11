@@ -5,24 +5,17 @@ hl.layer_rule({
 })
 
 hl.layer_rule({
-	match = { namespace = "swaync-control-center" },
+	name = "noctalia",
+	match = {
+		namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
+	},
+	ignore_alpha = 0.5,
 	blur = true,
-	ignore_alpha = 0,
-})
-hl.layer_rule({
-	match = { namespace = "swaync-notification-window" },
-	blur = true,
-	ignore_alpha = 0,
+	blur_popups = true,
 })
 
 hl.layer_rule({
 	match = { namespace = "logout_dialog" },
-	blur = true,
-	ignore_alpha = 0,
-})
-
-hl.layer_rule({
-	match = { namespace = "avizo" },
 	blur = true,
 	ignore_alpha = 0,
 })

@@ -1,0 +1,31 @@
+[audio]
+enable_overdrive = true
+
+[brightness]
+enable_ddcutil = true
+
+[brightness.monitor.DP-1]
+backend = "ddcutil"
+
+[brightness.monitor.HDMI-A-1]
+backend = "ddcutil"
+
+[idle.behavior.lock]
+enabled = false
+
+[idle.behavior.screen-off]
+enabled = false
+
+[idle.behavior.suspend]
+enabled = false
+
+[notification]
+background_opacity = 0.9
+offset_x = 7
+offset_y = 7
+
+[weather]
+enabled = true
+refresh_minutes = 30
+unit = "metric"
+effects = true
