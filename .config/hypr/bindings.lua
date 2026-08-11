@@ -41,8 +41,9 @@ hl.bind("SUPER + TAB", hl.dsp.window.cycle_next({ next = true, tiled = true }))
 hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.cycle_next({ prev = true, tiled = true }))
 
 -- Launchers
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-open launcher"))
-hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd(ipc .. "panel-open control-center"))
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+hl.bind("SUPER + CTRL + ALT + SPACE", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
 hl.bind("XF86LaunchA", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 hl.bind("XF86LaunchB", hl.dsp.exec_cmd("ff"))
 
