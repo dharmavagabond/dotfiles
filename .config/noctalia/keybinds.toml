@@ -1,0 +1,5 @@
+[keybinds]
+left = ["Left", "Ctrl+h"]
+right = ["Right", "Ctrl+l"]
+down = ["Down", "Ctrl+n"]
+up = ["Up", "Ctrl+p"]
