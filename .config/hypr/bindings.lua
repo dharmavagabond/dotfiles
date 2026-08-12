@@ -56,7 +56,7 @@ hl.bind("SUPER + B", hl.dsp.exec_cmd(string.format("launch-or-focus %s 'app2unit
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(tui .. "--title browsh -- browsh"))
 hl.bind("SUPER + ALT + B", hl.dsp.exec_cmd("btctl connect"))
 hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("btctl disconnect"))
-hl.bind("SUPER + C", hl.dsp.exec_cmd(tui .. "--title calcure -- calcure"))
+hl.bind("SUPER + C", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center calendar"))
 hl.bind("SUPER + D", hl.dsp.exec_cmd(tui .. "--title gdu -- mise x -- gdu"))
 hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd('launch-or-focus equibop "app2unit -- equibop.desktop"'))
 hl.bind("SUPER + F", hl.dsp.exec_cmd(tui .. "--title yazi -- mise x -- yazi"))
@@ -70,13 +70,15 @@ hl.bind("SUPER + W", hl.dsp.exec_cmd('launch-or-focus whatsapp "app2unit -- What
 hl.bind("SUPER + X", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
 hl.bind(
 	"SUPER + SHIFT + X",
-	hl.dsp.exec_cmd(ipc .. 'clipboard-clear && notify-send -a clipse -i kitty "Clipboard" "Historial eliminado"')
+	hl.dsp.exec_cmd(
+		ipc .. 'clipboard-clear && notify-send -u low -a noctilia -i noctilia "Clipboard" "Historial eliminado"'
+	)
 )
 hl.bind("SUPER + Y", hl.dsp.exec_cmd('launch-or-focus youtube "app2unit -- YouTube.desktop"'))
 
--- Switch workspaces & move windows with mainMod + [0-9] and mainMod + SHIFT + [0-9]
+-- Switch workspaces and windows
 for i = 1, 10 do
-	local keycode = 9 + i -- 10, 11, 12, ..., 19
+	local keycode = 9 + i
 	hl.bind("SUPER + code:" .. keycode, hl.dsp.focus({ workspace = i }))
 	hl.bind("SUPER + SHIFT + code:" .. keycode, hl.dsp.window.move({ workspace = i }))
 	hl.bind("SUPER + CTRL + SHIFT + code:" .. keycode, hl.dsp.window.move({ workspace = i, follow = false }))
