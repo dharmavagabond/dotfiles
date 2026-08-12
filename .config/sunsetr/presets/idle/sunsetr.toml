@@ -10,4 +10,4 @@ adaptive_interval = 1  # Adaptive interval base for smooth transition (1-1000)ms
 
 #[Static configuration]
 static_temp = 6500 # Color temperature for static mode (1000-20000) Kelvin
-static_gamma = 30  # Gamma percentage for static mode (10-200%)
+static_gamma = 20  # Gamma percentage for static mode (10-200%)
