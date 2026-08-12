@@ -1,5 +1,10 @@
 [plugins]
-enabled = ["noctalia/screen_recorder"]
+enabled = [
+  "noctalia/screen_recorder",
+  "marccvictoria/llamanager",
+  "nightwatch75/file-search",
+  "lucasoe/proton-pass",
+]
 auto_update = true
 
 [plugin_settings."noctalia/screen_recorder"]
@@ -7,3 +12,9 @@ color_range = "full"
 directory = "~/Vídeos"
 video_codec = "hevc"
 hide_inactive = true
+
+[plugin_settings."marccvictoria/llamanager"]
+launcher = "qwen3.5:9b-q4_K_M"
+
+[plugin_settings."nightwatch75/file-search"]
+show_hidden = true
