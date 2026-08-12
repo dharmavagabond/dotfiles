@@ -78,3 +78,9 @@ hl.window_rule({
 	match = { class = "dev.noctalia.Noctalia" },
 	tag = "+floating-window",
 })
+
+-- NetworkManager
+hl.window_rule({
+	match = { class = "nm-connection-editor" },
+	tag = "+floating-window",
+})
