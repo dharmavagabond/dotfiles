@@ -1,6 +1,11 @@
 [lockscreen]
 enabled = false
 
+[osd]
+background_opacity = 0.9
+offset_x = 7
+position = "bottom_left"
+
 [shell]
 avatar_path = "~/Imágenes/dharma-avatar.jpg"
 clipboard_image_action_command = "satty -f -"
