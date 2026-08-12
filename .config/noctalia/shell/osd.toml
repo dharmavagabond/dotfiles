@@ -1,0 +1,4 @@
+[osd]
+background_opacity = 0.9
+offset_x = 7
+position = "bottom_left"

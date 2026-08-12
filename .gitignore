@@ -7,7 +7,7 @@
 .config/zellij/plugins/*
 .config/zellij/themes/*
 
-.config/noctalia/location.toml
+.config/noctalia/services/location.toml
 .config/sunsetr/geo.toml
 
 !.config/bat/themes/.gitkeep

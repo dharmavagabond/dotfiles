@@ -1,0 +1,10 @@
+[notification]
+background_opacity = 0.9
+offset_x = 7
+offset_y = 7
+history_retention_hours = 2
+
+[notification.filter.tidal-hifi]
+match = "tidal-hifi"
+show_toast = false
+save_history = false

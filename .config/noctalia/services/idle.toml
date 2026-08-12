@@ -1,0 +1,8 @@
+[idle.behavior.lock]
+enabled = false
+
+[idle.behavior.screen-off]
+enabled = false
+
+[idle.behavior.suspend]
+enabled = false
