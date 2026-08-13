@@ -24,7 +24,7 @@ categories = false
 [shell.screenshot]
 directory = "~/Imágenes/screenshots"
 pipe_to_command = true
-pipe_command = "trimage -f"
+pipe_command = "oxipng -o 4 --strip safe --alpha -"
 
 [shell.shadow]
 alpha = 0.3
