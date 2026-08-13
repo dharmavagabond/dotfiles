@@ -84,3 +84,9 @@ hl.window_rule({
 	match = { class = "nm-connection-editor" },
 	tag = "+floating-window",
 })
+
+-- pavucontrol
+hl.window_rule({
+	match = { class = "org.pulseaudio.pavucontrol" },
+	tag = "+floating-window",
+})
