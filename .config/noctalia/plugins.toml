@@ -14,7 +14,7 @@ video_codec = "hevc"
 hide_inactive = true
 
 [plugin_settings."marccvictoria/llamanager"]
-launcher = "qwen3.5:9b-q4_K_M"
+launcher = "smallthinker"
 
 [plugin_settings."nightwatch75/file-search"]
 show_hidden = true
