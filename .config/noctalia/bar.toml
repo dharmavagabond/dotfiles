@@ -22,6 +22,7 @@ end = [
   "notifications",
   "weather",
   "clock",
+  "session",
 ]
 background_opacity = 0.9
 shadow = false

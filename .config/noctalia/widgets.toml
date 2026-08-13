@@ -32,3 +32,11 @@ hide_inactive = true
 
 [widget.notifications]
 hide_when_no_unread = true
+
+[widget.media]
+title_scroll = "on_hover"
+hide_when_no_media = true
+
+[widget.taskbar]
+show_active_indicator = false
+inactive_opacity = 0.6
