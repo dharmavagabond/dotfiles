@@ -1,2 +1,2 @@
 [include]
-files = ["services", "shell"]
+files = ["bar", "services", "shell"]
