@@ -15,9 +15,12 @@ scale = 0.9
 
 [widget.volume]
 show_label = false
+mute_color = "#6e6a86" # @muted
 
-[widget.brightness]
-show_label = false
+[widget.volume.effects_profile_glyphs]
+"Accentum Plus Gaming" = "device-gamepad"
+"Accentum Plus Music" = "music"
+"Accentum Plus Cinematic" = "movie"
 
 [widget.tray]
 drawer = true
@@ -29,6 +32,7 @@ show_temperature = false
 
 [widget.privacy]
 hide_inactive = true
+active_color = "error"
 
 [widget.notifications]
 hide_when_no_unread = true
