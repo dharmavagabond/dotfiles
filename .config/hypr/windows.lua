@@ -4,7 +4,9 @@ hl.window_rule({
 	size = { 845, 800 },
 })
 hl.window_rule({
-	match = { class = "kitty.tui.float" },
+	match = {
+		class = "(kitty.tui.float|dev.noctalia.Noctalia|nm-connection-editor|org.pulseaudio.pavucontrol|blueberry.py)",
+	},
 	tag = "+floating-window",
 })
 
@@ -71,22 +73,4 @@ hl.window_rule({
 	border_size = 0,
 	pin = true,
 	move = { "monitor_w - window_w - 20", "monitor_h - window_h - 20" },
-})
-
--- Noctalia Settings
-hl.window_rule({
-	match = { class = "dev.noctalia.Noctalia" },
-	tag = "+floating-window",
-})
-
--- NetworkManager
-hl.window_rule({
-	match = { class = "nm-connection-editor" },
-	tag = "+floating-window",
-})
-
--- pavucontrol
-hl.window_rule({
-	match = { class = "org.pulseaudio.pavucontrol" },
-	tag = "+floating-window",
 })
