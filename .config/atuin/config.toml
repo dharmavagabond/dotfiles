@@ -7,7 +7,7 @@ history_filter = [
   "^git reset",
   "^git push secret",
   "^man",
-  "^(sudo|doas)(edit)?",
+  "^(sudo|doas|pkexec|run0)(edit)?",
   "^scu?-",
   "^n?vim$",
   "^(a|p)sd ",
