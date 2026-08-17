@@ -51,30 +51,30 @@ hl.bind("XF86LaunchB", hl.dsp.exec_cmd("ff"))
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd('app2unit-term --dir="$(terminal-cwd)"'))
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("app2unit -- kitty.desktop:zellij"))
 hl.bind("SUPER + A", hl.dsp.exec_cmd(tui .. "--title btop -- mise x -- btop"))
-hl.bind("SUPER + SHIFT + A", hl.dsp.exec_cmd('launch-or-focus resources "app2unit -- net.nokyan.Resources.desktop"'))
-hl.bind("SUPER + B", hl.dsp.exec_cmd(string.format("launch-or-focus %s 'app2unit -- %s.desktop'", browser, browser)))
+hl.bind("SUPER + SHIFT + A", hl.dsp.exec_cmd("launch-or-focus net.nokyan.Resources"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("launch-or-focus " .. browser))
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(tui .. "--title browsh -- browsh"))
 hl.bind("SUPER + ALT + B", hl.dsp.exec_cmd("btctl connect"))
 hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("btctl disconnect"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center calendar"))
 hl.bind("SUPER + D", hl.dsp.exec_cmd(tui .. "--title gdu -- mise x -- gdu"))
-hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd('launch-or-focus equibop "app2unit -- equibop.desktop"'))
+hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd("launch-or-focus equibop"))
 hl.bind("SUPER + F", hl.dsp.exec_cmd(tui .. "--title yazi -- mise x -- yazi"))
-hl.bind("SUPER + G", hl.dsp.exec_cmd('launch-or-focus github "app2unit -- GitHub.desktop"'))
+hl.bind("SUPER + G", hl.dsp.exec_cmd("launch-or-focus github"))
 hl.bind("SUPER + M", hl.dsp.exec_cmd('launch-or-focus "Proton Mail" "app2unit -- proton-mail.desktop"'))
-hl.bind("SUPER + N", hl.dsp.exec_cmd('launch-or-focus nvim "app2unit -- nvim.desktop"'))
+hl.bind("SUPER + N", hl.dsp.exec_cmd("launch-or-focus nvim"))
 hl.bind("SUPER + P", hl.dsp.exec_cmd('launch-or-focus "Proton Pass" "app2unit -- proton-pass.desktop"'))
-hl.bind("SUPER + T", hl.dsp.exec_cmd('launch-or-focus tidal-hifi "app2unit -- tidal-hifi.desktop"'))
-hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd('launch-or-focus twitter "app2unit -- Twitter.desktop"'))
-hl.bind("SUPER + W", hl.dsp.exec_cmd('launch-or-focus whatsapp "app2unit -- WhatsApp.desktop"'))
+hl.bind("SUPER + T", hl.dsp.exec_cmd("launch-or-focus tidal-hifi"))
+hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd("launch-or-focus twitter"))
+hl.bind("SUPER + W", hl.dsp.exec_cmd("launch-or-focus whatsapp"))
 hl.bind("SUPER + X", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
 hl.bind(
 	"SUPER + SHIFT + X",
 	hl.dsp.exec_cmd(
-		ipc .. 'clipboard-clear && notify-send -u low -a noctilia -i noctilia "Clipboard" "Historial eliminado"'
+		ipc .. 'clipboard-clear && notify-send -u low -a noctalia -i noctalia "Clipboard" "Historial eliminado"'
 	)
 )
-hl.bind("SUPER + Y", hl.dsp.exec_cmd('launch-or-focus youtube "app2unit -- YouTube.desktop"'))
+hl.bind("SUPER + Y", hl.dsp.exec_cmd("launch-or-focus youtube"))
 
 -- Switch workspaces and windows
 for i = 1, 10 do
@@ -99,7 +99,7 @@ hl.bind("SUPER + mouse:272", hl.dsp.window.drag())
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize())
 
 -- Power menu controls lock, suspend, restart, shutdown
-hl.bind("SUPER + ESCAPE", D.show_wlogout)
+hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
 
 -- Notifications
 hl.bind("SUPER + COMMA", hl.dsp.exec_cmd(ipc .. "notification-clear-active"))
