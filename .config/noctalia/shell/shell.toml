@@ -1,5 +1,4 @@
 [shell]
-avatar_path = "~/Imágenes/dharma-avatar.jpg"
 clipboard_image_action_command = "satty -f -"
 corner_radius_scale = 0.6
 font_family = "DM Sans"
@@ -17,12 +16,15 @@ speed = 1.25
 [shell.panel]
 floating_layer = "top"
 transparency_mode = "glass"
+control_center_placement = "floating"
+control_center_position = "top_left"
+session_placement = "floating"
+session_position = "bottom_center"
 
 [shell.launcher]
 categories = false
 
 [shell.screenshot]
-directory = "~/Imágenes/screenshots"
 pipe_to_command = true
 pipe_command = "oxipng -o 4 --strip safe --alpha -"
 

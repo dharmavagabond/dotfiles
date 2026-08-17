@@ -10,13 +10,19 @@ hl.layer_rule({
 		namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
 	},
 	no_anim = true,
-	ignore_alpha = 0.5,
 	blur = true,
 	blur_popups = true,
 })
 
 hl.layer_rule({
+	name = "noctalia",
+	match = {
+		namespace = "^noctalia-(bar-.+)$",
+	},
+	ignore_alpha = 0,
+})
+
+hl.layer_rule({
 	match = { namespace = "logout_dialog" },
 	blur = true,
-	ignore_alpha = 0,
 })

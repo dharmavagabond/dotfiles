@@ -1,0 +1,41 @@
+[shell.session]
+grid = false
+grid_columns = 1
+show_shortcuts = true
+
+[[shell.session.actions]]
+action = "lock"
+label = "Bloquear"
+glyph = "lock"
+command = "loginctl lock-session"
+shortcut = "l"
+
+[[shell.session.actions]]
+action = "logout"
+label = "Cerrar sesión"
+glyph = "logout"
+command = "system-logout"
+shortcut = "o"
+
+[[shell.session.actions]]
+action = "suspend"
+label = "Suspender"
+glyph = "moon"
+command = "system-suspend"
+shortcut = "u"
+
+[[shell.session.actions]]
+action = "reboot"
+label = "Reiniciar"
+glyph = "refresh"
+command = "system-reboot"
+shortcut = "r"
+variant = "warning"
+
+[[shell.session.actions]]
+action = "shutdown"
+label = "Apagar"
+glyph = "power"
+command = "system-shutdown"
+shortcut = "s"
+variant = "destructive"

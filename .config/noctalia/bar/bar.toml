@@ -2,18 +2,35 @@
 order = ["main"]
 
 [bar.default]
-start = [
+icon_color = "primary"
+capsule_radius = 6.0
+start = ["group:left"]
+center = ["privacy"]
+end = ["group:right"]
+background_opacity = 0.0
+margin_ends = 0
+padding = 7
+shadow = false
+thickness = 28
+scale = 0.7
+font_weight = 400
+font_family = "DM Sans"
+
+[[bar.default.capsule_group]]
+id = "left"
+members = [
   "control-center",
-  "spacer",
   "workspaces",
-  "spacer",
   "taskbar",
-  "spacer",
   "media",
   "audio_visualizer",
 ]
-center = ["privacy"]
-end = [
+padding = 12.0
+widget_spacing = 12
+
+[[bar.default.capsule_group]]
+id = "right"
+members = [
   "tray",
   "recorder",
   "bluetooth",
@@ -22,14 +39,9 @@ end = [
   "notifications",
   "weather",
   "clock",
-  "session",
 ]
-background_opacity = 0.9
-shadow = false
-thickness = 24
-scale = 0.7
-font_weight = 400
-font_family = "DM Sans"
+padding = 12.0
+
 
 [bar.default.monitor.hdmi]
 match = "HDMI-A-1"
