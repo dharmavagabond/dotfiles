@@ -4,4 +4,4 @@ per_monitor_directories = true
 
 [wallpaper.automation]
 enabled = true
-interval_seconds = 30
+interval_seconds = 60
