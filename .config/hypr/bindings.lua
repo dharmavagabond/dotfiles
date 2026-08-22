@@ -1,9 +1,8 @@
-local tui = "app2unit -- kitty.desktop:tui "
 local ipc = "noctalia msg "
 local browser = io.popen("xdg-settings get default-web-browser"):read("*a"):gsub("\n", ""):gsub(".desktop$", "")
 
 -- Close window
-hl.bind("SUPER + Q", hl.dsp.window.close(), { description = "Quit app" })
+hl.bind("SUPER + Q", hl.dsp.exec_cmd("windowsctl close active"))
 
 -- Tiling
 hl.bind("SUPER + SLASH", hl.dsp.layout("togglesplit"))
@@ -27,7 +26,7 @@ hl.bind("SUPER + SHIFT + K", hl.dsp.window.swap({ direction = "u" }))
 hl.bind("SUPER + SHIFT + J", hl.dsp.window.swap({ direction = "d" }))
 
 -- Toggle groups
-hl.bind("SUPER + SHIFT + G", hl.dsp.window.move({ into_or_create_group = "r" }))
+hl.bind("SUPER + SHIFT + G", hl.dsp.group.toggle())
 hl.bind("SUPER + CTRL + SHIFT + G", hl.dsp.window.move({ out_of_group = true }))
 
 -- Join groups
@@ -37,8 +36,8 @@ hl.bind("SUPER + CTRL + SHIFT + K", hl.dsp.window.move({ into_group = "u" }))
 hl.bind("SUPER + CTRL + SHIFT + J", hl.dsp.window.move({ into_group = "d" }))
 
 -- Navigate a single set of grouped windows
-hl.bind("SUPER + TAB", hl.dsp.window.cycle_next({ next = true, tiled = true }))
-hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.cycle_next({ prev = true, tiled = true }))
+hl.bind("SUPER + TAB", hl.dsp.group.next())
+hl.bind("SUPER + SHIFT + TAB", hl.dsp.group.prev())
 
 -- Launchers
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
@@ -50,23 +49,25 @@ hl.bind("XF86LaunchB", hl.dsp.exec_cmd("ff"))
 -- Application bindings
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd('app2unit-term --dir="$(terminal-cwd)"'))
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("app2unit -- kitty.desktop:zellij"))
-hl.bind("SUPER + A", hl.dsp.exec_cmd(tui .. "--title btop -- mise x -- btop"))
+hl.bind("SUPER + A", hl.dsp.exec_cmd("launch-or-focus btop"))
 hl.bind("SUPER + SHIFT + A", hl.dsp.exec_cmd("launch-or-focus net.nokyan.Resources"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("launch-or-focus " .. browser))
-hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(tui .. "--title browsh -- browsh"))
+hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("launch-or-focus browsh"))
 hl.bind("SUPER + ALT + B", hl.dsp.exec_cmd("btctl connect"))
 hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("btctl disconnect"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center calendar"))
-hl.bind("SUPER + D", hl.dsp.exec_cmd(tui .. "--title gdu -- mise x -- gdu"))
+hl.bind("SUPER + D", hl.dsp.exec_cmd("launch-or-focus gdu"))
 hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd("launch-or-focus equibop"))
-hl.bind("SUPER + F", hl.dsp.exec_cmd(tui .. "--title yazi -- mise x -- yazi"))
+hl.bind("SUPER + F", hl.dsp.exec_cmd("app2unit -- yazi.desktop"))
 hl.bind("SUPER + G", hl.dsp.exec_cmd("launch-or-focus github"))
+hl.bind("SUPER + CTRL + ALT + G", hl.dsp.exec_cmd("launch-or-focus gamescope"))
 hl.bind("SUPER + M", hl.dsp.exec_cmd('launch-or-focus "Proton Mail" "app2unit -- proton-mail.desktop"'))
 hl.bind("SUPER + N", hl.dsp.exec_cmd("launch-or-focus nvim"))
 hl.bind("SUPER + P", hl.dsp.exec_cmd('launch-or-focus "Proton Pass" "app2unit -- proton-pass.desktop"'))
 hl.bind("SUPER + T", hl.dsp.exec_cmd("launch-or-focus tidal-hifi"))
 hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd("launch-or-focus twitter"))
 hl.bind("SUPER + W", hl.dsp.exec_cmd("launch-or-focus whatsapp"))
+hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("launch-or-focus wiremix"))
 hl.bind("SUPER + X", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
 hl.bind(
 	"SUPER + SHIFT + X",
@@ -141,15 +142,3 @@ hl.bind("CTRL + F12", hl.dsp.exec_cmd(ipc .. "mic-mute"))
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd(ipc .. "media next"))
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(ipc .. "media previous"))
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(ipc .. "media toggle"))
-
--- Gaming Mode
-hl.bind(
-	"SUPER + SHIFT + S",
-	hl.dsp.exec_cmd("systemctl --user start gamescope-steam.service"),
-	{ description = "Gamescope steam gaming mode" }
-)
-hl.bind(
-	"SUPER + SHIFT + R",
-	hl.dsp.exec_cmd("systemctl --user stop gamescope-steam.service"),
-	{ description = "Exit gaming mode" }
-)

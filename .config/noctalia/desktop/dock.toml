@@ -1,0 +1,10 @@
+[dock]
+enabled = true
+icon_size = 24
+reserve_space = false
+smart_auto_hide = true
+magnification_scale = 2
+inactive_opacity = 0.7
+inactive_scale = 0.7
+show_dots = true
+launcher_position = "start"

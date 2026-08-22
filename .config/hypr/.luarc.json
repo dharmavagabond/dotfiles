@@ -7,9 +7,7 @@
   },
   "diagnostics": {
     "globals": [
-      "hl",
-      "D",
-      "o"
+      "hl"
     ]
   }
 }
