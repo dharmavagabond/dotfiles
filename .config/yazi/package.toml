@@ -1,17 +1,12 @@
 [[plugin.deps]]
-use = "ndtoan96/ouch"
-rev = "406ce6c"
-hash = "f5afc904d5106ee368c8aa2ded43bd74"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:no-status"
-rev = "5d5c480"
+rev = "4848aac"
 hash = "3e023d31f29201efdac2a6ae35fedb78"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "5d5c480"
-hash = "384464b6df8cb807425c521f8cd790f3"
+rev = "4848aac"
+hash = "45a533508a9840cc5a10cf6129f63e6a"
 
 [[plugin.deps]]
 use = "wylie102/duckdb"
@@ -20,28 +15,33 @@ hash = "87b9233a74325e95011670ed20bbd0d4"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "5d5c480"
-hash = "e3260d0b1feded8c8e3ae3afa1169e30"
+rev = "4848aac"
+hash = "46cbdc05596a3ecd730b288e28c7079d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "5d5c480"
-hash = "c887903a63a2ff520081b6d90a4b3392"
+rev = "4848aac"
+hash = "d6f7351ea25a43c9b5f4315fa1e23935"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "4f80288"
-hash = "daf12bd7eb26044a8a5f41eeb369c27a"
+rev = "e079a00"
+hash = "8dd8bc3484547390ba50dfa58d7436b0"
 
 [[plugin.deps]]
 use = "uhs-robert/recycle-bin"
-rev = "fa68711"
-hash = "8714306b5cac6359edbacbf545fbd691"
+rev = "82da16a"
+hash = "7383d80862d3cdcc85f8658dac7b90c2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "5d5c480"
-hash = "88e56a64b7ce7c4314427452343fef17"
+rev = "4848aac"
+hash = "5bb0bfab901d3601c370eafdd66edd31"
+
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "cfe4f50"
+hash = "eff5702573b6cfba61e4ac8b1969629a"
 
 [[flavor.deps]]
 use = "Mintass/rose-pine-dawn"
