@@ -88,6 +88,7 @@ return {
   },
   {
     "gorbit99/codewindow.nvim",
+    enabled = false,
     event = "LazyFile",
     keys = {
       {

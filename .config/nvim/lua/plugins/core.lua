@@ -43,6 +43,7 @@ return {
   },
   {
     "polirritmico/lazy-local-patcher.nvim",
+    enabled = false,
     event = "VeryLazy",
     config = true,
   },
