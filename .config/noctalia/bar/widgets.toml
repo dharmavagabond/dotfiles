@@ -1,14 +1,11 @@
 [widget.control-center]
-glyph = ""
 custom_image = "~/.local/share/icons/hicolor/scalable/apps/cachyos-linux.svg"
-background_opacity = 1.0
-capsule_opacity = 1.0
 
 [widget.workspaces]
 active_pill_size = 1.0
 hide_when_empty = true
 focused_color = "secondary"
-occupied_color = "surface"
+occupied_color = "surface_variant"
 
 [widget.clock]
 format = "{:L%a %d %h %I:%M %p}"
@@ -20,7 +17,7 @@ show_label = false
 mute_color = "#6e6a86" # @muted
 
 [widget.volume.effects_profile_glyphs]
-"Accentum Plus Gaming" = "device-gamepad"
+"Accentum Plus Gaming" = "device-gamepad-2"
 "Accentum Plus Music" = "music"
 "Accentum Plus Cinematic" = "movie"
 

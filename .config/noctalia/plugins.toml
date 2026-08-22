@@ -5,11 +5,10 @@ enabled = [
   "nightwatch75/file-search",
   "lucasoe/proton-pass",
 ]
-auto_update = true
+auto_update = "all"
 
 [plugin_settings."noctalia/screen_recorder"]
 color_range = "full"
-directory = "~/Vídeos"
 video_codec = "hevc"
 hide_inactive = true
 

@@ -15,18 +15,15 @@ thickness = 28
 scale = 0.7
 font_weight = 400
 font_family = "DM Sans"
+concave_edge_corners = false
+radius = 0
+widget_spacing = 10
+
 
 [[bar.default.capsule_group]]
 id = "left"
-members = [
-  "control-center",
-  "workspaces",
-  "taskbar",
-  "media",
-  "audio_visualizer",
-]
-padding = 12.0
-widget_spacing = 12
+members = ["control-center", "workspaces", "media", "audio_visualizer"]
+padding = 12
 
 [[bar.default.capsule_group]]
 id = "right"
@@ -40,7 +37,7 @@ members = [
   "weather",
   "clock",
 ]
-padding = 12.0
+padding = 12
 
 
 [bar.default.monitor.hdmi]
