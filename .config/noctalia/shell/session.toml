@@ -7,28 +7,28 @@ show_shortcuts = true
 action = "lock"
 label = "Bloquear"
 glyph = "lock"
-command = "loginctl lock-session"
+command = "sistemactl lock"
 shortcut = "l"
 
 [[shell.session.actions]]
 action = "logout"
 label = "Cerrar sesión"
 glyph = "logout"
-command = "system-logout"
+command = "sistemactl logout"
 shortcut = "o"
 
 [[shell.session.actions]]
 action = "suspend"
 label = "Suspender"
 glyph = "moon"
-command = "system-suspend"
+command = "sistemactl suspend"
 shortcut = "u"
 
 [[shell.session.actions]]
 action = "reboot"
 label = "Reiniciar"
 glyph = "refresh"
-command = "system-reboot"
+command = "sistemactl reboot"
 shortcut = "r"
 variant = "warning"
 
@@ -36,6 +36,6 @@ variant = "warning"
 action = "shutdown"
 label = "Apagar"
 glyph = "power"
-command = "system-shutdown"
+command = "sistemactl shutdown"
 shortcut = "s"
 variant = "destructive"
