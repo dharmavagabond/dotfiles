@@ -16,11 +16,6 @@ scale = 0.9
 show_label = false
 mute_color = "#6e6a86" # @muted
 
-[widget.volume.effects_profile_glyphs]
-"Accentum Plus Gaming" = "device-gamepad-2"
-"Accentum Plus Music" = "music"
-"Accentum Plus Cinematic" = "movie"
-
 [widget.tray]
 drawer = true
 drawer_columns = 5
@@ -33,7 +28,12 @@ show_temperature = false
 
 [widget.privacy]
 hide_inactive = true
-active_color = "error"
+capsule = true
+capsule_fill = "#E0DEF4"   # @text
+capsule_opacity = 0.9
+capsule_padding = 15
+active_color = "#D20F39"   # catppuccin red
+inactive_color = "#6E6A86" # @muted
 
 [widget.notifications]
 hide_when_no_unread = true
