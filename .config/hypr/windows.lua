@@ -14,6 +14,12 @@ hl.window_rule({
 	float = true,
 	center = true,
 })
+hl.window_rule({
+	match = { tag = "floating-window", workspace = "m[DP-1]" },
+	size = { 1200, 800 },
+	float = true,
+	center = true,
+})
 
 -- Set opacity
 hl.window_rule({
@@ -23,13 +29,13 @@ hl.window_rule({
 
 -- Set floating-window
 local floating_apps = {
-	"kitty.tui.float",
 	"dev.noctalia.Noctalia",
+	"kitty.tui.float",
 	"nm-connection-editor",
+	"nwg-displays",
 	"com.saivert.pwvucontrol",
 	"blueberry.py",
 	"com.github.ezrakhuzadi.BluetoothBitrateManager",
-	"wiremix",
 }
 
 for _, app in ipairs(floating_apps) do
@@ -100,22 +106,7 @@ hl.window_rule({
 -- swayimg
 hl.window_rule({
 	match = { class = "swayimg" },
-	float = true,
-	center = true,
-})
-hl.window_rule({
-	match = {
-		class = "swayimg",
-		workspace = "m[HDMI-A-1]",
-	},
-	size = { 845, 800 },
-})
-hl.window_rule({
-	match = {
-		class = "swayimg",
-		workspace = "m[DP-1]",
-	},
-	size = { 1200, 800 },
+	tag = "+floating-window",
 })
 
 -- Workspaces
@@ -191,11 +182,11 @@ hl.window_rule({
 	match = { title = "(Picture.?in.?[Pp]icture)" },
 	float = true,
 	pin = true,
-	size = { 600, 338 },
+	size = { 600, 340 },
 	keep_aspect_ratio = true,
 	border_size = 0,
 	opacity = "1 1",
-	move = { "(monitor_w-window_w-40)", "(monitor_h*0.04)" },
+	move = { "7", "35" },
 })
 
 -- Webcam overlay
