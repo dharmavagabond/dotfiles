@@ -1,7 +1,7 @@
 hl.monitor({
 	output = "DP-1",
 	mode = "3840x2160@144",
-	position = "864x128",
+	position = "864x170",
 	scale = "2",
 	bitdepth = 10,
 	vrr = true,
