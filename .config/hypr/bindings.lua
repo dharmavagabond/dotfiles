@@ -49,25 +49,25 @@ hl.bind("XF86LaunchB", hl.dsp.exec_cmd("ff"))
 -- Application bindings
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd('app2unit-term --dir="$(terminal-cwd)"'))
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("app2unit -- kitty.desktop:zellij"))
-hl.bind("SUPER + A", hl.dsp.exec_cmd("launch-or-focus btop"))
+hl.bind("SUPER + A", hl.dsp.exec_cmd("app2unit -- btop.desktop"))
 hl.bind("SUPER + SHIFT + A", hl.dsp.exec_cmd("launch-or-focus net.nokyan.Resources"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("launch-or-focus " .. browser))
-hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("launch-or-focus browsh"))
+hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("app2unit -- browsh.desktop"))
 hl.bind("SUPER + ALT + B", hl.dsp.exec_cmd("btctl connect"))
 hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("btctl disconnect"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center calendar"))
-hl.bind("SUPER + D", hl.dsp.exec_cmd("launch-or-focus gdu"))
+hl.bind("SUPER + D", hl.dsp.exec_cmd("app2unit -- gdu.desktop"))
 hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd("launch-or-focus equibop"))
 hl.bind("SUPER + F", hl.dsp.exec_cmd("app2unit -- yazi.desktop"))
-hl.bind("SUPER + G", hl.dsp.exec_cmd("launch-or-focus github"))
+hl.bind("SUPER + G", hl.dsp.exec_cmd("app2unit -- github.desktop"))
 hl.bind("SUPER + CTRL + ALT + G", hl.dsp.exec_cmd("launch-or-focus gamescope"))
-hl.bind("SUPER + M", hl.dsp.exec_cmd('launch-or-focus "Proton Mail" "app2unit -- proton-mail.desktop"'))
+hl.bind("SUPER + M", hl.dsp.exec_cmd("launch-or-focus 'Proton Mail' app2unit -- proton-mail.desktop"))
 hl.bind("SUPER + N", hl.dsp.exec_cmd("launch-or-focus nvim"))
-hl.bind("SUPER + P", hl.dsp.exec_cmd('launch-or-focus "Proton Pass" "app2unit -- proton-pass.desktop"'))
+hl.bind("SUPER + P", hl.dsp.exec_cmd("launch-or-focus 'Proton Pass' app2unit -- proton-pass.desktop"))
 hl.bind("SUPER + T", hl.dsp.exec_cmd("launch-or-focus tidal-hifi"))
-hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd("launch-or-focus twitter"))
-hl.bind("SUPER + W", hl.dsp.exec_cmd("launch-or-focus whatsapp"))
-hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("launch-or-focus wiremix"))
+hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd("app2unit -- twitter.desktop"))
+hl.bind("SUPER + W", hl.dsp.exec_cmd("app2unit -- whatsapp.desktop"))
+hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("app2unit -- wiremix.desktop"))
 hl.bind("SUPER + X", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
 hl.bind(
 	"SUPER + SHIFT + X",
@@ -75,7 +75,7 @@ hl.bind(
 		ipc .. 'clipboard-clear && notify-send -u low -a noctalia -i noctalia "Clipboard" "Historial eliminado"'
 	)
 )
-hl.bind("SUPER + Y", hl.dsp.exec_cmd("launch-or-focus youtube"))
+hl.bind("SUPER + Y", hl.dsp.exec_cmd("app2unit -- youtube.desktop"))
 
 -- Switch workspaces and windows
 for i = 1, 10 do
@@ -120,10 +120,10 @@ hl.bind(
 )
 
 -- Screenrecord
-hl.bind("ALT + PRINT", hl.dsp.exec_cmd("omarchy-capture-screenrecording"), { description = "Screen record" })
+hl.bind("ALT + PRINT", hl.dsp.exec_cmd("screenrecording"), { description = "Screen record" })
 hl.bind(
 	"ALT + SHIFT + PRINT",
-	hl.dsp.exec_cmd("omarchy-capture-screenrecording --with-desktop-audio"),
+	hl.dsp.exec_cmd("screenrecording --with-desktop-audio"),
 	{ description = "Screen record with audio" }
 )
 
