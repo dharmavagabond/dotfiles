@@ -9,7 +9,7 @@ function -(){
 
 update(){
   noctalia msg caffeine-enable &>/dev/null
-  trap 'noctalia msg caffeine-disable' EXIT
+  trap 'noctalia msg caffeine-disable &>/dev/null' EXIT
   ssdctl mount 2T
   paru --sync --refresh --sysupgrade
   mise upgrade
