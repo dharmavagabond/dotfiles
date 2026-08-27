@@ -1,7 +1,7 @@
 [shell.session]
 grid = false
 grid_columns = 1
-show_shortcuts = true
+show_shortcuts = false
 
 [[shell.session.actions]]
 action = "lock"
@@ -9,6 +9,7 @@ label = "Bloquear"
 glyph = "lock"
 command = "sistemactl lock"
 shortcut = "l"
+variant = "ghost"
 
 [[shell.session.actions]]
 action = "logout"
@@ -16,6 +17,7 @@ label = "Cerrar sesión"
 glyph = "logout"
 command = "sistemactl logout"
 shortcut = "o"
+variant = "ghost"
 
 [[shell.session.actions]]
 action = "suspend"
@@ -23,6 +25,7 @@ label = "Suspender"
 glyph = "moon"
 command = "sistemactl suspend"
 shortcut = "u"
+variant = "ghost"
 
 [[shell.session.actions]]
 action = "reboot"
@@ -30,7 +33,7 @@ label = "Reiniciar"
 glyph = "refresh"
 command = "sistemactl reboot"
 shortcut = "r"
-variant = "warning"
+variant = "secondary"
 
 [[shell.session.actions]]
 action = "shutdown"
