@@ -168,11 +168,14 @@ for _, apps in ipairs(full_opacity_apps) do
 	})
 end
 
--- Zen browser and webapps
+-- Browsers and webapps
 hl.window_rule({
-	match = {
-		initial_title = "Zen Browser",
-	},
+	match = { initial_title = "Zen Browser" },
+	tag = "-default-opacity",
+	opacity = "1.0 0.9",
+})
+hl.window_rule({
+	match = { class = "brave-origin" },
 	tag = "-default-opacity",
 	opacity = "1.0 0.9",
 })
