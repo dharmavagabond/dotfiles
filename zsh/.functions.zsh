@@ -90,20 +90,14 @@ optim_png() {
     return 1
   fi
 
-  local directorio="$1"
+  local directory="$1"
 
-  if [ ! -d "$directorio" ]; then
-    echo "Error: El directorio '$directorio' no existe"
+  if [ ! -d "$directory" ]; then
+    echo "Error: El directorio '$directory' no existe"
     return 1
   fi
 
-  echo "Optimizando imágenes PNG en: $directorio"
+  echo "Optimizando imágenes PNG en: $directory"
 
-  fd \
-    --extension png \
-    --print0 \
-    --type file \
-    . "$directorio" | parallel --jobs 8 --null --bar --eta trimage --file={}
-
-  echo "Optimización completada"
+  oxipng -o 4 --strip safe --alpha --recursive "$directory"
 }
