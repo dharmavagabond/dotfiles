@@ -110,29 +110,66 @@ return {
     "folke/snacks.nvim",
     keys = {
       {
-        "<leader>ff",
-        function()
-          Snacks.picker.files({ hidden = true, follow = true })
-        end,
-        desc = "Find Files",
-      },
-      {
-        "<leader>fc",
-        function()
-          Snacks.picker.files({
-            cwd = vim.fn.stdpath("config"),
-            hidden = true,
-            follow = true,
-          })
-        end,
-        desc = "Find Config File",
-      },
-      {
         "<leader>z",
         function()
           Snacks.zen()
         end,
         desc = "Toggle Zen Mode",
+      },
+    },
+  },
+  {
+    "ibhagwan/fzf-lua",
+    enabled = false,
+  },
+  {
+    "dmtrKovalenko/fff.nvim",
+    build = function()
+      require("fff.download").download_or_build_binary()
+    end,
+    opts = {
+      debug = {
+        enabled = true,
+        show_scores = true,
+      },
+    },
+    lazy = false,
+    keys = {
+      {
+        "<leader><space>",
+        function()
+          require("fff").find_files()
+        end,
+        desc = "fffind files",
+      },
+      {
+        "fc",
+        function()
+          require("fff").find_files_in_dir(vim.fn.stdpath("config"))
+        end,
+        desc = "Find config files",
+      },
+      {
+        "<leader>fg",
+        function()
+          require("fff").live_grep()
+        end,
+        desc = "LiFFFe grep",
+      },
+      {
+        "<leader>fz",
+        function()
+          require("fff").live_grep({ grep = { modes = { "fuzzy", "plain" } } })
+        end,
+        desc = "Live fffuzy grep",
+      },
+      {
+        "<leader>fw",
+        function()
+          require("fff").live_grep_under_cursor()
+        end,
+        mode = { "n", "x" },
+        desc = "Search current word / selection",
       },
     },
   },
