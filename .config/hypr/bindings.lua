@@ -39,9 +39,13 @@ hl.bind("SUPER + CTRL + SHIFT + J", hl.dsp.window.move({ into_group = "d" }))
 hl.bind("SUPER + TAB", hl.dsp.group.next())
 hl.bind("SUPER + SHIFT + TAB", hl.dsp.group.prev())
 
+-- Noctalia Control center
+hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+hl.bind("SUPER + ALT + COMMA", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center notifications"))
+hl.bind("SUPER + ALT + A", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center audio"))
+
 -- Launchers
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
-hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
 hl.bind("SUPER + CTRL + ALT + SPACE", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
 hl.bind("XF86LaunchA", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 hl.bind("XF86LaunchB", hl.dsp.exec_cmd("ff"))
@@ -107,7 +111,6 @@ hl.bind("SUPER + COMMA", hl.dsp.exec_cmd(ipc .. "notification-clear-active"))
 hl.bind("SUPER + SHIFT + COMMA", hl.dsp.exec_cmd(ipc .. "notification-clear-history"))
 hl.bind("SUPER + CTRL + COMMA", hl.dsp.exec_cmd(ipc .. "notification-dnd-toggle "))
 hl.bind("SUPER + CTRL + SHIFT + COMMA", hl.dsp.exec_cmd(ipc .. "notification-invoke-latest"))
-hl.bind("SUPER + CTRL + ALT + COMMA", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center notifications"))
 
 -- Screenshots
 hl.bind("PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
