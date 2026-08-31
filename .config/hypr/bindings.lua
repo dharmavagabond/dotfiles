@@ -109,8 +109,8 @@ hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
 -- Notifications
 hl.bind("SUPER + COMMA", hl.dsp.exec_cmd(ipc .. "notification-clear-active"))
 hl.bind("SUPER + SHIFT + COMMA", hl.dsp.exec_cmd(ipc .. "notification-clear-history"))
-hl.bind("SUPER + CTRL + COMMA", hl.dsp.exec_cmd(ipc .. "notification-dnd-toggle "))
-hl.bind("SUPER + CTRL + SHIFT + COMMA", hl.dsp.exec_cmd(ipc .. "notification-invoke-latest"))
+hl.bind("SUPER + CTRL + COMMA", hl.dsp.exec_cmd(ipc .. "notification-invoke-latest"))
+hl.bind("SUPER + CTRL + SHIFT + COMMA", hl.dsp.exec_cmd(ipc .. "notification-dnd-toggle"))
 
 -- Screenshots
 hl.bind("PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
