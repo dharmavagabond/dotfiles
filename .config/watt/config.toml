@@ -29,6 +29,7 @@ cpu.energy-perf-bias = { if.is-energy-perf-bias-available = "performance", then 
 cpu.energy-performance-preference = { if.is-energy-performance-preference-available = "performance", then = "performance" }
 cpu.governor = { if.is-governor-available = "performance", then = "performance" }
 cpu.turbo = { if = "?turbo-available", then = true }
+cpu.pm-qos-resume-latency-us = 0
 
 # ============================================================
 # Moderate performance
@@ -43,6 +44,7 @@ priority = 60
 cpu.energy-perf-bias = { if.is-energy-perf-bias-available = "balance-performance", then = "balance-performance" }
 cpu.energy-performance-preference = { if.is-energy-performance-preference-available = "balance_performance", then = "balance_performance" }
 cpu.governor = { if.is-governor-available = "schedutil", then = "schedutil" }
+cpu.pm-qos-resume-latency-us = 0
 
 # ============================================================
 # Light activity
