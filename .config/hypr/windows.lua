@@ -34,7 +34,7 @@ local floating_apps = {
 	"nm-connection-editor",
 	"nwg-displays",
 	"com.saivert.pwvucontrol",
-	"blueberry.py",
+	"io.github.kaii_lb.Overskride",
 	"com.github.ezrakhuzadi.BluetoothBitrateManager",
 }
 
