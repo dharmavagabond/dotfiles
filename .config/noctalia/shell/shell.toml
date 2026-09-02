@@ -27,3 +27,6 @@ categories = false
 [shell.screenshot]
 pipe_to_command = true
 pipe_command = "oxipng -o 4 --strip safe --alpha -"
+
+[shell.mpris]
+blacklist = ["mpv"]
