@@ -29,11 +29,11 @@ show_temperature = false
 [widget.privacy]
 hide_inactive = true
 capsule = true
-capsule_fill = "#E0DEF4"   # @text
+capsule_fill = "#D20F39" # catppuccin red
 capsule_opacity = 0.9
 capsule_padding = 15
-active_color = "#D20F39"   # catppuccin red
-inactive_color = "#6E6A86" # @muted
+active_color = "#E0DEF4" # @text
+inactive_color = "error"
 
 [widget.notifications]
 hide_when_no_unread = true
