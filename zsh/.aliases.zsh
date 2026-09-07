@@ -9,3 +9,4 @@ alias visudo=vidoas
 alias pbpaste="wl-paste"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias kdiff="kitten diff"
+alias adb='HOME="$XDG_DATA_HOME"/android adb'
