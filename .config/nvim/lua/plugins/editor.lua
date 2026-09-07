@@ -110,7 +110,7 @@ return {
     "folke/snacks.nvim",
     keys = {
       {
-        "<leader>z",
+        "<leader>zm",
         function()
           Snacks.zen()
         end,
@@ -120,7 +120,17 @@ return {
   },
   {
     "ibhagwan/fzf-lua",
-    enabled = false,
+    enabled = true,
+    keys = {
+      { "<leader><space>", false },
+      { "<leader>ff", false },
+      { "<leader>fc", false },
+      { "<leader>/", false },
+      { "<leader>sg", false },
+      { "<leader>sG", false },
+      { "<leader>sw", false },
+      { "<leader>sW", false },
+    },
   },
   {
     "dmtrKovalenko/fff.nvim",
@@ -143,14 +153,14 @@ return {
         desc = "fffind files",
       },
       {
-        "fc",
+        "<leader>fc",
         function()
           require("fff").find_files_in_dir(vim.fn.stdpath("config"))
         end,
         desc = "Find config files",
       },
       {
-        "<leader>fg",
+        "<leader>/",
         function()
           require("fff").live_grep()
         end,
@@ -164,7 +174,7 @@ return {
         desc = "Live fffuzy grep",
       },
       {
-        "<leader>fw",
+        "<leader>sw",
         function()
           require("fff").live_grep_under_cursor()
         end,
