@@ -132,8 +132,8 @@ hl.bind(
 )
 
 -- Brightness
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"))
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"))
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brilloctl +"))
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brilloctl -"))
 
 -- Volume
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
