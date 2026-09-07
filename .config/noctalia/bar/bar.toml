@@ -29,7 +29,7 @@ padding = 12
 id = "right"
 members = [
   "tray",
-  "recorder",
+  "noctalia/screen_recorder",
   "bluetooth",
   "network",
   "volume",

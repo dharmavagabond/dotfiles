@@ -1,8 +1,5 @@
 [theme]
 mode = "dark"
-source = "community"
-builtin = "Rosé Pine"
-community_palette = "Rose Pine Alt"
 
 [theme.templates]
 builtin_ids = ["gtk3", "gtk4"]

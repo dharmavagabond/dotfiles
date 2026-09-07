@@ -5,8 +5,6 @@
 build
 restic-ignore
 
-$XDG_STATE_HOME
-
 $HOME/.atuin
 $HOME/.duckdb
 $HOME/.librewolf
@@ -29,3 +27,10 @@ $XDG_DATA_HOME/*
 !$XDG_DATA_HOME/nautilus-python
 !$XDG_DATA_HOME/opensnitch
 !$XDG_DATA_HOME/zsh
+
+$XDG_STATE_HOME/*
+
+!$XDG_STATE_HOME/noctalia
+
+  $XDG_STATE_HOME/noctalia/*
+  !$XDG_STATE_HOME/noctalia/settings.toml

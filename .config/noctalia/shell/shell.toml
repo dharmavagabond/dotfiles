@@ -1,7 +1,6 @@
 [shell]
 clipboard_image_action_command = "satty -f -"
 corner_radius_scale = 0.6
-font_family = "DM Sans"
 launch_apps_custom_command = "app2unit -- $CMD"
 polkit_agent = true
 settings_show_advanced = true
