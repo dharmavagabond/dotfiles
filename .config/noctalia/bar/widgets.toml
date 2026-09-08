@@ -9,7 +9,6 @@ occupied_color = "surface_variant"
 
 [widget.clock]
 format = "{:L%a %d %h %I:%M %p}"
-font_family = "Zalando Sans"
 scale = 0.9
 
 [widget.volume]

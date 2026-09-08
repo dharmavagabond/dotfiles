@@ -14,7 +14,6 @@ shadow = false
 thickness = 28
 scale = 0.7
 font_weight = 400
-font_family = "DM Sans"
 concave_edge_corners = false
 radius = 0
 widget_spacing = 10
