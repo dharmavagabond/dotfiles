@@ -8,9 +8,11 @@ viewer.on_key("q", function()
 	swayimg.exit()
 end)
 
-viewer.set_text("topleft", {})
-viewer.set_text("topright", {})
-viewer.set_text("bottomleft", {})
+viewer.text = {
+	topleft = {},
+	topright = {},
+	bottomleft = {},
+}
 
 viewer.on_key("h", function()
 	viewer.open("prev")
@@ -39,7 +41,10 @@ end)
 
 gallery.border_color = 0xffc4a7e7
 
-gallery.set_text("topleft", {})
+gallery.text = {
+	topleft = {},
+	topright = {},
+}
 
 gallery.on_key("q", function()
 	swayimg.exit()
