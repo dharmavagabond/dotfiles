@@ -21,6 +21,9 @@ history_filter = [
   "^ssd-cryptsetup-open",
   "secret-tool",
   "pass-cli",
+  "^brilloctl",
+  "^hyprshade",
+  "^sunsetr",
 ]
 inline_height = 10
 keymap_mode = "vim-normal"
