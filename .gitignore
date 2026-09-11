@@ -1,5 +1,6 @@
 .config/mpv/watch_later
 .config/bat/themes/*
+.config/hypr/shaders/*
 .config/mpv/scripts/*
 .config/mpv/shaders/*
 .config/yazi/flavors/*
