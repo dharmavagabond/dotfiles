@@ -9,12 +9,6 @@ love = '#eb6f92'
 iris = '#c4a7e7'
 gold = '#f6c177'
 
-[upgrade]
-source = 'cdn'
-interval = '168h'
-auto = true
-notice = false
-
 [[blocks]]
 type = 'prompt'
 alignment = 'left'
