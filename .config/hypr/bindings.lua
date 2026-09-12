@@ -51,8 +51,8 @@ hl.bind("XF86LaunchA", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 hl.bind("XF86LaunchB", hl.dsp.exec_cmd("ff"))
 
 -- Application bindings
-hl.bind("SUPER + RETURN", hl.dsp.exec_cmd('app2unit-term --dir="$(terminal-cwd)"'))
-hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("app2unit -- kitty.desktop:zellij"))
+hl.bind("SUPER + RETURN", hl.dsp.exec_cmd("app2unit -- kitty.desktop:tmux"))
+hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd('app2unit-term --dir="$(terminal-cwd)"'))
 hl.bind("SUPER + A", hl.dsp.exec_cmd("app2unit -- btop.desktop"))
 hl.bind("SUPER + SHIFT + A", hl.dsp.exec_cmd("launch-or-focus net.nokyan.Resources"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("launch-or-focus " .. browser))
