@@ -57,7 +57,7 @@ tag_icon = "\uf412 "
 [[blocks.segments]]
 type = 'executiontime'
 style = 'plain'
-foreground = 'p:pine'
+foreground = 'p:gold'
 background = 'transparent'
 template = ' {{ div .Ms 1000 }}s'
 
@@ -85,9 +85,9 @@ template = "\uf105"
 [transient_prompt]
 background = 'transparent'
 foreground_templates = ["{{if gt .Code 0}}p:love{{else}}p:pine{{end}}"]
-template = "\uf105 "
+template = " \uf105 "
 
 [secondary_prompt]
 foreground = 'p:pine'
 background = 'transparent'
-template = "\uf105\uf105  "
+template = " \uf105\uf105 "
