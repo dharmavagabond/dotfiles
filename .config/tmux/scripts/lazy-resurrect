@@ -1,0 +1,4 @@
+#!/bin/bash
+
+~/.config/tmux/plugins/tmux-resurrect/resurrect.tmux
+~/.config/tmux/plugins/tmux-continuum/continuum.tmux
