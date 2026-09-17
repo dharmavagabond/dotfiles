@@ -43,6 +43,11 @@ use = "ndtoan96/ouch"
 rev = "cfe4f50"
 hash = "eff5702573b6cfba61e4ac8b1969629a"
 
+[[plugin.deps]]
+use = "PHONE1X/merge-paste"
+rev = "e95e0bb"
+hash = "dcab65652d246f0c2497435ae1ebbb07"
+
 [[flavor.deps]]
 use = "Mintass/rose-pine-dawn"
 rev = "d82f54f"

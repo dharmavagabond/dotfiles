@@ -63,3 +63,8 @@ desc = "Restore from Trash"
 on = [":"]
 run = "plugin command"
 desc = "Open command palette"
+
+[[mgr.prepend_keymap]]
+on = ["P"]
+run = "plugin merge-paste"
+desc = "Paste with conflict prompt (overwrite / merge / skip / rename)"
