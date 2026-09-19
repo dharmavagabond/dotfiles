@@ -2,7 +2,8 @@
 
 [[mgr.prepend_keymap]]
 on = "M"
-run = "plugin mount"
+run = "plugin lsblk-mount"
+desc = "Open the drive mount manager"
 
 [[mgr.prepend_keymap]]
 on = "F"

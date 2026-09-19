@@ -14,11 +14,6 @@ rev = "3f8c863"
 hash = "87b9233a74325e95011670ed20bbd0d4"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:mount"
-rev = "4848aac"
-hash = "46cbdc05596a3ecd730b288e28c7079d"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
 rev = "4848aac"
 hash = "d6f7351ea25a43c9b5f4315fa1e23935"
@@ -47,6 +42,16 @@ hash = "eff5702573b6cfba61e4ac8b1969629a"
 use = "PHONE1X/merge-paste"
 rev = "e95e0bb"
 hash = "dcab65652d246f0c2497435ae1ebbb07"
+
+[[plugin.deps]]
+use = "PHONE1X/lsblk-mount"
+rev = "73e863f"
+hash = "69e36cdc69855863e0c1b176e19838cd"
+
+[[plugin.deps]]
+use = "saumyajyoti/omp"
+rev = "32ae96c"
+hash = "ca913db57342496f96c533725a64ccc4"
 
 [[flavor.deps]]
 use = "Mintass/rose-pine-dawn"
