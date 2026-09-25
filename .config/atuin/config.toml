@@ -10,20 +10,16 @@ history_filter = [
   "^(sudo|doas|pkexec|run0)(edit)?",
   "^scu?-",
   "^n?vim$",
-  "^(a|p)sd ",
-  "^z ",
+  "^(a|p)sd\\s",
+  "^(z|y)\\s?",
   "^uuctl$",
   "^update$",
   "^paru(i)?(\\s-Ss)?",
-  "^md5sum ",
+  "^md5sum\\s",
   "^yazi",
   "^pac((?i)u|x|i)(?-i)",
-  "^ssd-cryptsetup-open",
   "secret-tool",
   "pass-cli",
-  "^brilloctl",
-  "^hyprshade",
-  "^sunsetr",
 ]
 inline_height = 10
 keymap_mode = "vim-normal"
