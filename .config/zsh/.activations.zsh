@@ -1,16 +1,17 @@
 # fast-syntax-highlighting
-if [ -f $ZDOTDIR/fsh/fast-syntax-highlighting.plugin.zsh ]; then
-  source $ZDOTDIR/fsh/fast-syntax-highlighting.plugin.zsh
+if [ -f $XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh ]; then
+  source $XDG_DATA_HOME/zsh/fsh/fast-syntax-highlighting.plugin.zsh
 fi
 
 # fzf-tab
-if [ -f $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh ]; then
-  source $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh
+if [ -f $XDG_DATA_HOME/zsh/fzf-tab/fzf-tab.plugin.zsh ]; then
+  source $XDG_DATA_HOME/zsh/fzf-tab/fzf-tab.plugin.zsh
 fi
 
 # Prezto
-if [ -f $ZDOTDIR/prezto/init.zsh ]; then
-  source $ZDOTDIR/prezto/init.zsh
+if [ -f $XDG_DATA_HOME/zsh/prezto/init.zsh ]; then
+  ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump-$ZSH_VERSION"
+  source $XDG_DATA_HOME/zsh/prezto/init.zsh
 fi
 
 # Forgit

@@ -42,4 +42,4 @@ path=(
 )
 
 # Add completions
-fpath+=("$ZDOTDIR/completions" "$ZDOTDIR/zsh-completions/src")
+fpath+=("$XDG_DATA_HOME/zsh/completions" "$XDG_DATA_HOME/zsh/zsh-completions/src")
