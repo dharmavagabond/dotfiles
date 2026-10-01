@@ -52,3 +52,13 @@ clear-screen-and-scrollback() {
   printf '\x1Bc'
   zle clear-screen
 }
+
+zvm_after_select_vi_mode() {
+  [[ -n $TMUX ]] || return
+  case $ZVM_MODE in
+    $ZVM_MODE_NORMAL)   tmux setenv -g ZSH_VI_MODE "NORMAL" ;;
+    $ZVM_MODE_INSERT)   tmux setenv -g ZSH_VI_MODE "INSERT" ;;
+    $ZVM_MODE_VISUAL)   tmux setenv -g ZSH_VI_MODE "VISUAL" ;;
+  esac
+  tmux refresh-client -S
+}

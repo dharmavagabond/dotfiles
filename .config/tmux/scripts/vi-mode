@@ -1,0 +1,9 @@
+#!/bin/bash
+
+case "$ZSH_VI_MODE" in
+NORMAL) echo "#[fg=colour6] NORMAL " ;;
+VISUAL) echo "#[fg=colour5] VISUAL " ;;
+VISUAL_LINE) echo "#[fg=colour5] V-LINE " ;;
+REPLACE) echo "#[fg=colour3] REPLACE " ;;
+*) echo "#[fg=colour4] INSERT " ;;
+esac
