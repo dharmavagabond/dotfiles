@@ -1,0 +1,47 @@
+#!/bin/bash
+
+select_window() {
+  local session="$1" target="$2" idx path match
+
+  target=$(realpath "$target" 2>/dev/null) || return 1
+
+  while read -r idx path; do
+    path=$(realpath "$path" 2>/dev/null)
+    if [[ "$path" == "$target" ]]; then
+      match="$idx"
+      break
+    fi
+  done < <(tmux list-panes -t "$session" -F '#{window_index} #{pane_current_path}' 2>/dev/null)
+
+  if [[ -n "$match" ]]; then
+    tmux select-window -t "${session}:${match}"
+  else
+    tmux new-window -t "${session}:" -c "$target"
+  fi
+}
+
+attach() {
+  local -a sessions
+  local target="${1:-$PWD}" log_dir="$XDG_STATE_HOME/tmux"
+
+  [ -f "$target" ] && target="$(dirname "$target")"
+
+  mapfile -t sessions < <(tmux list-sessions -F '#{session_name}' 2>/dev/null)
+
+  if ((${#sessions[@]} == 0)); then
+    mkdir -p "$log_dir"
+    exec env -C "$log_dir" tmux -v new-session -c "$target"
+  elif ((${#sessions[@]} == 1)); then
+    select_window "${sessions[0]}" "$target"
+    exec tmux attach-session -t "${sessions[0]}" -d
+  else
+    local chosen
+
+    chosen=$(printf '%s\n' "${sessions[@]}" | fzf)
+    [ -z "$chosen" ] && exit 0
+    select_window "$chosen" "$target"
+    exec tmux attach-session -t "$chosen"
+  fi
+}
+
+attach "$@"
