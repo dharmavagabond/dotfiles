@@ -1,3 +1,3 @@
-if [ -f "$XDG_DATA_HOME/zsh/hooks/.rehash.zsh" ];then
-  source "$XDG_DATA_HOME/zsh/hooks/.rehash.zsh"
-fi
+for f in "${XDG_DATA_HOME:-$HOME/.local/share}/zsh/hooks/"*.zsh(N); do
+  source "$f"
+done
