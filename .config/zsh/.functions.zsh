@@ -62,3 +62,11 @@ zvm_after_select_vi_mode() {
   esac
   tmux refresh-client -S
 }
+
+expand-dot-to-parent-directory-path() {
+  if [[ $LBUFFER = *.. ]]; then
+    LBUFFER+='/..'
+  else
+    LBUFFER+='.'
+  fi
+}
