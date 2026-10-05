@@ -11,7 +11,7 @@ select_window() {
       match="$idx"
       break
     fi
-  done < <(tmux list-panes -t "$session" -F '#{window_index} #{pane_current_path}' 2>/dev/null)
+  done < <(tmux list-panes -s -t "$session" -F '#{window_index} #{pane_current_path}' 2>/dev/null)
 
   if [[ -n "$match" ]]; then
     tmux select-window -t "${session}:${match}"
