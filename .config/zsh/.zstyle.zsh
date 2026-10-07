@@ -18,3 +18,4 @@ zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 # pacman
 zstyle ':zim:pacman' priv_cmd 'doas'
 zstyle ':zim:pacman' frontend 'paru'
+zstyle ':zim:pacman' helper 'aur'
