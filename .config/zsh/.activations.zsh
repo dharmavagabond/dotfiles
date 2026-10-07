@@ -1,3 +1,15 @@
+# FZF
+if command -v fzf &>/dev/null; then
+  export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+  export FZF_DEFAULT_OPTS="
+    --color=fg:#908caa,bg:#191724,hl:#ebbcba
+    --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
+    --color=border:#403d52,header:#31748f,gutter:#191724
+    --color=spinner:#f6c177,info:#9ccfd8
+    --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
+
 # Mise
 if command -v mise &>/dev/null; then
   export MISE_NPM_BUN=true
@@ -31,19 +43,6 @@ fi
 # zsh-vi-mode
 if [ -f /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh ]; then
   source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
-  # FZF
-  if command -v fzf &>/dev/null; then
-    export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
-    export FZF_DEFAULT_OPTS="
-      --color=fg:#908caa,bg:#191724,hl:#ebbcba
-      --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
-      --color=border:#403d52,header:#31748f,gutter:#191724
-      --color=spinner:#f6c177,info:#9ccfd8
-      --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
-    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-    zvm_after_init_commands+=('source <(fzf --zsh)')
-  fi
 fi
 
 # Carapace
