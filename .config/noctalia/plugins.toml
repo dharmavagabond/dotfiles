@@ -1,7 +1,6 @@
 [plugins]
 enabled = [
   "noctalia/screen_recorder",
-  "marccvictoria/llamanager",
   "nightwatch75/file-search",
   "lucasoe/proton-pass",
 ]
@@ -11,9 +10,6 @@ auto_update = "all"
 color_range = "full"
 video_codec = "hevc"
 hide_inactive = true
-
-[plugin_settings."marccvictoria/llamanager"]
-launcher = "smallthinker"
 
 [plugin_settings."nightwatch75/file-search"]
 show_hidden = true
