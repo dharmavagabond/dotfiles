@@ -206,9 +206,22 @@ return {
     },
   },
   {
-    "mrjones2014/smart-splits.nvim",
+    "smart-splits-nvim/backend-kitty",
+    module = "smart-splits-backend-kitty",
+  },
+  {
+    "smart-splits-nvim/backend-tmux",
+    main = "smart-splits-backend-tmux",
+  },
+  {
+    "smart-splits-nvim/smart-splits.nvim",
     enabled = true,
     event = "BufEnter",
+    opts = {
+      mux = {
+        backend = { "smart-splits-backend-tmux", "smart-splits-backend-kitty" },
+      },
+    },
     keys = {
       {
         "<M-S-h>",
@@ -259,7 +272,6 @@ return {
         end,
       },
     },
-    build = "./kitty/install-kittens.bash",
   },
   {
     "nvim-zh/colorful-winsep.nvim",
