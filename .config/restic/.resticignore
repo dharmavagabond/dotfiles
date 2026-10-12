@@ -13,6 +13,7 @@ $HOME/.local/opt
 $HOME/.ollama
 $HOME/.pki
 $HOME/.steam
+$HOME/.magnitude
 
 $XDG_DATA_HOME/*
 
