@@ -38,7 +38,7 @@ return {
   {
     "wsdjeg/rooter.nvim",
     opts = {
-      command = "tcd",
+      root_patterns = { ".git/", ".editorconfig" },
     },
   },
   {
