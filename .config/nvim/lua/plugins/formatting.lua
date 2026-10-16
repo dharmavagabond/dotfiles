@@ -18,6 +18,8 @@ return {
         toml = { "taplo" },
         tsp = { "typespec" },
         yaml = { "yamlfix" },
+        lua = { "stylua" },
+        luau = { "stylua" },
         ["*"] = { "trim_whitespace", "trim_newlines" },
       },
       formatters = {

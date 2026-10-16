@@ -4,6 +4,9 @@ return {
     event = "VeryLazy",
     opts = {
       servers = {
+        luau_lsp = {
+          root_markers = { ".git", ".luaurc" },
+        },
         yamlls = {
           settings = {
             yaml = {
