@@ -55,7 +55,7 @@ fi
 # Atuin
 if command -v atuin &>/dev/null; then
   export ZSH_AUTOSUGGEST_STRATEGY=(atuin history completion)
-  eval "$(atuin init zsh)"
+  eval "$(atuin init zsh --disable-ai)"
 fi
 
 # Zoxide
