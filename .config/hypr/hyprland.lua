@@ -1,12 +1,19 @@
-package.path = os.getenv("XDG_CONFIG_HOME") .. "/?.lua;"
+local base = os.getenv("XDG_CONFIG_HOME") .. "/hypr"
 
--- Custom
-require("hypr.animation")
-require("hypr.autostart")
-require("hypr.bindings")
-require("hypr.config.init")
-require("hypr.layers")
-require("hypr.monitors")
-require("hypr.windows")
-require("hypr.workspaces")
-require("hypr.permissions")
+local function load_dir(dir, prefix, skip)
+	local handle = io.popen("ls -1 " .. dir .. " 2>/dev/null")
+
+	if not handle then
+		return
+	end
+
+	for entry in handle:lines() do
+		if entry:match("%.lua$") and entry ~= skip then
+			require((prefix or "") .. entry:gsub("%.lua$", ""))
+		end
+	end
+	handle:close()
+end
+
+load_dir(base, nil, "hyprland.lua")
+load_dir(base .. "/config", "config.")
