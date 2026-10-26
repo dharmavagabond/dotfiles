@@ -44,6 +44,10 @@ hl.bind("SUPER + ALT + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle control-cent
 hl.bind("SUPER + ALT + COMMA", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center notifications"))
 hl.bind("SUPER + ALT + A", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center audio"))
 
+-- Windows
+hl.bind("ALT + M", hl.dsp.exec_cmd("windowsctl hide active"))
+hl.bind("SUPER + ALT + M", hl.dsp.exec_cmd("windowsctl restore"))
+
 -- Launchers
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind("SUPER + CTRL + ALT + SPACE", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
