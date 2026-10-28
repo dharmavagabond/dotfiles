@@ -7,7 +7,10 @@ alias sudo=doas
 alias sudoedit=doasedit
 alias visudo=vidoas
 alias pbpaste="wl-paste"
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
 alias kdiff="kitten diff"
 alias adb='HOME="$XDG_DATA_HOME"/android adb'
 alias ug='ug --pager="less -R" --config="$XDG_CONFIG_HOME/ugrep/config"'
+alias mitmproxy="mitmproxy --set confdir=$XDG_CONFIG_HOME/mitmproxy"
+alias mitmweb="mitmweb --set confdir=$XDG_CONFIG_HOME/mitmproxy"
+alias adb='HOME="$XDG_DATA_HOME"/android adb'
