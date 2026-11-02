@@ -8,3 +8,4 @@ inactive_opacity = 0.7
 inactive_scale = 0.7
 show_dots = true
 launcher_position = "start"
+background_opacity = 0.9
