@@ -61,13 +61,6 @@ hl.window_rule({
 	workspace = 1,
 })
 
--- clipse
-hl.window_rule({
-	match = { class = "clipse" },
-	float = true,
-	size = { 622, 652 },
-})
-
 -- mpv
 hl.window_rule({
 	match = { class = "mpv" },
@@ -122,6 +115,7 @@ local gaming_apps = {
 	"dolphin - emu",
 	"PPSSPPSDL",
 	"Azahar",
+	"steam",
 }
 for _, apps in ipairs(gaming_apps) do
 	hl.window_rule({
@@ -130,7 +124,7 @@ for _, apps in ipairs(gaming_apps) do
 	})
 end
 hl.window_rule({
-	match = { class = "^(equibop|steam|streamlink-twitch-gui)$" },
+	match = { class = "^(equibop|streamlink-twitch-gui)$" },
 	workspace = 6,
 })
 
