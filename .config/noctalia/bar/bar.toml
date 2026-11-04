@@ -12,12 +12,11 @@ margin_ends = 0
 padding = 7
 shadow = false
 thickness = 28
-scale = 0.7
+scale = 0.65
 font_weight = 400
 concave_edge_corners = false
 radius = 0
 widget_spacing = 10
-
 
 [[bar.default.capsule_group]]
 id = "left"
@@ -28,7 +27,7 @@ padding = 12
 id = "right"
 members = [
   "tray",
-  "noctalia/screen_recorder",
+  "recorder",
   "bluetooth",
   "network",
   "volume",
@@ -37,8 +36,3 @@ members = [
   "clock",
 ]
 padding = 12
-
-
-[bar.default.monitor.hdmi]
-match = "HDMI-A-1"
-scale = 0.6

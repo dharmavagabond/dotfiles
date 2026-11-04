@@ -44,3 +44,9 @@ hide_when_no_media = true
 [widget.taskbar]
 show_active_indicator = false
 inactive_opacity = 0.6
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
+
+[widget.recorder.actions]
+left = "exec screenrecording"
