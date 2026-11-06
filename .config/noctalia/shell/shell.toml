@@ -1,5 +1,5 @@
 [shell]
-clipboard_image_action_command = 'oxipng -o 4 --strip safe --alpha --stdout - | satty -f -'
+clipboard_image_action_command = 'oxipng -o 4 --strip safe --stdout - | satty -f -'
 corner_radius_scale = 0.6
 launch_apps_custom_command = "app2unit -- $CMD"
 polkit_agent = true
@@ -28,7 +28,7 @@ annotate = true
 copy_on_close = false
 save_to_file = true
 pipe_to_command = true
-pipe_command = 'oxipng -o 4 --strip safe --alpha --out "$NOCTALIA_SCREENSHOT_PATH" - && pbcopy < "$NOCTALIA_SCREENSHOT_PATH"'
+pipe_command = 'oxipng -o 4 --strip safe --out "$NOCTALIA_SCREENSHOT_PATH" - && pbcopy < "$NOCTALIA_SCREENSHOT_PATH"'
 
 [shell.mpris]
 blacklist = ["mpv"]
