@@ -25,10 +25,10 @@ categories = false
 
 [shell.screenshot]
 annotate = true
-copy_on_close = true
+copy_on_close = false
 save_to_file = true
 pipe_to_command = true
-pipe_command = 'oxipng -o 4 --strip safe --alpha --out "$NOCTALIA_SCREENSHOT_PATH" -'
+pipe_command = 'oxipng -o 4 --strip safe --alpha --out "$NOCTALIA_SCREENSHOT_PATH" - && pbcopy < "$NOCTALIA_SCREENSHOT_PATH"'
 
 [shell.mpris]
 blacklist = ["mpv"]
