@@ -58,7 +58,6 @@ lnav = "latest"
 gdu = "latest"
 jaq = "latest"
 ruby = "latest"
-opencode = "latest"
 pi = "latest"
 
 [settings]
