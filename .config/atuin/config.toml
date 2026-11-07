@@ -31,3 +31,6 @@ name = "rose-pine"
 
 [sync]
 records = true
+
+[logs]
+dir = "~/.local/share/atuin/logs"
