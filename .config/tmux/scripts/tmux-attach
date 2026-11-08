@@ -30,7 +30,7 @@ attach() {
 
   if ((${#sessions[@]} == 0)); then
     mkdir -p "$log_dir"
-    exec env -C "$log_dir" tmux -v new-session -c "$target"
+    exec env -C "$log_dir" tmux new-session -c "$target"
   elif ((${#sessions[@]} == 1)); then
     select_window "${sessions[0]}" "$target"
     exec tmux attach-session -t "${sessions[0]}" -d
