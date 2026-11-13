@@ -1,6 +1,7 @@
 # completion
 zstyle ':zim:completion' dumpfile "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
 zstyle ':completion::complete:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompcache"
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 zstyle ':completion:*' menu no
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
