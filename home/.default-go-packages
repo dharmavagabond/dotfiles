@@ -5,3 +5,4 @@ github.com/GeertJohan/gomatrix
 github.com/pdfcpu/pdfcpu/cmd/pdfcpu
 github.com/golangci/golines
 github.com/kevinpollet/serve
+gotest.tools/gotestsum
