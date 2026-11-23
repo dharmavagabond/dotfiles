@@ -10,22 +10,23 @@ return {
     "milanglacier/minuet-ai.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
-      provider = "claude",
+      provider = "openai_compatible",
       context_window = 2048,
       throttle = 300,
       debounce = 200,
+      request_timeout = 15,
       provider_options = {
-        claude = {
+        openai_compatible = {
           api_key = "TERM",
-          end_point = "http://127.0.0.1:10100/inference/anthropic/v1/messages",
-          model = "minicpm5-2b:gguf:q8",
+          name = "Ollama",
+          end_point = "http://127.0.0.1:11434/v1/chat/completions",
+          model = "hf.co/Abiray/MiniCPM5-2B-heretic-abliterated-GGUF:Q8_0",
           max_tokens = 128,
           stream = true,
           optional = {
             temperature = 0.2,
             top_p = 0.9,
             frequency_penalty = 0.3,
-            thinking = { type = "disabled" },
           },
         },
       },
