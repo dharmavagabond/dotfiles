@@ -50,3 +50,6 @@ type = "noctalia/screen_recorder:recorder"
 
 [widget.recorder.actions]
 left = "exec screenrecording"
+
+[widget.network]
+show_label = false
